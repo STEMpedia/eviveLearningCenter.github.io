@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getting Started Scratch</title>
+</head>
+<body>
+<h1><strong>Getting Started with Scratch</strong></h1>
+<p>Scratch is a free programming language where you can create your own innovative and interactive projects, stories, games, and animations. <a href="http://www.mblock.cc">mBlock</a> is based on Scratch 2.0 and let you use evive for your projects through its Arduino plugins.</p>
+<h2><strong>Installation Instructions</strong></h2>
+<p>Installation of mblock is simple and pretty straight forward. Here we are showing the installation steps for windows user only.</p>
+<ol>
+<li>Go to <a href="http://www.mBlock.cc">mBlock.cc</a> and download the program, by clicking on &ldquo;Windows Download&rdquo; buttons.</li>
+<li>When the download is finished, unzip the file. In the folder, you will find mBlock application setup file (.exe extension). Run the setup.</li>
+<div class="doc-caic">
+<img src="images/Scratch/S1.png" style="max-width: 300px;" alt="evive Scratch Installation">
+</div>
+<li>Choose the appropriate language and press &ldquo;OK&rdquo;. In our case, we are choosing English.</li>
+<div class="doc-caic">
+<img src="images/Scratch/S2.png" style="max-width: 450px;" alt="evive Scratch Installation">
+</div>
+<li>A new window will popup. Press &ldquo;Next&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Scratch/S3.png" style="max-width: 450px;" alt="evive Scratch Installation">
+</div>
+<li>Choose the installation directory (We suggest you to not change the directory). Then press &ldquo;Next&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Scratch/S4.png" style="max-width: 450px;" alt="evive Scratch Installation">
+</div>
+<li>Select start menu folder, where the setup will place the program&rsquo;s shortcuts. Then press &ldquo;Next&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Scratch/S5.png" style="max-width: 450px;" alt="evive Scratch Installation">
+</div>
+<li>Check the &ldquo;Create a desktop icon&rdquo;, if you want to create the desktop icon. Then press &ldquo;Next&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Scratch/S6.png" style="max-width: 450px;" alt="evive Scratch Installation">
+</div>
+<li>Press &ldquo;Install&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Scratch/S7.png" style="max-width: 450px;" alt="evive Scratch Installation">
+</div>
+<li>After the installation is finished press &ldquo;Finish&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Scratch/S8.png" style="max-width: 450px;" alt="evive Scratch Installation">
+</div>
+</ol>
+<h2>Creating first script in Scratch</h2>
+	</div>
+	<p>	
+		evive has a programmable LED connected to its digital pin 13. Thus, LED glows whenever digital pin 13 is HIGH, and turns off whenever it is LOW. 
+		In Scratch, we will make digital pin 13 HIGH for 1 second, then LOW for another 1 second and repeat. Open Scratch application on your desktop and start following the steps:
+		</br>
+		</br>
+		<strong>Step 1:</strong> 
+		</br>Whenever you want to run a script, you have to start with a Hat block which are present in Event category.
+		There is a block named ‘when space key is pressed’, which starts the execution of the program when space is pressed. We will use this block to start our program. Drag the block and drop the block in script using mouse.
+		<div class="doc-caic">
+		<img src="images/Tutorial/mblock2.PNG" style="max-width: 500px">
+		</div>
+		</br>
+		</br>
+		<strong>Step 2:</strong> 
+		</br>Now, we want to run the code forever. For this types of functions there is a C block named ‘Forever’, which runs the code inside it continuously in loop. Drag the block and snap it below the hat block.
+		</br>
+		</br>
+		<strong>Step 3:</strong> 
+		</br>To access the evive digital pin 13, click on Arduino tab, you have to evive via serial port. First connect evive to you PC using USB B type connect. Select the Board to “Arduino Mega 2560”
+		<div class="doc-caic">
+		<img src="images/Tutorial/Screenshot (118).png" style="max-width: 500px">
+		</div>
+		Click on Connect and select the serial port to which evive is connected. 
+		<div class="doc-caic">
+		<img src="images/Tutorial/Screenshot (119).png" style="max-width: 500px">
+		</div>
+		Upload or upgrade the firmware to evive. 
+		<div class="doc-caic">
+		<img src="images/Tutorial/Screenshot (121).png" style="max-width: 500px">
+		</div>
+		Finally in Extension tab select Arduino. Now you are ready to use evive digital and analog pins.
+		<div class="doc-caic">
+		<img src="images/Tutorial/Screenshot (122).png" style="max-width: 450px">
+		</div>
+		Once you select a COM Port, you will get a message “Serial port connected” at the top. If you don’t get this message, select another COM port.
+		</br>
+		</br>
+		<strong>Step 4:</strong> 
+		</br>You want to turn ON the LED. For this digital pin 13 should be HIGH, which can be done using ‘set digital pin’ block. Drag and snap the block inside forever block. Next to the pin inside the block you can see white space where you have to input the pin number (13 in this case). To turn the pin HIGH, select the option at the end of the block.
+		</br>
+		</br>
+		<strong>Step 5:</strong> 
+		</br>Now you want to wait for 1 seconds. In Control panel there is wait block. Drag and drop it inside the forever loop below the digital pin block.
+		</br>
+		</br>
+		<strong>Step 6:</strong> 
+		</br>Now you want to turn the LED OFF. For this the digital pin should be LOW. Right click on the set digital pin block inside forever loop and duplicate. 
+		<div class="doc-caic">
+		<img src="images/Tutorial/Screenshot (123).png" style="max-width: 300px">
+		</div>
+		You will see two duplicated blocks, which you have to snap below wait block. Select the LOW option in set digital pin block.
+		<div class="doc-caic">
+		<img src="images/Tutorial/mb2.PNG" style="max-width: 300px">
+		</div>
+		Your program is ready now and you can press ‘space’ to start it. The whole script will start glowing indicating that the program is running.  To stop it press ‘Esc’ on keyboard.
+	</p>
+</body>
+</html>
+
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	.main-image{
+		width: 200px;
+	}
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		width: 600px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+</style>

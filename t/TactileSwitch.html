@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+    <h1><strong>Tactile Switches</strong></h1>
+<p>The two tactile switches are connected to Arduino pins 38 and 39, both active high. This means that the pins are at +5V when the switch is pressed, and at 0V (Ground) otherwise.</p>
+<div class="doc-caic">
+<img src="images/evive_Pushbuttons.png" alt="evive Pushbutton or Tictile Switch">
+</div>
+<div class="doc-note"> Note that pins 38, 39 are pulled low, i.e. they will be at 0V (and not floating) when the switch is not pressed</div>
+<p>The test code for the tactile switch is given below:</p>
+<!-- <gist id="e5847abebce8fcb74455209af8e96926"></gist> -->
+<div class="doc-code">
+  <pre>
+  <code>
+
+/*
+ evive inbuilt pushbutton code
+
+ Pushbutton 1 is connected to digital pin 38.
+ Pushbutton 2 is connected to digital pin 39.
+ 
+ This code demonstrates how to use evive inbuilt tactile switches.
+ The code turns on and off a light emitting diode(LED) connected to digital
+ pin 13, when pressing a pushbutton.
+ 
+ Created by Pankaj Kumar Verma and Akshat Agarwal
+ On 12 Dec, 2016
+ This example code is in the public domain.
+ */
+
+// set pin numbers:
+int buttonPin = 38;     // the number of the pushbutton 1 pin
+//int buttonPin = 39;     // the number of the pushbutton 2 pin
+
+// Note: This code is meant to run for only one pushbutton. Please initialise only one of the pushbutton.
+
+int ledPin =  13;      // the number of the LED pin
+
+int buttonState = 0;         // variable for reading the pushbutton status
+
+void setup() {
+  // initialize the LED pin as an output:
+  pinMode(ledPin, OUTPUT);
+  // initialize the pushbutton pin as an input:
+  pinMode(buttonPin, INPUT);
+  // open serial port, set data rate at 9600 bps:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // read the state of the pushbutton value:
+  buttonState = digitalRead(buttonPin);
+
+  // check if the pushbutton is pressed.
+  // if it is, the buttonState is HIGH:
+  if (buttonState == HIGH) {
+    // print on serial monitor
+    Serial.println("Pushbotton is Pressed");
+    delay(100);
+    // turn LED on:
+    digitalWrite(ledPin, HIGH);
+  } else {
+    // turn LED off:
+    digitalWrite(ledPin, LOW);
+  }
+}
+</code>
+</pre>
+</div>
+
+</body>
+</html>

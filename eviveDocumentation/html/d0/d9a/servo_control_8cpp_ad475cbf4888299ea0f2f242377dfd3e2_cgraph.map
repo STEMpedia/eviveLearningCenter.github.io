@@ -1,0 +1,5 @@
+<map id="controlServo" name="controlServo">
+<area shape="rect" id="node2" href="$d2/d3c/class_servo.html#aaca0af33ba7d7c87c8a785b8eabf95a7" title="Servo::read" alt="" coords="185,5,271,32"/>
+<area shape="rect" id="node3" href="$d2/d3c/class_servo.html#a72b4b546912eada96a6ef705168ceb8a" title="Servo::write" alt="" coords="183,56,273,83"/>
+<area shape="rect" id="node4" href="$d3/d10/class_potentiometer.html#ac992f846228fddede6d86d6ffa1be9b6" title="Potentiometer::getValue" alt="" coords="147,107,309,133"/>
+</map>

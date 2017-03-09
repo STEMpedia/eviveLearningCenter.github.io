@@ -1,0 +1,8 @@
+<map id="addServo2" name="addServo2">
+<area shape="rect" id="node2" href="$d2/d3c/class_servo.html#aeccd2077f07ebc45250da14e72a0c461" title="Servo::attach" alt="" coords="136,5,235,32"/>
+<area shape="rect" id="node3" href="$d1/d83/action_8cpp.html#a55a83badfadf734e35b2f04ce9fd1532" title="actionAdd" alt="" coords="145,56,225,83"/>
+<area shape="rect" id="node4" href="$d0/d9a/servo_control_8cpp.html#ad475cbf4888299ea0f2f242377dfd3e2" title="controlServo" alt="" coords="139,157,232,184"/>
+<area shape="rect" id="node5" href="$d2/d3c/class_servo.html#aaca0af33ba7d7c87c8a785b8eabf95a7" title="Servo::read" alt="" coords="321,107,407,133"/>
+<area shape="rect" id="node6" href="$d2/d3c/class_servo.html#a72b4b546912eada96a6ef705168ceb8a" title="Servo::write" alt="" coords="319,157,409,184"/>
+<area shape="rect" id="node7" href="$d3/d10/class_potentiometer.html#ac992f846228fddede6d86d6ffa1be9b6" title="Potentiometer::getValue" alt="" coords="283,208,445,235"/>
+</map>

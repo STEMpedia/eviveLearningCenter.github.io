@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>evive Relay</title>
+</head>
+<body>
+	<h1 style="text-align: center;"><strong>Relay</strong></h1>
+<h2><strong>Introduction</strong></h2>
+<p>A relay is an electrically operated switch which uses an electromagnet to mechanically operate a switch. Relays are used where it is necessary to control a circuit by a separate low-power signal, or where several circuits must be controlled by one signal. For example, if you want to control an AC bulb using evive, you have to use a relay. Similarly it is used in high current applications.</p>
+<h2><strong>5V Relay</strong></h2>
+<p>Relay operating at 5V can be directly used with evive using its digital pins. Given below is the circuit for controlling an AC bulb using relay:</p>
+<div class="doc-caic">
+	<img src="images/Relay5V_bb.png" style="min-width: 800px">
+</div>
+<p>We are using Keyes 5V Relay Module. It has three pins, the VCC, GND and Signal. It can act as switch if the circuit and the load circuit have different supply voltage. It is commonly use if the load circuit is AC. It is a switch used to connect isolated connection from the circuit using a circuit signal. It has red LED that turns on every time the coil is energized or the signal pin has a high input.</p>
+<p><strong>Specifications</strong></p>
+<ul>
+<li>5V &ndash; 12 V TTL control signal</li>
+<li>Maximum AC current and voltage : 10A 250VAC</li>
+<li>Maximum DC current and voltage : 10A 30VDC</li>
+<li>The control signal DC or AC, 220V AC load can be controlled</li>
+<li>There is a normally open and one normally closed contact</li>
+<li>To make the coil of relay energized you must need to have an input of 1 in the signal pin.</li>
+</ul>
+<p><strong>Pin Configuration</strong></p>
+<ul>
+<li>+ : 5V power supply</li>
+<li>- : Ground</li>
+<li>S : Signal from the Arduino</li>
+<li>NC : normally closed</li>
+<li>NO : normally open</li>
+<li>COMMON : common</li>
+</ul>
+<p>Example Code:</p>
+<h2><strong>12V Relay</strong></h2>
+<p>Relay operating at 12V can be used via motor output pins configured to work at 12V output.</p>
+<div class="doc-caic">
+	<img src="images/evive_motor_pin.png" alt="evive Relay Output Pins">
+</div>
+<p>Pin Configuration</p>
+<ul>
+<li>Coil A</li>
+<li>Coil B</li>
+<li>NC : normally closed</li>
+<li>NO : normally open</li>
+<li>COMMON : common</li>
+</ul>
+<p>You have to connect Coil A and Coil B pin to evive motor output pin 1. Then using motor functions in Arduino IDE or by control in menu, you can control the relay directly.</p>
+<p>&nbsp;</p>
+</body>
+</html>

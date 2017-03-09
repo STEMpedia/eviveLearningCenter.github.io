@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<h1><strong>PWM Pins</strong></h1>
+<p>Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough, the result is as if the signal is a steady voltage between 0 and 5v controlling the speed of the motor.</p>
+<div class="doc-caic">
+<img src="images/evive_PWM.png" style="min-width: 700px">
+</div>
+</br>
+<div class="doc-caic">
+<img src="images/PWM-Duty Cycle.gif" style="max-width: 350px">
+</div>
+<h2><strong>analogWrite():</strong></h2>
+<p>Generally, Arduino's PWM frequency is about 500Hz. In Arduino IDE, we use PWM concept through analogWrite() function. We give a value ranging on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.</p>
+<p><code style="font-size: 16px">Syntax: analogWrite(pin, value)</code></p>
+<p>Where pin is the pin to write to and value is the duty cycle between 0 (always off) and 255 (always on).</p>
+<p>Example:</p>
+<div class="doc-code">
+<pre>
+<code>
+/*
+ This code demonstrate the use of analogWrite(). According to the value
+ of the potentiometer 1 of evive, the brightness of the LED is controlled.
+ */
+
+int LEDPin = 13;   // LED connected to digital pin 13
+int PotPin = A9;   // Potentiometer connected to analog pin A9
+int val;           // variable to store the read value\
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(LEDPin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  val = analogRead(PotPin);     // Read the value of voltage from potentiometer
+  analogWrite(LEDPin, val/4);   // Sets the brightness according to potentiometer state
+  delay(50);
+}
+</code>
+</pre>
+</div>
+
+</body>
+</html>

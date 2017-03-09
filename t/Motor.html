@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1><strong>DC motors</strong></h1>
+<h2><strong>Introduction:</strong></h2>
+<p>evive has two inbuilt motor control units with which you can control motors with current limit of 1A each. It uses a SN754410NE Quad H-Bridge IC to control two DC Motors.</p>
+<div class="doc-caic">
+<img src="images/evive_motor_pin.png">
+</div>
+<h2><strong>SN754410NE:</strong></h2>
+<p>If you look at the SN754410NE chip, you will notice a u-shaped notch at one end. &nbsp;This helps you to identify pin 1.</p>
+<figure align="center" style="margin-bottom: 30px">
+<div class="doc-caic">
+<img src="images/Screenshot (9).png" style="max-width: 400px">
+</div>
+<figcaption>Pin diagram of SN754410NE IC</figcaption>
+</figure>
+<p>Pin 4, 5, 12, 13 are connected to ground.</p>
+<p>Pin 16 is connected to 5V and pin 8 is connected to power voltage which can vary from 4.5V to 30V.</p>
+<p>1A and 2A are connected to Arduino Mega digital pin 28 and 29 respectively and 3A and 4A to digital pin 30 and 31. Depending on the states of the pins, motor state is determined:</p>
+<table>
+<tbody>
+<tr>
+<td width="156">
+<p>Pin 30</p>
+</td>
+<td width="168">
+<p>Pin 31</p>
+</td>
+<td width="500">
+<p>State</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>LOW</p>
+</td>
+<td width="168">
+<p>LOW</p>
+</td>
+<td width="500">
+<p>Motor is free</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>LOW</p>
+</td>
+<td width="168">
+<p>HIGH</p>
+</td>
+<td width="500">
+<p>Motor rotates in one direction</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>HIGH</p>
+</td>
+<td width="168">
+<p>LOW</p>
+</td>
+<td width="500">
+<p>Motor rotates in another direction</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>HIGH</p>
+</td>
+<td width="168">
+<p>HIGH</p>
+</td>
+<td width="500">
+<p>Motor is stalled</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The outputs are provided from 1Y and 2Y (for motor 1) and 3Y and 4Y (for motor 2). This output is amplified voltage which is determined by enable pin (1 for motor 1 and 9 for motor 2). Hence if the VCC is 12V then to generate 6V output, one has to provide 2.5 V to enable pin. This is done using PWM (Pulse Width Modulation).</p>
+<h2><strong>PWM:</strong></h2>
+<p>Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough, the result is as if the signal is a steady voltage between 0 and 5v controlling the speed of the motor.</p>
+<p>Generally, Arduino's PWM frequency is about 500Hz. In Arduino IDE, we use PWM concept through analogWrite() function. We give a value ranging on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.</p>
+<div class="doc-caic">
+<img src="images/Screenshot (10).png" style="max-width: 400px">
+</div>
+<p>In evive the PWM pin for motor 1 is connected to digital pin 44 and for motor 2 it is connected to digital pin 45.</p>
+<h2><strong>VVR vs VVS:</strong></h2>
+<p>The power voltage can be provided to the motor drive IC through variable voltage or source voltage, using a jumper. So if you want to change the power voltage, then you connect to the VVR side (left one) else VVS (right).</p>
+<div class="doc-caic">
+<img src="images/evive_jumperMotor.png" >
+</div>
+<h2><strong>Controlling motor using evive menu based system:</strong></h2>
+<p>You can control or test your motors through evive menu based system. You have to just navigate into control, select motor and then select which motor output you want to use (Motor 1, Motor 2 or both Motor 1 and Motor 2).</p>
+<div class="doc-caic">
+<img src="images/DC_Motor_fritzing_bb.png" style="max-width: 450px">
+</div>
+<p>Using inbuilt potentiometers, you can control the PWM of the motors and using slide switches you can control the state of the motor (CW, CCW or free state).</p>
+<h2><strong>Controlling motor using motor library:</strong></h2>
+<p>If you don&rsquo;t know how to use a library then you can visit here to learn more.</p>
+<p>Library Variables:</p>
+<table>
+<tbody>
+<tr>
+<td width="138">
+<p>Variable</p>
+</td>
+<td width="132">
+<p>Type</p>
+</td>
+<td width="500">
+<p>Comment</p>
+</td>
+</tr>
+<tr>
+<td width="138">
+<p>dir1_pin</p>
+</td>
+<td width="132">
+<p>Integer</p>
+</td>
+<td width="500">
+<p>Stores pin no of direction1</p>
+</td>
+</tr>
+<tr>
+<td width="138">
+<p>dir2_pin</p>
+</td>
+<td width="132">
+<p>Integer</p>
+</td>
+<td width="500">
+<p>Stores pin no of direction2</p>
+</td>
+</tr>
+<tr>
+<td width="138">
+<p>pwm_pin</p>
+</td>
+<td width="132">
+<p>Integer</p>
+</td>
+<td width="500">
+<p>Stores pin no of pwm pin</p>
+</td>
+</tr>
+<tr>
+<td width="138">
+<p>dir1</p>
+</td>
+<td width="132">
+<p>Integer</p>
+</td>
+<td width="500">
+<p>Stores value of DIR1PIN as 1 or 0</p>
+</td>
+</tr>
+<tr>
+<td width="138">
+<p>dir2</p>
+</td>
+<td width="132">
+<p>Integer</p>
+</td>
+<td width="500">
+<p>Stores value of DIR2PIN as 1 or 0</p>
+</td>
+</tr>
+<tr>
+<td width="138">
+<p>pwm</p>
+</td>
+<td width="132">
+<p>Integer</p>
+</td>
+<td width="500">
+<p>Stores the pwm value given to the motor</p>
+</td>
+</tr>
+<tr>
+<td width="138">
+<p>mean_speed</p>
+</td>
+<td width="132">
+<p>Integer</p>
+</td>
+<td width="500">
+<p>The value to which motor moves when speed=100%</p>
+</td>
+</tr>
+<tr>
+<td width="138">
+<p>speed</p>
+</td>
+<td width="132">
+<p>Float</p>
+</td>
+<td width="500">
+<p>Speed of the motor in percentage of meanspeed</p>
+</td>
+</tr>
+<tr>
+<td width="138">
+<p>damping</p>
+</td>
+<td width="132">
+<p>Integer</p>
+</td>
+<td width="500">
+<p>To be changed later by trial</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Library Functions:</p>
+<table>
+<tbody>
+<tr>
+<td width="400">
+<p>Function</p>
+</td>
+<td width="400">
+<p>Comment</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>Motor();</p>
+</td>
+<td width="400">
+<p>Constructor</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>Motor(int Dir1,int Dir2,int Pwm);</p>
+</td>
+<td width="400">
+<p>Constructor with attachments of pins</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void attachMotor(int Dir1,int Dir2,int Pwm);</p>
+</td>
+<td width="400">
+<p>Attachments of pins</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void moveMotor(int Pwm);</p>
+</td>
+<td width="400">
+<p>Positive for CW and negative for CCW</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void moveMotor(int Dir1,int Dir2,int Pwm);</p>
+</td>
+<td width="400">
+<p>dir1 and dir2 can be 1 or 0,pwm can only be positive for CW</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void stopMotor();</p>
+</td>
+<td width="400">
+<p>By default stop motor will lock motor</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void lockMotor();</p>
+</td>
+<td width="400">
+<p>To lock the motor</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void freeMotor();</p>
+</td>
+<td width="400">
+<p>Free the motor</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void setMeanSpeed(int Speed);</p>
+</td>
+<td width="400">
+<p>Sets the mean speed with which motor moves when speed=100%</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void setMotorSpeed(int Speed);</p>
+</td>
+<td width="400">
+<p>Positive for CW and negative for CCW. Speed in percentage of mean speed</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void setMotorSpeed(int Dir1,int Dir2,int Speed);</p>
+</td>
+<td width="400">
+<p>dir1 and dir2 can be 1 or 0</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void changePWM(int Pwm);</p>
+</td>
+<td width="400">
+<p>Just to change the PWM in whatever direction the motor was moving</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void changeSpeed(int Speed);</p>
+</td>
+<td width="400">
+<p>Just to change the speed (In percentage) not the direction</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>int getDirection();</p>
+</td>
+<td width="400">
+<p>+1 for CW and -1 for CCW and 0 for free or locked</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>int isFree();</p>
+</td>
+<td width="400">
+<p>+1 for free and 0 for not free</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>int isLocked();</p>
+</td>
+<td width="400">
+<p>+1 for locked and 0 for not locked</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>int getSpeed();</p>
+</td>
+<td width="400">
+<p>Returns speed in % of mean speed</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>int getPWM();</p>
+</td>
+<td width="400">
+<p>Returns positive for CW and negative for CCW.</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void startSmoothly(int Speed);</p>
+</td>
+<td width="400">
+<p>Positive for CW and negative for CCW.</p>
+</td>
+</tr>
+<tr>
+<td width="400">
+<p>void stopSmoothly();</p>
+</td>
+<td width="400">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Using these library functions, you can control your motors easily. Here is a sample code to illustrate how to use the motor library:</p>
+<div class="doc-code">
+<pre>
+<code>
+/* 
+ * evive motor control through motor library
+ * 
+ * For Motor 1: Dirction digital pins are 28 and 29, and PWM pin is digital pin 44
+ * For Motor 1: Dirction digital pins are 30 and 31, and PWM pin is digital pin 45
+ * 
+ * This code demonstrate how to use motor library, intialise motor, and controlling motor.
+ * 
+ * Created by Pankaj Kumar Verma
+ * On 20 Dec, 2016
+ */
+
+#include <motor.h>
+
+// set pin number
+int motor1Dir1 = 28; // motor direction 1 pin
+int motor1Dir2 = 29; // motor direction 2 pin
+int motor1PWM = 44; // motor pwm pin
+
+// if you want to use second motor output, then uncomment these code
+//int motor2Dir1 = 30; // motor direction 1 pin
+//int motor2Dir2 = 31; // motor direction 2 pin
+//int motor2PWM = 45; // motor pwm pin
+
+//Initialise motor 1:
+Motor Motor1 = Motor(motor1Dir1, motor1Dir2, motor1PWM);
+
+void setup() {
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+//Rotate motor in CW direction with PWM 150
+Motor1.moveMotor(150);
+delay(1000);
+
+// Stop Motor
+Motor1.freeMotor();
+delay(1000);
+
+// Rotate motor in CCW direction with PWM -150
+Motor1.moveMotor(-150);
+delay(1000);
+
+// Stop Motor
+Motor1.freeMotor();
+delay(1000);
+}
+</code>
+</pre>
+</div>
+</body>
+</html>

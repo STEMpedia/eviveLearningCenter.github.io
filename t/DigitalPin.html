@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<h1><strong>Digital Input/Output Pins</strong></h1>
+<p>Under the Magic Lid of evive there are 28 Digital 5V Input and Output (I/O) pins.</p>
+<div class="doc-note">
+Digital I/O stands for Digital Input and Output. Digital Inputs allow a microcontroller to detect logic states, and Digital Outputs allow a microcontroller to output logic states.
+</br>
+</br>
+<strong>Digital Input:</strong> A digital input detects if a voltage is above/below a specific threshold. If the voltage is higher than some value, evive will detect the digital input as HIGH/1. If the voltage is lower than some value, evive will detect the digital input as LOW/0.
+</br>
+</br>
+<strong>Digital Output:</strong> A digital output allows you to control a voltage with evive. If evive instructs the output to be high, the output will produce a voltage (generally about 5 or 3.3 volts). If evive instructs the output to be low, it is connected to ground and produces no voltage.
+</div>
+<div class="doc-caic">
+<img src="images/evive_analog.png">
+</div>
+<h2><strong>Using the digital pin as Input:</strong></h2>
+<p>evive digital I/O pins are default assigned as inputs and hence they don&rsquo;t need to be explicitly declared as input initially in the program. But it is advisable that one should declare each and every pins as input or output for consistency.</p>
+<p>Digital Input pins can be configured as pinMode(pin, INPUT), where the pin is the digital pin number you want to initialise. Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pullup resistor (to +5V), or a pulldown resistor (resistor to ground) on the input. A 10K resistor is a good value for a pullup or pulldown resistor.</p>
+<p>If the pin is configured as INPUT_PULLUP during initialisation, it inverts the behaviour of the INPUT mode, where HIGH means the sensor is OFF and LOW means the sensor is ON. It is because, there are 20K pullup resistors built into the Atmega chip that can be accessed from software.</p>
+<h2><strong>Using the digital pin as Output:</strong></h2>
+<p>Pins can be configured as OUTPUT with pinMode(pin, OUTPUT), where the pin is the digital pin number you want to initialise as output. These pins are also in a low-impedance state. This means that they can provide a substantial amount of current to other circuits. Atmega pins can source (provide positive current) or sink (provide negative current) up to 40 mA (milliamps) of current to other devices/circuits. This is enough current to brightly light up an LED (don't forget the series resistor), or run many sensors, for example, but not enough current to run most relays, solenoids, or motors.</p>
+<p>Short circuits on digital pins, or attempting to run high current devices from them, can damage or destroy the output transistors in the pin, or damage the entire Atmega chip. Often this will result in a "dead" pin in the microcontroller but the remaining chip will still function adequately. For this reason it is a good idea to connect OUTPUT pins to other devices with 470&Omega; or 1k&Omega; resistors, unless maximum current draw from the pins is required for a particular application.</p>
+<h2><strong>digitalWrite():</strong></h2>
+<p>Using digitalWrite() function in Arduino IDE, you can write a digital pin, to a HIGH or LOW value.</p>
+<p>If the pin has been configured as an OUTPUT with pinMode(), its voltage will be set to the corresponding value: 5V for HIGH, 0V for LOW.</p>
+<p>If the pin is configured as an INPUT, digitalWrite() will enable (HIGH) or disable (LOW) the internal pullup on the input pin. It is recommended to set the pinMode() to INPUT_PULLUP to enable the internal pull-up resistor.</p>
+<p>The analog input pins can also be used as digital pins, referred to as A0, A1, etc.</p>
+<p>Example:</p>
+<div class="doc-code">
+<pre>
+<code>
+/*
+ This program demonstrate the use of digitalWrite() functions. It 
+ sets the pin 13 to HIGH, makes one-second long delay, and sets 
+ the pin back to LOW and then again makes one-second long delay.
+ */
+
+int LED = 13;                                // LED connected to digital pin 13
+
+void setup() {
+  pinMode(LED, OUTPUT);                      // configure the digital pin as OUTPUT
+}
+
+void loop() {
+  digitalWrite(LED, HIGH);                   // sets the LED on (5V on pin 13)
+  delay(1000);
+  digitalWrite(LED, LOW);                    // sets the LED off (0V on pin 13)
+  delay(1000);
+}
+</code>
+  </pre>
+</div>
+
+<h2><strong>digitalRead():</strong></h2>
+<p>Using digitalRead() function in Arduino IDE, you can read the value from a specific digital pin as HIGH or LOW.</p>
+<p>Example:</p>
+<div class="doc-code">
+<pre>
+<code>
+/*
+ This program demonstrate the use of digitalRead() function. It sets 
+ the digital
+ */
+int LEDPin = 13;                              // LED connected to digital pin 13
+int BUTTONPin = 38;                           // pushbutton connected to digital pin 38
+int val = 0;                                  // variable to store the read value
+
+void setup() {
+  pinMode(LEDPin, OUTPUT);                    // sets the digital pin 13 as output
+  pinMode(BUTTONPin, INPUT);                  // sets the digital pin 7 as input
+}
+
+void loop() {
+  val = digitalRead(BUTTONPin);               // read the input pin
+  digitalWrite(LEDPin, val);                  // sets the LED to the button's value
+}
+</code>
+</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>evive TFT Screen</title>
+</head>
+<body>
+	<h1 style="text-align: center;"><strong>TFT Display</strong></h1>
+<h2><strong>Introduction:</strong></h2>
+<p>evive has a 1.8&rdquo; TFT Display which is mainly used for visual feedback. The display has a 128 x 160 colour pixels. The TFT driver (ST7735R) can display full 18-bit colour (262,144 shades).</p>
+<div class="doc-caic">
+	<img src="images/evive_tft.png" alt="evive TFT Display">
+</div>
+<h2><strong>ST7735R Driver:</strong></h2>
+<p>The <a href="http://www.sitronix.com.tw/sitronix/product.nsf/Doc/ST7735?OpenDocument">ST7735</a> is a single-chip controller/driver for 262K-color, graphic type TFT-LCD. It consists of 396 source line and 162 gate line driving circuits. This chip is capable of connecting directly to an external microprocessor, and accepts Serial Peripheral Interface (SPI), 8-bit/9-bit/16-bit/18-bit parallel interface. Display data can be stored in the on-chip display data RAM of 132 x 162 x 18 bits. It can perform display data RAM read/write operation with no external operation clock to minimize power consumption.</p>
+<h2><strong>Adafruit ST7735 TFT Library</strong></h2>
+<p>We will use Arduino IDE to control the TFT display.</p>
+<p>Two libraries are required for TFT:</p>
+<ol>
+<li>Adafruit_ST7735_Library (<a href="http://adafru.it/dXk">http://adafru.it/dXk</a>): this contains the low-level code specific to this device.</li>
+<li>Adafruit_GFX_Library (<a href="http://adafru.it/cBB">http://adafru.it/cBB</a>): handles graphics operations common to many displays.</li>
+</ol>
+<p>Download both ZIP files, uncompress and rename the folders to Adafruit_ST7735 (contains Adafruit_ST7735.cpp and .h) and Adafruit_GFX (contains Adafruit_GFX.cpp and .h) respectively. Then place them inside your Arduino libraries folder and restart the Arduino IDE.</p>
+<p>After restarting the Arduino software, you should see a new example folder called Adafruit_ST7735 and inside, an example called graphicstest. Change the pin details as shown below.</p>
+<pre>
+<code style="font-size: 16px">
+#define TFT_CS&nbsp;&nbsp;&nbsp;&nbsp; 48
+#define TFT_RST&nbsp;&nbsp;&nbsp; 47
+#define TFT_DC&nbsp;&nbsp;&nbsp;&nbsp; 49
+</code>
+</pre>
+<p>Now upload the sketch to your Arduino. You should see a collection of graphical tests draw out on the TFT.</p>
+<h2><strong>Display Functions</strong></h2>
+<p>Following are the functions available for use:</p>
+<table>
+<tbody>
+<tr>
+<td width="550">
+<p><strong>Function</strong></p>
+</td>
+<td width="550">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a line using two points</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a vertical line</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a horizontal line</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>drawRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a rectangle using one point coordinate, width and height</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>fillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a filled rectangle using one point coordinate, width and height</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>fillScreen(uint16_t color)</p>
+</td>
+<td width="550">
+<p>Change screen colour</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>drawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a circle using center point coordinate and radius of the circle</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>fillCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a filled circle using center point coordinate and radius of the circle</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a triangle using three points coordinate</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a filled triangle using three points coordinate</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>drawRoundRect(int16_t x0, int16_t y0, int16_t w, int16_t h, int16_t radius, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a round rectangle using one point coordinate, width, height and radius</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>fillRoundRect(int16_t x0, int16_t y0, int16_t w, int16_t h, int16_t radius, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a filled round rectangle using one point coordinate, width, height and radius</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t color)</p>
+</td>
+<td width="550">
+<p>Draw a Bitmap</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t color, uint16_t bg)</p>
+</td>
+<td width="550">
+<p>Draw a Bitmap</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>setCursor(int16_t x, int16_t y)</p>
+</td>
+<td width="550">
+<p>Set cursor to a location</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>setTextColor(uint16_t c)</p>
+</td>
+<td width="550">
+<p>Set text colour</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>setTextColor(uint16_t c, uint16_t bg)</p>
+</td>
+<td width="550">
+<p>Set text colour</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>setTextSize(uint8_t s)</p>
+</td>
+<td width="550">
+<p>Set text size</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>setTextWrap(boolean w)</p>
+</td>
+<td width="550">
+<p>Set text wrap</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>setRotation(uint8_t r)</p>
+</td>
+<td width="550">
+<p>Set rotation</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>int16_t height(void) const;</p>
+</td>
+<td width="550">
+<p>Get height</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>int16_t width(void) const;</p>
+</td>
+<td width="550">
+<p>Get width</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>uint8_t getRotation(void) const;</p>
+</td>
+<td width="550">
+<p>Get Rotation</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>int16_t getCursorX(void) const;</p>
+</td>
+<td width="550">
+<p>Get curser X position</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>int16_t getCursorY(void) const;</p>
+</td>
+<td width="550">
+<p>Get curser Y position</p>
+</td>
+</tr>
+<tr>
+<td width="550">
+<p>println(text)</p>
+</td>
+<td width="550">
+<p>Write text</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="doc-code">
+	<pre>
+		<code>
+/* 
+ * evive TFT Display
+ * 
+ * This code demonstrates how to use TFT Display functions.
+ * 
+ * Created by Pankaj Kumar Verma
+ * On 7 Mar, 2017
+ */
+
+#include &lt;Adafruit_GFX.h>    // Core graphics library
+#include &lt;Adafruit_ST7735.h> // Hardware-specific library
+#include &lt;SPI.h>
+
+// These pins will also work for the 1.8" TFT shield
+#define TFT_CS     48
+#define TFT_RST    47
+#define TFT_DC     49
+
+//Intialisation
+Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS,  TFT_DC, TFT_RST);
+
+int height,width;
+
+void setup() {
+  Serial.begin(9600);
+  tft.initR(INITR_BLACKTAB);   // initialize a ST7735S chip, black tab
+  tft.setRotation(1);
+  Serial.println("Initialized");
+  tft.fillScreen(ST7735_BLACK);
+  height=tft.height();
+  width=tft.width();
+}
+
+void loop() {
+  // Drawing Lines
+  tft.drawLine(10, 10, 150, 118, ST7735_RED);
+  tft.drawLine(10, 118, 150, 10, ST7735_RED);
+  delay(1000);
+  tft.fillScreen(ST7735_BLACK);
+
+  // Drawing Fast Verticle Lines
+  for(int i = 10; i< 151; i = i+10)
+    {
+      tft.drawFastVLine(i, 1, 128, ST7735_RED);
+    }
+
+  // Drawing Fast Horizontal Lines
+  for(int i=10; i&lt;121; i = i+10)
+    {
+      tft.drawFastHLine(1, i, 160, ST7735_RED);
+    }
+  delay(1000);
+  tft.fillScreen(ST7735_BLACK);
+
+  // Draw Rectangle
+  tft.drawRect(10, 10, 140, 108, ST7735_WHITE);
+  tft.fillRect(20, 20, 120, 88, ST7735_RED);
+  delay(1000);
+  tft.fillScreen(ST7735_BLACK);
+
+  // Draw Round Rectangle
+  tft.drawRoundRect(10, 10, 140, 108, 10, ST7735_WHITE);
+  tft.fillRoundRect(20, 20, 120, 88, 4, ST7735_RED);
+  delay(1000);
+  tft.fillScreen(ST7735_BLACK);
+
+  // Draw Circle
+  tft.drawCircle(80, 64, 60, ST7735_WHITE);
+  tft.fillCircle(80, 64, 50, ST7735_RED);
+  delay(1000);
+  tft.fillScreen(ST7735_BLACK);
+
+  // Draw Triangle
+  tft.drawTriangle(80, 10, 10, 118, 150, 118, ST7735_WHITE);
+  tft.fillTriangle(80, 30, 30, 108, 130, 108, ST7735_RED);
+  delay(1000);
+  tft.fillScreen(ST7735_BLACK);
+
+  // Write text
+  tft.setCursor(0,5);
+  tft.setTextColor(ST7735_WHITE);
+  for(int i = 1; i < 6; i++)
+    {
+      tft.setTextSize(i);
+      tft.println("evive");
+      delay(100);
+    }
+  delay(1000);
+  tft.fillScreen(ST7735_BLACK);
+}
+		</code>
+	</pre>
+</div>
+</body>
+</html>

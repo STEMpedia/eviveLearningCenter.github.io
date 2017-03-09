@@ -1,0 +1,98 @@
+\hypertarget{_servo_8h}{}\section{Servo.\+h File Reference}
+\label{_servo_8h}\index{Servo.\+h@{Servo.\+h}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+Include dependency graph for Servo.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{d3/d04/_servo_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d59/_servo_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_servo_pin__t}{Servo\+Pin\+\_\+t}
+\item 
+struct \hyperlink{structservo__t}{servo\+\_\+t}
+\item 
+class \hyperlink{class_servo}{Servo}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_servo_8h_af6fdee462ecaf434690dad810328b0dd}{Servo\+\_\+\+V\+E\+R\+S\+I\+ON}~2
+\item 
+\#define \hyperlink{_servo_8h_ad95c8286fc30ece77d632ad00a94d80e}{M\+I\+N\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}~544
+\item 
+\#define \hyperlink{_servo_8h_a57a10261e6511f97317cee9076692315}{M\+A\+X\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}~2400
+\item 
+\#define \hyperlink{_servo_8h_a7eada57cb49e7b1766a813e4635d79bd}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}~1500
+\item 
+\#define \hyperlink{_servo_8h_adfe85923c58edb0cfa15a0d026d7ee74}{R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+AL}~20000
+\item 
+\#define \hyperlink{_servo_8h_af16be8a4945638887eae35a30aa702c0}{S\+E\+R\+V\+O\+S\+\_\+\+P\+E\+R\+\_\+\+T\+I\+M\+ER}~12
+\item 
+\#define \hyperlink{_servo_8h_a4259c40a55e489ed25c9f3cbb3be05ab}{M\+A\+X\+\_\+\+S\+E\+R\+V\+OS}~(\hyperlink{_servo_timers_8h_aa57046a4eafc371d1ae9a7f82f666887a53f530c6e8ca85b1b3fbd5b21ef207a4}{\+\_\+\+Nbr\+\_\+16timers}  $\ast$ \hyperlink{_servo_8h_af16be8a4945638887eae35a30aa702c0}{S\+E\+R\+V\+O\+S\+\_\+\+P\+E\+R\+\_\+\+T\+I\+M\+ER})
+\item 
+\#define \hyperlink{_servo_8h_ac4ebf3d89da7ee64b1f4726099b6d6ec}{I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+VO}~255
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_servo_8h_a7eada57cb49e7b1766a813e4635d79bd}\label{_servo_8h_a7eada57cb49e7b1766a813e4635d79bd}} 
+\index{Servo.\+h@{Servo.\+h}!D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}!Servo.\+h@{Servo.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}{DEFAULT\_PULSE\_WIDTH}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH~1500}
+
+\mbox{\Hypertarget{_servo_8h_ac4ebf3d89da7ee64b1f4726099b6d6ec}\label{_servo_8h_ac4ebf3d89da7ee64b1f4726099b6d6ec}} 
+\index{Servo.\+h@{Servo.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+VO@{I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+VO}}
+\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+VO@{I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+VO}!Servo.\+h@{Servo.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+VO}{INVALID\_SERVO}}
+{\footnotesize\ttfamily \#define I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+VO~255}
+
+\mbox{\Hypertarget{_servo_8h_a57a10261e6511f97317cee9076692315}\label{_servo_8h_a57a10261e6511f97317cee9076692315}} 
+\index{Servo.\+h@{Servo.\+h}!M\+A\+X\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH@{M\+A\+X\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}}
+\index{M\+A\+X\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH@{M\+A\+X\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}!Servo.\+h@{Servo.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}{MAX\_PULSE\_WIDTH}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH~2400}
+
+\mbox{\Hypertarget{_servo_8h_a4259c40a55e489ed25c9f3cbb3be05ab}\label{_servo_8h_a4259c40a55e489ed25c9f3cbb3be05ab}} 
+\index{Servo.\+h@{Servo.\+h}!M\+A\+X\+\_\+\+S\+E\+R\+V\+OS@{M\+A\+X\+\_\+\+S\+E\+R\+V\+OS}}
+\index{M\+A\+X\+\_\+\+S\+E\+R\+V\+OS@{M\+A\+X\+\_\+\+S\+E\+R\+V\+OS}!Servo.\+h@{Servo.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+S\+E\+R\+V\+OS}{MAX\_SERVOS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+S\+E\+R\+V\+OS~(\hyperlink{_servo_timers_8h_aa57046a4eafc371d1ae9a7f82f666887a53f530c6e8ca85b1b3fbd5b21ef207a4}{\+\_\+\+Nbr\+\_\+16timers}  $\ast$ \hyperlink{_servo_8h_af16be8a4945638887eae35a30aa702c0}{S\+E\+R\+V\+O\+S\+\_\+\+P\+E\+R\+\_\+\+T\+I\+M\+ER})}
+
+\mbox{\Hypertarget{_servo_8h_ad95c8286fc30ece77d632ad00a94d80e}\label{_servo_8h_ad95c8286fc30ece77d632ad00a94d80e}} 
+\index{Servo.\+h@{Servo.\+h}!M\+I\+N\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH@{M\+I\+N\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}}
+\index{M\+I\+N\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH@{M\+I\+N\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}!Servo.\+h@{Servo.\+h}}
+\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH}{MIN\_PULSE\_WIDTH}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+TH~544}
+
+\mbox{\Hypertarget{_servo_8h_adfe85923c58edb0cfa15a0d026d7ee74}\label{_servo_8h_adfe85923c58edb0cfa15a0d026d7ee74}} 
+\index{Servo.\+h@{Servo.\+h}!R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}
+\index{R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!Servo.\+h@{Servo.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+AL}{REFRESH\_INTERVAL}}
+{\footnotesize\ttfamily \#define R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+AL~20000}
+
+\mbox{\Hypertarget{_servo_8h_af6fdee462ecaf434690dad810328b0dd}\label{_servo_8h_af6fdee462ecaf434690dad810328b0dd}} 
+\index{Servo.\+h@{Servo.\+h}!Servo\+\_\+\+V\+E\+R\+S\+I\+ON@{Servo\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{Servo\+\_\+\+V\+E\+R\+S\+I\+ON@{Servo\+\_\+\+V\+E\+R\+S\+I\+ON}!Servo.\+h@{Servo.\+h}}
+\subsubsection{\texorpdfstring{Servo\+\_\+\+V\+E\+R\+S\+I\+ON}{Servo\_VERSION}}
+{\footnotesize\ttfamily \#define Servo\+\_\+\+V\+E\+R\+S\+I\+ON~2}
+
+\mbox{\Hypertarget{_servo_8h_af16be8a4945638887eae35a30aa702c0}\label{_servo_8h_af16be8a4945638887eae35a30aa702c0}} 
+\index{Servo.\+h@{Servo.\+h}!S\+E\+R\+V\+O\+S\+\_\+\+P\+E\+R\+\_\+\+T\+I\+M\+ER@{S\+E\+R\+V\+O\+S\+\_\+\+P\+E\+R\+\_\+\+T\+I\+M\+ER}}
+\index{S\+E\+R\+V\+O\+S\+\_\+\+P\+E\+R\+\_\+\+T\+I\+M\+ER@{S\+E\+R\+V\+O\+S\+\_\+\+P\+E\+R\+\_\+\+T\+I\+M\+ER}!Servo.\+h@{Servo.\+h}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+O\+S\+\_\+\+P\+E\+R\+\_\+\+T\+I\+M\+ER}{SERVOS\_PER\_TIMER}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+O\+S\+\_\+\+P\+E\+R\+\_\+\+T\+I\+M\+ER~12}
+

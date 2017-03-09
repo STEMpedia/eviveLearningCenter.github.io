@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1><strong>Mini Oscilloscope</strong></h1>
+<h2><strong>Introduction</strong></h2>
+<p>Oscilloscope is a type of electronic test instrument that allows observation of constantly varying signal voltages, usually as a two-dimensional plot of one or more signals as a function of time. Other signals (such as sound or vibration) can be converted to voltages and displayed.</p>
+<figure style="text-align: center">
+  <div class="doc-caic">
+  <img src="images/sensing1.gif">
+  </div>
+  <figcaption>Visualising Heartbeat from a heartbeat sensor on evive's mini-oscilloscope. </figcaption>
+</figure>
+<p>evive can be used as mini oscilloscope to visualize voltage and current measurements. Is has lots of function like scaling voltage level, time scaling to see the reading in better way, trigger to start the measurement at some set value, scanning modes like single or continuous, offset, save readings to SD card and send data to computer. It uses a very accurate 24-bit dual channel ADC IC for sensing from Analog Devices (ADE7912). There are two channels for data acquisition namely Probe I/V and Probe V. The Probe I/V can be used to sense currents or voltage as per the Jumper selection. The maximum sensing frequency is about 1kHz. The current sensing has accuracy of 3mA with range of -3A to +3A, while in voltage mode, the accuracy is of 3mV with range of -5V to +5V. The Probe V can be used for higher voltage sensing in range of -30V to +30V with accuracy of 10mV.</p>
+<h2><strong>Using Mini Oscilloscope</strong></h2>
+<p>The option for Mini -Oscilloscope appears on the main menu. The ports present at the bottom right of evive are used for connecting the evive with the circuit in order to use it as an oscilloscope. The three ports present are Channel 1, COM, and Channel 2 from left to right respectively. From channel 1 you can sense voltage between -30V and +30V.&nbsp; From channel 2 you can either sense voltage from -5V to +5V or sense current from -3A to +3A by changing jumper (JP2). The signal from both these channels are plotted and displayed on the screen.</p>
+<div class="doc-caic" width="700">
+<img src="images/evive_jumperSensing.png">
+</div>
+<p>Navigation through the mini oscilloscope menu is done using the joystick. By moving it left or right and for selecting items and use the up and down movements for changing the value.</p>
+<p>The options displayed in the mini oscilloscope menu include:</p>
+<ol>
+<li>Voltage divsions: The voltage divisions that can be displayed in evive are:<br /> 10 V/div, 5 V/div, 2 V/div, 1 V/div, 0.5 V/div, 0.2 V/div, 0.1 V/div, 50 mV/div, 20mV/div<br />The voltage division for each channel can be selected according to the amplitude of the signal.</li>
+</ol>
+<ol start="2">
+<li>Time divisions: The time divisions that can be displayed in evive are: 5 ms/div, 10 ms/div, 20 ms/div, 50 ms/div, 0.1 s/div, 0.5 s/div, 1 s/div, 2.5 s/div, 5 s/div, 10 s/div.</li>
+</br>
+<li>Trigger modes: Evive has the 4 trigger modes available:</li>
+</ol>
+<ul>
+<li style="margin-left: 30px">Auto - This trigger mode allows the oscilloscope to acquire a waveform even when it does not detect a trigger condition. If no trigger condition occurs while the oscilloscope waits for a specific period (as determined by the time-base setting), it will force itself to trigger.</li>
+<li style="margin-left: 30px">Normal - The Normal mode allows the oscilloscope to acquire a waveform only when it is triggered. If no trigger occurs, the oscilloscope will not acquire a new waveform, and the previous waveform, if any, will remain on the display.</li>
+<li style="margin-left: 30px">Single - The Single mode allows the oscilloscope to acquire one waveform each time you press the RUN button, and the trigger condition is detected.</li>
+<li style="margin-left: 30px">Scan &ndash; The Scan mode continuously sweeps waveform from left to right.</li>
+</ul>
+<ol start="4">
+<li>Offset adjustment: It is used to give a DC offset i.e. displacing the amplitude from the mean position for both Channel 1 &amp; 2.</li>
+</br>
+<li>Send: This prints the voltage data in the serial monitor.</li>
+</br>
+<li>Trigger:</li>
+</ol>
+<ul>
+<li style="margin-left: 30px">Up &ndash; The trigger value is considered in the rising part of the graph.</li>
+<li style="margin-left: 30px">Down &ndash; The trigger value is considered in the falling part of the graph.</li>
+</ul>
+<p>The options like Voltage divisions &amp; Offset adjustment are displayed twice for Channel 1 &amp; Channel 2.</p>
+
+</body>
+</html>

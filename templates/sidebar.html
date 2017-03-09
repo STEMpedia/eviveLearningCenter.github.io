@@ -1,0 +1,83 @@
+<div class="sidebar">
+	<div>
+		<div class="level-1" ng-repeat="e in sidebarInfo">
+			<a class="level-1-href" href="{{e.href}}" target="{{e.target?e.target:'_self'}}">{{e.title}}</a>
+			<div ng-if="e.children">
+				<div class="level-2-href-wrapper" ng-repeat="f in e.children">
+					<a ng-if="!f.children" class="level-2-href" href="{{f.href}}" target="{{f.target?f.target:'_self'}}">{{f.title}}</a>
+					<div ng-if="f.children" >
+						<div class="level-2-href {{sidebarClicked.title==f.title?'up':'down'}} {{selectedInSidebar2.title==f.title?'bold':''}}" ng-click="selectSomething(f)">
+							<span>{{f.title}}</span>
+							<div class="dropdown-arrow">
+								<svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" fill="#8699a7" xmlns="http://www.w3.org/2000/svg" fit="" height="24" width="24" preserveAspectRatio="xMidYMid meet"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg>
+							</div>
+						</div>
+					</div>
+					<div ng-if="f.children">
+						<div class="child-wrapper" ng-show="sidebarClicked.title==f.title">
+							<div ng-repeat="g in f.children">
+								<a class="level-3-href {{selectedInSidebar3.title==g.title?'bold':''}}" target="{{g.target?g.target:'_self'}}" href="{{g.href}}">{{g.title}}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	.bold{
+		font-weight: bold;
+	}
+	.sidebar{
+		width: 240px;
+		padding: 50px 20px 50px 0;
+		border-right: solid 1px #f0f2f1;
+		margin-left: 12px;
+	}
+	.level-1{
+		margin-bottom: 24px;
+	}
+	.level-1-href, .level-2-href, .level-3-href{
+		cursor: pointer;
+	}
+	.level-1-href{
+		border-bottom: dashed 1px #e6e6e6;
+		width: 100%;
+		display: block;
+		padding-bottom: 12px;
+		margin-bottom: 12px;
+	}
+	.level-2-href{
+		color: #006dc3;
+		/*padding-left: 12px;*/
+		line-height: 24px;
+		position: relative;
+		display: block;
+	}
+	.level-2-href-wrapper{
+		position: relative;
+	}
+	.dropdown-arrow{
+		position: absolute;
+		display: flex;
+		right: 0;
+		top: 0;
+		transition: transform ease 300ms;
+	}
+	.level-2-href.down .dropdown-arrow{
+		transform: rotate(180deg);
+	}
+	.level-2-href.up .dropdown-arrow{
+		transform: rotate(0deg);
+	}
+
+	.level-3-href{
+		font-size: 13px;
+		padding-left: 12px;
+		color: #1c75bc;
+	}
+	.child-wrapper{
+		margin-bottom: 12px;
+	}
+</style>

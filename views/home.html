@@ -1,0 +1,127 @@
+<ng-include src="navbar.url"></ng-include>
+<div class="main-documentation">
+	<div class="tile-container">
+		<a class="tile" href="{{e.href}}" ng-repeat="e in homeData">
+			<img class="tile-image" src="{{e.img}}">
+			<div class="tile-title">{{e.title}}</div>
+		</a>
+	</div>
+	<div class="section section-projects">
+		<div class="title" style="text-align: center;">PROJECTS</div>
+		<div class="content">
+			<div class="tile">
+				<div class="image-wrapper">
+					<img src="./images/projects/Calculator.png" >
+				</div>
+				<div class="text-wrapper">
+					<div class="can-be-invisible">
+						<a class="full-instructions" target="_blank" href="https://www.hackster.io/evive-an-opensource-embedded-platoform/scientific-calculator-on-evive-powered-by-arduino-mega-5b4373?ref=search&ref_id=evive&offset=2">
+						<div >
+							This is a Scientific Calculator with a 4 decimal accuracy, with functions like +, -, *, %, Sin, Cos, Tan, arcSin, arcCos, aTan, log made using evive.
+						</div>
+					</div>
+					<a class="title" target="_blank" href="https://www.hackster.io/evive-an-opensource-embedded-platoform/scientific-calculator-on-evive-powered-by-arduino-mega-5b4373?ref=search&ref_id=evive&offset=2">
+						Scientific Calculator
+					</a>
+				</div>
+			</div>
+			<div class="tile">
+				<div class="image-wrapper">
+					<img src="./images/projects/Obstacle.png">
+				</div>
+				<div class="text-wrapper">
+					<div class="can-be-invisible">
+						<a class="full-instructions" target="_blank" href="https://www.hackster.io/evive-transform-your-ideas-to-reality/ultrasonic-obstacle-avoiding-robot-using-evive-784a0d?ref=search&ref_id=evive&offset=5">
+						<div>
+							With ultrasonic sensor mounted, the robot detects the obstcle when they come in its way. After the obstacle is detected in front of it, the robot analyses, which direction is the best to go using ultrasonic reading at various angles.
+						</div>
+					</div>
+					<a class="title" target="_blank" href="https://www.hackster.io/evive-transform-your-ideas-to-reality/ultrasonic-obstacle-avoiding-robot-using-evive-784a0d?ref=search&ref_id=evive&offset=5">
+						Ultrasonic Obstacle Avoiding Robot
+					</a>
+				</div>
+			</div>
+			<div class="tile">
+				<div class="image-wrapper">
+					<img src="./images/projects/Plant.png">
+				</div>
+				<div class="text-wrapper">
+					<div class="can-be-invisible">
+						<a class="full-instructions" target="_blank" href="https://www.hackster.io/evive-an-opensource-embedded-platoform/plant-monitoring-and-watering-system-using-evive-d48677?ref=search&ref_id=evive&offset=7">
+						<div>
+							Implementing a plant monitoring system which monitors the temperature and moisture of plant soil and waters it when needed.
+						</div>
+					</div>
+					<a class="title" target="_blank" href="https://www.hackster.io/evive-an-opensource-embedded-platoform/plant-monitoring-and-watering-system-using-evive-d48677?ref=search&ref_id=evive&offset=7">
+						Plant Monitoring and Watering System
+					</a>
+				</div>
+			</div>
+			<div class="tile">
+				<div class="image-wrapper">
+					<img src="./images/projects/Skateboard.png">
+				</div>
+				<div class="text-wrapper">
+					<div class="can-be-invisible">
+						<a class="full-instructions" target="_blank" href="https://www.hackster.io/evive/smartphone-controlled-electric-skateboard-20e21b?ref=search&ref_id=evive&offset=12 ">
+						<div>
+							DIY powered skateboard is controlled using Smartphone over Bluetooth communication.
+						</div>
+					</div>
+					<a class="title" target="_blank" href="https://www.hackster.io/evive/smartphone-controlled-electric-skateboard-20e21b?ref=search&ref_id=evive&offset=12 ">
+						Smartphone Controlled Electric Skateboard
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="explore-more-container">
+		<a class="explore-more" href="somewhere">Explore more projects</a>
+	</div>
+</div>
+
+<style type="text/css">
+	.main-documentation{
+		margin-top: 24px;
+		margin-left: -12px;
+		margin-right: -24px;
+	}
+	.tile-container{
+		position: relative;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.tile{
+		position: relative;
+		width: 274px;
+		/*height: 274px;*/
+		background: #fafafa;
+		border: solid 1px #eee;
+		margin: 12px;
+		padding: 12px;
+		text-align: center;
+	}
+	.tile-image{
+		width: 250px;
+		height: 250px;
+	}
+	.tile-title{
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	.explore-more-container{
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	.explore-more{
+		border: solid 1px #1c75bc;
+		color: #fff;
+		background: #1c75bc;
+		padding: 8px 24px;
+		font-size: 18px;
+		border-radius: 3px;
+	}
+</style>

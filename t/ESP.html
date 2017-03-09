@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>evive ESP WiFi</title>
+</head>
+<body>
+<h1 style="text-align: center;"><strong>WiFi &ndash; ESP8266</strong></h1>
+<h2><strong>Introduction</strong></h2>
+<p>evive has a dedicated WiFi headers, which just requires you to connect the ESP8266 WiFi module. Communication between evive and the WiFi module occur via serial port 3.</p>
+<div class="doc-caic">
+<img src="images/evive_esp8266.png" alt="evive ESP8266">
+</div>
+<h2><strong>ESP8266 WiFi Module</strong></h2>
+<p>ESP8266 WiFi Module is a self-contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network. The ESP8266 is capable of either hosting an application or offloading all Wi-Fi networking functions from another application processor. Each ESP8266 module comes pre-programmed with an AT command set firmware, meaning, you can simply hook this up to your evive and get about as much WiFi-ability as a WiFi Shield offers.</p>
+<div class="doc-caic">
+<img src="images/Kits/esp.png" alt="ESP8266" style="max-width: 300px">
+</div>
+<div class="doc-caic">
+<img src="images/WiFi.jpg" alt="evive ESP8266">
+</div>
+<p>Features:</p>
+<ul>
+<li>11 b/g/n</li>
+<li>Wi-Fi Direct (P2P), soft-AP</li>
+<li>Integrated TCP/IP protocol stack</li>
+<li>Integrated TR switch, balun, LNA, power amplifier and matching network</li>
+<li>Integrated PLLs, regulators, DCXO and power management units</li>
+<li>+19.5dBm output power in 802.11b mode</li>
+<li>Power down leakage current of &lt;10uA</li>
+<li>Integrated low power 32-bit CPU could be used as application processor</li>
+<li>SDIO 1.1 / 2.0, SPI, UART</li>
+<li>STBC, 1&times;1 MIMO, 2&times;1 MIMO</li>
+<li>A-MPDU &amp; A-MSDU aggregation &amp; 0.4ms guard interval</li>
+<li>Wake up and transmit packets in &lt; 2ms</li>
+<li>Standby power consumption of &lt; 1.0mW (DTIM3)</li>
+</ul>
+<h2><strong>ESP8266 AT Command Set</strong></h2>
+<table width="1000">
+<tbody>
+<tr>
+<td width="132">
+<p><strong><em>Function </em></strong></p>
+</td>
+<td width="255">
+<p><strong><em>AT Command </em></strong></p>
+</td>
+<td width="321">
+<p><strong><em>Response </em></strong></p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Working</p>
+</td>
+<td width="255">
+<p>AT</p>
+</td>
+<td width="321">
+<p>OK</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Restart</p>
+</td>
+<td width="255">
+<p>AT+RST</p>
+</td>
+<td width="321">
+<p>OK&nbsp; [System Ready, Vendor:www.ai-thinker.com]</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Firmware version</p>
+</td>
+<td width="255">
+<p>AT+GMR&nbsp;</p>
+</td>
+<td width="321">
+<p>AT+GMR 0018000902 OK</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>List Access Points</p>
+</td>
+<td width="255">
+<p>AT+CWLAP</p>
+</td>
+<td width="321">
+<p>AT+CWLAP +CWLAP:(4,"RochefortSurLac",38,"70:62:b8:6f:6d:58",1)</p>
+<p>+CWLAP:(4,"LiliPad2.4",-83,"f8:7b:8c:1e:7c:6d",1) OK</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Join Access Point&nbsp;</p>
+</td>
+<td width="255">
+<p>AT+CWJAP?</p>
+<p>AT+CWJAP="SSID","Password"</p>
+</td>
+<td width="321">
+<p>Query AT+CWJAP? +CWJAP:"RochefortSurLac"&nbsp;&nbsp; OK</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Quit Access Point</p>
+</td>
+<td width="255">
+<p>AT+CWQAP=?&nbsp;</p>
+<p>&nbsp;</p>
+<p>AT+CWQAP</p>
+</td>
+<td width="321">
+<p>Query OK</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Get IP Address</p>
+</td>
+<td width="255">
+<p>AT+CIFSR</p>
+</td>
+<td width="321">
+<p>AT+CIFSR 192.168.0.105&nbsp; OK</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Set Parameters of Access Point</p>
+</td>
+<td width="255">
+<p>AT+ CWSAP?</p>
+<p>AT+ CWSAP= &lt;ssid&gt;,&lt;pwd&gt;,&lt;chl&gt;, &lt;ecn&gt;</p>
+</td>
+<td width="321">
+<p>Query ssid, pwd</p>
+<p>chl = channel, ecn = encryption&nbsp;&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>WiFi Mode</p>
+</td>
+<td width="255">
+<p>AT+CWMODE?</p>
+<p>AT+CWMODE=1</p>
+<p>AT+CWMODE=2</p>
+<p>AT+CWMODE=3</p>
+</td>
+<td width="321">
+<p>Query</p>
+<p>STA</p>
+<p>AP</p>
+<p>BOTH</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Set up TCP or UDP connection</p>
+</td>
+<td width="255">
+<p>AT+CIPSTART=?</p>
+<p>(CIPMUX=0) AT+CIPSTART =</p>
+<p>&lt;type&gt;,&lt;addr&gt;,&lt;port&gt;</p>
+<p>(CIPMUX=1) AT+CIPSTART=</p>
+<p>&lt;id&gt;&lt;type&gt;,&lt;addr&gt;, &lt;port&gt;</p>
+</td>
+<td width="321">
+<p>Query</p>
+<p>id = 0-4, type = TCP/UDP, addr = IP address, port= port</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>TCP/UDP</p>
+<p>Connections</p>
+</td>
+<td width="255">
+<p>AT+ CIPMUX?</p>
+<p>AT+ CIPMUX=0</p>
+<p>AT+ CIPMUX=1</p>
+</td>
+<td width="321">
+<p>Query</p>
+<p>Single</p>
+<p>Multiple</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Check join devices' IP</p>
+</td>
+<td width="255">
+<p>AT+CWLIF</p>
+</td>
+<td width="321">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>TCP/IP Connection Status</p>
+</td>
+<td width="255">
+<p>AT+CIPSTATUS</p>
+</td>
+<td width="321">
+<p>AT+CIPSTATUS? no this fun</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Send TCP/IP data</p>
+</td>
+<td width="255">
+<p>(CIPMUX=0) AT+CIPSEND=&lt;length&gt;;</p>
+<p>(CIPMUX=1) AT+CIPSEND= &lt;id&gt;,&lt;length&gt;</p>
+</td>
+<td width="321">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Close TCP / UDP connection</p>
+</td>
+<td width="255">
+<p>AT+CIPCLOSE=&lt;id&gt; or AT+CIPCLOSE</p>
+</td>
+<td width="321">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Set as server</p>
+</td>
+<td width="255">
+<p>AT+ CIPSERVER= &lt;mode&gt;[,&lt;port&gt;]</p>
+</td>
+<td width="321">
+<p>mode 0 to close server mode; mode 1 to open; port = port</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Set the server timeout</p>
+</td>
+<td width="255">
+<p>AT+CIPSTO?</p>
+<p>AT+CIPSTO=&lt;time&gt;</p>
+</td>
+<td width="321">
+<p>Query</p>
+<p>&lt;time&gt;0~28800 in seconds</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Baud Rate*</p>
+</td>
+<td width="255">
+<p>AT+CIOBAUD?</p>
+<p>Supported: 9600, 19200, 38400, 74880,</p>
+<p>115200, 230400, 460800, 921600</p>
+</td>
+<td width="321">
+<p>Query AT+CIOBAUD? +CIOBAUD:9600 OK</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Check IP address</p>
+</td>
+<td width="255">
+<p>AT+CIFSR</p>
+</td>
+<td width="321">
+<p>AT+CIFSR 192.168.0.106 OK</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Firmware Upgrade (from Cloud)</p>
+</td>
+<td width="255">
+<p>AT+CIUPDATE</p>
+</td>
+<td width="321">
+<ol>
+<li>+CIPUPDATE:1 found server</li>
+<li>+CIPUPDATE:2 connect server</li>
+<li>+CIPUPDATE:3 got edition</li>
+<li>+CIPUPDATE:4 start update</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Received data</p>
+</td>
+<td width="255">
+<p>+IPD</p>
+</td>
+<td width="321">
+<p>(CIPMUX=0): + IPD, &lt;len&gt;:</p>
+<p>(CIPMUX=1): + IPD, &lt;id&gt;, &lt;len&gt;: &lt;data&gt;</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Watchdog Enable*</p>
+</td>
+<td width="255">
+<p>AT+CSYSWDTENABLE</p>
+</td>
+<td width="321">
+<p>Watchdog, auto restart when program errors occur: enable</p>
+</td>
+</tr>
+<tr>
+<td width="132">
+<p>Watchdog Disable*</p>
+</td>
+<td width="255">
+<p>AT+CSYSWDTDISABLE</p>
+</td>
+<td width="321">
+<p>Watchdog, auto restart when program errors occur: disable</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="doc-code">
+<pre>
+	<code>
+/*
+  evive ESP test
+  Turn LED 13 On/Off using Serial Commands
+
+  It's a simple sketch which waits for a character on serial
+  and in case of a desirable character, it turns an LED on/off.
+
+  Possible string values:
+  a (to turn the LED on)
+  b (tor turn the LED off)
+*/
+
+char junk;
+String inputString="";
+
+void setup()                    // run once, when the sketch starts
+{
+  Serial3.begin(9600);            // set the baud rate to 9600, same should be of yourSerial3 Monitor
+  Serial.begin(9600); 
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  if(Serial3.available()){
+  while(Serial3.available())
+    {
+      char inChar = (char)Serial3.read(); //read the input
+      inputString += inChar;        //make a string of the characters coming onSerial3
+    }
+   Serial3.println(inputString);
+   Serial3.println(123);
+   Serial.println(inputString);
+    while (Serial3.available() > 0)  
+    { junk =Serial3.read() ; }      // clear the serial buffer
+    if(inputString == "a"){         //in case of 'a' turn the LED on
+      digitalWrite(13, HIGH);  
+    }else if(inputString == "b"){   //incase of 'b' turn the LED off
+      digitalWrite(13, LOW);
+    }
+    inputString = "";
+  }
+}
+	</code>
+</pre>
+</div>
+</body>
+</html>

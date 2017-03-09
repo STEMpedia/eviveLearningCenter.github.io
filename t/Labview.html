@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getting started with Labview</title>
+</head>
+<body>
+	<h1 style="text-align: center;"><strong>Getting started with LabVIEW</strong></h1>
+<p>LINX (LabVIEW Plugin) provides easy to use LabVIEW VIs for interacting with evive. Use the built in sensor VIs to start getting data to your PC in seconds or use the peripheral VIs to access your devices digital I/O, analog I/O, SPI, I2C, UART, PWM and more.</p>
+<h2><strong>Installation Instructions:</strong></h2>
+<p>You should have LabVIEW software installed in your desktop to proceed further. If you do not have it installed please visit <a href="http://www.ni.com/gate/gb/GB_ACADEVALSOFTWARE/US">here</a> and install the software.</p>
+<ol>
+<li>Download VI Package Manager from <a href="https://vipm.jki.net/download">here</a>. We are installing for windows in this instructions.</li>
+<li>Once the download gets over, execute the installation application. Click &ldquo;Next&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Labview/L1.png" style="max-width: 450px;" alt="evive LabVIEW Installation">
+</div>
+<li>Then choose the first option &ldquo;Install&rdquo; to install and click &ldquo;Next&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Labview/L2.png" style="max-width: 450px;" alt="evive LabVIEW Installation">
+</div>
+<li>Custom Setup window will open. Click &ldquo;Next&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Labview/L3.png" style="max-width: 450px;" alt="evive LabVIEW Installation">
+</div>
+<li>Click &ldquo;Install&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Labview/L4.png" style="max-width: 450px;" alt="evive LabVIEW Installation">
+</div>
+<li>Once installation is finished click &ldquo;Finish&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Labview/L5.png" style="max-width: 450px;" alt="evive LabVIEW Installation">
+</div>
+<li>Open VI Package Manager from start menu. The application will look like this when it is open.</li>
+<div class="doc-caic">
+<img src="images/Labview/L6.png" style="max-width: 450px;" alt="evive LabVIEW Installation">
+</div>
+<li>Search for LINX in the search bar, and double click on LINX plugin.</li>
+<div class="doc-caic">
+<img src="images/Labview/L7.png" style="min-width: 900px;" alt="evive LabVIEW Installation">
+</div>
+<li>Install Digilent LINX.</li>
+<div class="doc-caic">
+<img src="images/Labview/L8.png" style="min-width: 900px;" alt="evive LabVIEW Installation">
+</div>
+<li>Once it gets finished, click &ldquo;Finish&rdquo; and close the application.</li>
+<div class="doc-caic">
+<img src="images/Labview/L9.png" style="min-width: 700px;" alt="evive LabVIEW Installation">
+</div>
+</ol>
+<h2><strong>Creating first VI with LINX functions:</strong></h2>
+<ol>
+<li>Open new VI in LabVIEW. Go to Tools -&gt; MakerHub -&gt; LINK -&gt; Generate Firmware Librarie&hellip;</li>
+<div class="doc-caic">
+<img src="images/Labview/L12.png" style="min-width: 700px;" alt="evive LabVIEW Installation">
+</div>
+<li>Choose the folder you want to save your Arduino library and click &ldquo;Generate&rdquo;.</li>
+<div class="doc-caic">
+<img src="images/Labview/L13.png" style="min-width: 500px;" alt="evive LabVIEW Installation">
+</div>
+<li>Go to the folder you have just generated libraries into and go to examples\Arduino_Mega2560_Serial folder and open the Arduino code. Upload the code into evive. In my case the directory is Documents\LabVIEW\ArduinoLibrary\LINX\examples\Arduino_Mega2560_Serial</li>
+<li>Now, go to block diagram panel and using LINX functions make the following block diagram to read analog value from the potentiometer of evive.</li>
+<div class="doc-caic">
+<img src="images/Labview/L17.png" style="min-width: 500px;" alt="evive LabVIEW Installation">
+</div>
+<div class="doc-caic">
+<img src="images/Labview/L15.png" style="min-width: 900px;" alt="evive LabVIEW Installation">
+</div>
+<li>Your front panel will look like this.</li>
+<div class="doc-caic">
+<img src="images/Labview/L16.png" style="min-width: 700px;" alt="evive LabVIEW Installation">
+</div>
+<li>Now, start the code execution and plot the analog reading of the potentiometer.</li>
+<div class="doc-caic">
+<img src="images/Labview/L14.png" style="min-width: 700px;" alt="evive LabVIEW Installation">
+</div>
+</ol>
+<p>&nbsp;</p>
+</body>
+</html>

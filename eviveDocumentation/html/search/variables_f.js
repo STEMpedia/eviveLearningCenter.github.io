@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['tactilesw1',['tactileSw1',['../d6/df7/button_8cpp.html#a655d03554c0f8800f449aa967d9b5de1',1,'tactileSw1():&#160;button.cpp'],['../d7/d0e/button_8h.html#ab8e824590d3f7100427daf0d83fffa9b',1,'tactileSw1():&#160;button.h']]],
+  ['tactilesw2',['tactileSw2',['../d6/df7/button_8cpp.html#a294847356cf81ad98ba25dfce883aa4f',1,'tactileSw2():&#160;button.cpp'],['../d7/d0e/button_8h.html#a0105731f2350fe3d51cfb01813c39a92',1,'tactileSw2():&#160;button.h']]],
+  ['textbgcolor',['textbgcolor',['../d9/d97/class_adafruit___g_f_x.html#a23e7a4efcab0b1588dc0cafa14b1fac1',1,'Adafruit_GFX']]],
+  ['textcolor',['textcolor',['../d9/d97/class_adafruit___g_f_x.html#a8c6d23a386651136fd9530a5b7046591',1,'Adafruit_GFX']]],
+  ['textsize',['textsize',['../d9/d97/class_adafruit___g_f_x.html#ac293848b8fe8c46107d1a491f6a5168d',1,'Adafruit_GFX']]],
+  ['ticks',['ticks',['../da/d58/structservo__t.html#a9405b5e5266318f889ef6ff95a97943b',1,'servo_t']]],
+  ['trig_5fauto',['TRIG_AUTO',['../d2/d9c/screen_implementation_8h.html#a6785525f353de47350877184b551f2a2',1,'screenImplementation.h']]],
+  ['trig_5fch',['trig_ch',['../d2/d9c/screen_implementation_8h.html#a5b956632c385abfc9be5ab085d585c9d',1,'screenImplementation.h']]],
+  ['trig_5fe_5fdn',['TRIG_E_DN',['../d2/d9c/screen_implementation_8h.html#a54733f3f52faf731c47e83971f691d9e',1,'screenImplementation.h']]],
+  ['trig_5fe_5fup',['TRIG_E_UP',['../d2/d9c/screen_implementation_8h.html#a0e266596777244ee84e6cd2062d8d746',1,'screenImplementation.h']]],
+  ['trig_5fedge',['trig_edge',['../d2/d9c/screen_implementation_8h.html#aa9f91640f171057a10b8a24e8c51182a',1,'screenImplementation.h']]],
+  ['trig_5flv',['trig_lv',['../d2/d9c/screen_implementation_8h.html#ad9628b4671b4a8122b95108500a1fcab',1,'screenImplementation.h']]],
+  ['trig_5fmode',['trig_mode',['../d2/d9c/screen_implementation_8h.html#a655cd0aae585a05dcb8f50e03ea4694d',1,'screenImplementation.h']]],
+  ['trig_5fmodes',['TRIG_Modes',['../d2/d9c/screen_implementation_8h.html#a4a4eac68efb6fe6f708d3a84c132a198',1,'screenImplementation.h']]],
+  ['trig_5fnorm',['TRIG_NORM',['../d2/d9c/screen_implementation_8h.html#ad5501b44c03e64c5a5729980d3626946',1,'screenImplementation.h']]],
+  ['trig_5fone',['TRIG_ONE',['../d2/d9c/screen_implementation_8h.html#a08f25ac84c339f0d5ced92b0e5187a0b',1,'screenImplementation.h']]],
+  ['trig_5fscan',['TRIG_SCAN',['../d2/d9c/screen_implementation_8h.html#a691f43627b57d33835d2c83f8217a6aa',1,'screenImplementation.h']]]
+];

@@ -1,0 +1,20 @@
+<map id="Adafruit_GFX::setCursor" name="Adafruit_GFX::setCursor">
+<area shape="rect" id="node2" href="$d2/d9c/screen_implementation_8h.html#af1fa449cd5ccc125ba9af9147b83d615" title="vvrUpdate" alt="" coords="275,5,353,32"/>
+<area shape="rect" id="node3" href="$d2/d9c/screen_implementation_8h.html#a4efe22dbc8528726190cde48e3871206" title="lcd_implementation\l_drawedit" alt="" coords="247,57,381,98"/>
+<area shape="rect" id="node4" href="$d2/d9c/screen_implementation_8h.html#ad1e3a4dee091aab44fda5c56de6f0ebc" title="lcd_implementation\l_control_status_motor" alt="" coords="239,122,389,163"/>
+<area shape="rect" id="node5" href="$d2/d9c/screen_implementation_8h.html#a0a9b5f6d54a1e180061423c25785e9f0" title="lcd_implementation\l_control_status_servo" alt="" coords="240,187,388,229"/>
+<area shape="rect" id="node6" href="$d2/d9c/screen_implementation_8h.html#a21856890864e14206b8bf0bb4f6466d8" title="lcd_implementation\l_control_status_stepper" alt="" coords="233,253,395,294"/>
+<area shape="rect" id="node7" href="$d2/d9c/screen_implementation_8h.html#a7ba1eab2349a7b954feff9aee5155f89" title="lcd_control_status\l_template" alt="" coords="250,318,378,359"/>
+<area shape="rect" id="node8" href="$d2/d9c/screen_implementation_8h.html#a943be3b2d4985761a33c2d8982519ff7" title="lcd_sensing_status\l_template" alt="" coords="247,383,381,425"/>
+<area shape="rect" id="node9" href="$d2/d9c/screen_implementation_8h.html#adcc9e5bb6c51ac4d92f862ec34852327" title="lcd_implementation\l_sensing_status" alt="" coords="247,449,381,490"/>
+<area shape="rect" id="node10" href="$d2/d9c/screen_implementation_8h.html#a549b2576ed0410b4a8ecc5a1cf67bd8c" title="evive_oscilloscope" alt="" coords="250,515,378,541"/>
+<area shape="rect" id="node11" href="$d2/d9c/screen_implementation_8h.html#a48956c5a252e2af9dd520bfabbbe17c6" title="lcd_digital_pin_state\l_monitor_template" alt="" coords="244,566,384,607"/>
+<area shape="rect" id="node12" href="$d2/d9c/screen_implementation_8h.html#abce8c6c7f834f8d8dcf7c4b6a9eada69" title="lcd_analog_pin_state\l_monitor_template" alt="" coords="242,631,386,673"/>
+<area shape="rect" id="node13" href="$d2/d9c/screen_implementation_8h.html#a893de95059551f24d9777130d118eaf0" title="displayFrequenccyAmplitude" alt="" coords="219,697,409,724"/>
+<area shape="rect" id="node14" href="$d2/d9c/screen_implementation_8h.html#a2fe91ca8669227b8f13e44e01fa609f3" title="lcd_implementation\l_dac_template" alt="" coords="247,749,381,790"/>
+<area shape="rect" id="node15" href="$d3/dd4/class_serial_monitor.html#a2747038f640e76c7b822d3c1ce8a8798" title="SerialMonitor::Initalise" alt="" coords="239,815,389,841"/>
+<area shape="rect" id="node16" href="$d3/dd4/class_serial_monitor.html#a2d27ad4a626b5856b5bfa2ea833ce4b6" title="SerialMonitor::serial0PrintMsg" alt="" coords="216,865,412,892"/>
+<area shape="rect" id="node18" href="$d3/dd4/class_serial_monitor.html#adca14d5a90debc9e60b84e3aff902d20" title="SerialMonitor::serial2PrintMsg" alt="" coords="216,916,412,943"/>
+<area shape="rect" id="node19" href="$d3/dd4/class_serial_monitor.html#a2e2164f6a67a339e28e0fe566954fa06" title="SerialMonitor::serial3PrintMsg" alt="" coords="216,967,412,993"/>
+<area shape="rect" id="node17" href="$d2/d9c/screen_implementation_8h.html#af782e20a542b66706629c7149ca0aaf9" title="lcd_implementation\l_serial_monitor" alt="" coords="460,909,595,950"/>
+</map>

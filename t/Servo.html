@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<h1><strong>Servo</strong></h1>
+<h2><strong>Introduction:</strong></h2>
+<p>A servomotor is a rotary actuator that allows for precise control of angular position, velocity and acceleration. It consists of a suitable motor coupled to a sensor for position feedback.</p>
+<p>evive has two dedicated servo motor outputs pins.</p>
+<div class="doc-caic">
+<img src="images/evive_servo_pins.png" alt="evive Servo Pins">
+</div>
+<h2><strong>Controlling Servo Angle: </strong></h2>
+<p>Servo is controlled on the concept of PWM (Pulse Width Modulation). The refresh interval (the minimum time to refresh servos in microseconds) is 20000, which means that the servo is refreshing at a frequency of 50Hz. For most of the servos, a certain range of PWM correspond to the range of angle servo can rotate. Minimum pulse width is the shortest time for the pulse has been HIGH and maximum pulse width is the longest time for which the pulse is HIGH. Hence if the range of motor angular position is from 0 to 180, then minimum pulse width corresponds to 0 and maximum pulse width correspond to 180.</p>
+<p>Signal pin of servo 1 is connected to digital pin 44 and servo 2 is connected to digital pin 45.</p>
+<h2><strong>Schematic:</strong></h2>
+<div class="doc-caic">
+<img src="images/Servo_fritzing_bb.png">
+</div>
+<h2><strong>Controlling servo through evive menu:</strong></h2>
+<p>You can directly connect servo and control angle using inbuilt potentiometers using evive menu. You just have to navigate to control submenu, select servo and then select which servo you want to control (Servo 1 or Servo 2 or both servo).</p>
+<h2><strong>Controlling servo using servo library:</strong></h2>
+<p>There is a servo library which can be used to control the servo motor. The available functions are provided in the table below:</p>
+<table>
+<tbody>
+<tr>
+<td width="300">
+<p>Function</p>
+</td>
+<td width="192">
+<p>Return data type</p>
+</td>
+<td width="450">
+<p>Comment</p>
+</td>
+</tr>
+<tr>
+<td width="300">
+<p>attach(int pin);</p>
+</td>
+<td width="192">
+<p>unit8_t</p>
+</td>
+<td width="450">
+<p>Attach the given pin to the next free channel, sets pinMode, returns channel number or 0 if failure</p>
+</td>
+</tr>
+<tr>
+<td width="300">
+<p>attach(int pin, int min, int max);</p>
+</td>
+<td width="192">
+<p>unit8_t</p>
+</td>
+<td width="450">
+<p>As above but also sets min and max values for writes</p>
+</td>
+</tr>
+<tr>
+<td width="300">
+<p>detach();</p>
+</td>
+<td width="192">
+<p>void</p>
+</td>
+<td width="450">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="300">
+<p>write(int value);</p>
+</td>
+<td width="192">
+<p>void</p>
+</td>
+<td width="450">
+<p>If value is &lt; 200 its treated as an angle, otherwise as pulse width in microseconds</p>
+</td>
+</tr>
+<tr>
+<td width="300">
+<p>writeMicroseconds(int value);</p>
+</td>
+<td width="192">
+<p>void</p>
+</td>
+<td width="450">
+<p>Write pulse width in microseconds</p>
+</td>
+</tr>
+<tr>
+<td width="300">
+<p>read();</p>
+</td>
+<td width="192">
+<p>Integer</p>
+</td>
+<td width="450">
+<p>Returns current pulse width as an angle between 0 and 180 degrees</p>
+</td>
+</tr>
+<tr>
+<td width="300">
+<p>readMicroseconds();</p>
+</td>
+<td width="192">
+<p>Integer</p>
+</td>
+<td width="450">
+<p>Returns current pulse width in microseconds for this servo (was read_us() in first release)</p>
+</td>
+</tr>
+<tr>
+<td width="300">
+<p>attached();</p>
+</td>
+<td width="192">
+<p>bool</p>
+</td>
+<td width="450">
+<p>Return true if this servo is attached, otherwise false</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>The sample code is given below which uses the library:</p>
+<div class="doc-code">
+<pre>
+<code>
+/*
+ evive Servo Knob Control
+
+ Servo 1 signal pin is connected to digital pin 44
+ Servo 2 signal pin is connected to digital pin 45
+ 
+ This code demonstrate controlling a servo position using a potentiometer
+ that is connected to analog pin A9
+
+ Modified by Pankaj Kumar Verma
+ On 20 Dec, 2016
+*/
+
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+
+int potPin = A9;  // analog pin used to connect the potentiometer
+int val;    // variable to read the value from the analog pin
+
+void setup() {
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+  val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023)
+  val = map(val, 0, 1023, 0, 180);     // scale it to use it with the servo (value between 0 and 180)
+  myservo.write(val);                  // sets the servo position according to the scaled value
+  delay(15);                           // waits for the servo to get there
+}
+</code>
+</pre>
+</div>
+
+</body>
+</html>

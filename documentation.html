@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  
+<body ng-app="myApp">
+<style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+  <nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Age</a></li>
+        <li><a href="#">Gender</a></li>
+        <li><a href="#">Geo</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Logo</h2>
+      <ul class="nav nav-pills nav-stacked">
+       <li><a href="#feature/Feature0">Main</a></li>
+<!-- ENTER THE   <a> TAGS HERE AND REPLACE Feature1,Feature2.. BY THE FEATURE YOU WANT TO ADDRESS -->
+<li><a href="#feature/Feature1">Feature1 !</a></li>
+<li><a href="#feature/Feature2">Feature2 !</a></li>
+<li><a href="#feature/Feature3">Feature3 !</a></li>
+
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+       
+<div ng-view></div>
+      </div>
+     
+     
+    </div>
+  </div>
+</div>
+<!-- <p><a href="#/">Main</a></p> -->
+<!-- ENTER THE   <a> TAGS HERE AND REPLACE Feature1,Feature2.. BY THE FEATURE YOU WANT TO ADDRESS -->
+<!-- <a href="#feature/Feature1">Feature1 !</a>
+<a href="#feature/Feature2">Feature2 !</a>
+<a href="#feature/Feature3">Feature3 !</a> -->
+
+<!-- FIND A SUITABLE STYLE TO DISPLAY THESE <a> TAGS -->
+<!-- Click on the links to get the details -->
+
+<!-- <p>Note that each "view" has its own controller which each gives the "msg" variable a value.</p> -->
+
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "feature.html",
+    })
+    .when("/feature/:feature_name", {
+        templateUrl : "feature.html",
+        controller : "control:feature_name"
+    });
+    
+});
+app.controller("control:feature_name", function ($scope,$location,$routeParams,$http,$filter) {
+    $scope.feature = $routeParams.feature_name;
+ 
+    $http.get("sample_data.json").then(function(response) {
+        $scope.myData = response.data.records;
+    });
+    
+   
+    //$scope.result = $filter('filter')(myData.results, {Name:"Alfreds Futterkiste"})[0];
+     //$scope.msg = myData.City;
+});
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="Adafruit_MPR121::begin" name="Adafruit_MPR121::begin">
+<area shape="rect" id="node2" href="$d9/d2e/class_adafruit___m_p_r121.html#a5dce866e817cfc15933e56b8dc679a13" title="Writes 8&#45;bits to the specified destination register. " alt="" coords="476,24,683,51"/>
+<area shape="rect" id="node3" href="$d9/d2e/class_adafruit___m_p_r121.html#a344c416d709121094a21d6892e23d28e" title="Adafruit_MPR121::readRegister8" alt="" coords="217,24,427,51"/>
+<area shape="rect" id="node4" href="$d9/d2e/class_adafruit___m_p_r121.html#a8588eabc494059b6fe5231b8dd2be416" title="Adafruit_MPR121::setThresholds" alt="" coords="216,75,428,101"/>
+</map>

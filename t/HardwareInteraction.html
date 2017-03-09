@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1><strong>Hardware Interaction</strong></h1>
+<p>The hardware interaction module helps interface with hardware easily, within seconds and without any messy wires</p>
+<h2><strong>Potentiometers</strong></h2>
+<p>The two 10kOhm knob potentiometers can be used directly from the screen to control motor PWM and servo angles in our firmware. Potentiometers 1 and 2 can be accessed at Arduino pins A9 and A10, respectively.</p>
+<div class="doc-caic">
+<img src="images/evive_potentiometer.png">
+</div>
+<div class="doc-readmore">
+<a href="?t=Potentiometer">
+Read More
+</a>
+</div>
+<h2><strong>Slide Switches</strong></h2>
+<p>There are two 3-way slide switches.</p>
+<p>Slide switch 1 is connected to Arduino pins 40 and 41, both active high. This means that when the switch is slid up, pin 28 is high, when it is slide down, pin 29 is high while both are low when the switch is in the middle. Slide switch 2 is connected to pins 42 and 43, and behave similarly as above.</p>
+<div class="doc-caic">
+<img src="images/evive_slideswitch.png">
+</div>
+<div class="doc-note">
+Note that pins 40-43 are all pulled low, i.e. they will be at 0V (and not floating) when the switch is not engaged.
+</div>
+</div>
+<div class="doc-readmore" style="margin-top: 24px">
+<a href="?t=SlideSwitch">
+Read More
+</a>
+</div>
+<h2><strong>Tactile Switches</strong></h2>
+<p>The two tactile switches are connected to Arduino pins 38 and 39, both active high. This means that the pins are at +5V when the switch is pressed, and at 0V (Ground) otherwise.</p>
+<div class="doc-caic">
+<img src="images/evive_pushbuttons.png">
+</div>
+<div class="doc-note">Note that pins 38, 39 are pulled low, i.e. they will be at 0V (and not floating) when the switch is not pressed
+</div>
+</div>
+<div class="doc-readmore" style="margin-top: 24px">
+<a href="?t=TactileSwitch">
+Read More
+</a>
+</div>
+<h2><strong>Touch Interface</strong></h2>
+<p>evive has 12 touch outputs, which are interfaced via the MPR121 chip using SPI interface. The touch library is easy-to-use, and you can just plug a wire from the outputs to any conducting surface, and get a touch-sensitive surface!</p>
+<div class="doc-caic">
+<img src="images/evive_capacitive_touch.png">
+</div>
+</div>
+<div class="doc-readmore">
+<a href="?t=Touch">
+Read More
+</a>
+</div>
+</body>
+</html>

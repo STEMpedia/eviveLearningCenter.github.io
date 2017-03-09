@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<h1><strong>3.3V Digital I/O</strong></h1>
+<p>evive has two bidirectional logic level shifters which are accessible from digital pin 36 and 37 in Arduino IDE and the flow of direction is controlled by digital pin 33. evive uses 74LVC245 for level shifting.</p>
+<div class="doc-caic">
+<img src="images/evive_io3v3.png">
+</div>
+<h2><strong>Programming in Arduino IDE:</strong></h2>
+<p>By changing the state of digital pin 33, you can change the characteristics of the logic shifter as an input or output. If the state of digital pin 33 is HIGH, then the IO3V3 pins act as OUTPUT pins, but if the state is LOW, then they act like INPUT pins. The digital pin 33 should always be configured as output.</p>
+<p>Digital pins 36 and 37 are directly connected to the level shifter. Level shifter takes 5V input and output from the digital pins and convert them to 3.3V I/O. These 3.3V I/O pins are shown in the figure. If you want to give 3.3V output from these pin then you have to configure digital pins 36 and 37 as OUTPUT pins in Arduino IDE. You can use IO3V3 pins as input anytime without configuring them as INPUT or OUTPUT. But you have change the state of digital pin 33 to LOW before reading.</p>
+<p>Example:</p>
+<div class="doc-code">
+<pre>
+<code>
+/*
+ This code demonstrate the use of bidirectional logic shifter as 3.3V digital output and input. Connect the positive pin of the LED to IO3V3 pin 1 and negative pin to the GND.
+ This code will link the LED using 3.3V digital output as well as read the state of LED and IO3V3 pin 2.
+
+ Modified by Pankaj Kumar Verma
+ on 18 Jan, 2017
+ */
+
+int handlePin = 33;                   // Control pin connected to digital pin 33
+int outPin = 36;                      // Output pin connected to digital pin 36
+int inPin = 37;                       // Input pin connected to digital pin 37
+
+void setup() {
+  pinMode(outPin, OUTPUT);            // Configure digital pin 36 as output
+  pinMode(handlePin, OUTPUT);         // Configure digital pin 33 as output
+  pinMode(inPin, INPUT);              // Configure digital pin 37 as input
+  
+  Serial.begin(9600);                 // Start Serial
+  Serial.println("Start");
+}
+
+void loop() {
+  digitalWrite(handlePin, HIGH);      // Logic shifter work as output
+  digitalWrite(outPin, LOW);
+  delay(1000);
+  
+  digitalWrite(handlePin, LOW);       // Logic shifter work as input
+  Serial.println(digitalRead(inPin));  
+  Serial.println(digitalRead(outPin));
+  
+  digitalWrite(handlePin, HIGH);      // Logic shifter work as output
+  digitalWrite(outPin, HIGH); 
+  delay(1000);
+  
+  digitalWrite(handlePin, LOW);       // Logic shifter work as input
+  Serial.println(digitalRead(inPin));  
+  Serial.println(digitalRead(outPin));
+}
+</code>
+</pre>
+</div>
+</body>
+</html>

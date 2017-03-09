@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <script src="scripts/shi_jquery.min.js"></script> -->
+	<title>Learn | evive</title>
+	<link href="/icons/evive_logo_250px.png" rel="shortcut icon">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./main.css">
+	<!-- <link rel="stylesheet" type="text/css" href="styles/shi_emacs.min.css"> -->
+</head>
+<body ng-app="learnEviveApp">
+<div ng-view></div>
+<div id="scroll-to-top" class="scroll-to-top hidden">
+	<span onclick="window.scrollTo(0,0)" style="width: 48px;height: 48px;display: inline-block;display: flex;justify-content: center;align-items: center;background: #2a8bd8;border-radius: 50%;cursor: pointer;box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.1);">
+		<svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" fill="#fff" xmlns="http://www.w3.org/2000/svg" fit="" height="24" width="24" preserveAspectRatio="xMidYMid meet"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg>
+	</span>
+	<style type="text/css">
+		.scroll-to-top{
+			position: fixed;bottom: 36px;right: 50px;
+			transition: transform ease 300ms;
+		}
+		.scroll-to-top.hidden{
+			transform: scale(0);
+		}
+	</style>
+	<script type="text/javascript">
+		window.addEventListener('scroll',function(){
+			if(window.scrollY<200){
+				document.getElementById('scroll-to-top').setAttribute('class','scroll-to-top hidden');
+			}else{
+				document.getElementById('scroll-to-top').setAttribute('class','scroll-to-top');
+			}
+		})
+	</script>
+</div>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="./scripts/doc.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</body>
+</html>

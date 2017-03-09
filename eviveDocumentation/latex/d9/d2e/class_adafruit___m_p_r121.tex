@@ -1,0 +1,201 @@
+\hypertarget{class_adafruit___m_p_r121}{}\section{Adafruit\+\_\+\+M\+P\+R121 Class Reference}
+\label{class_adafruit___m_p_r121}\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+
+
+{\ttfamily \#include $<$Adafruit\+\_\+\+M\+P\+R121.\+h$>$}
+
+
+
+Collaboration diagram for Adafruit\+\_\+\+M\+P\+R121\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{d3/d64/class_adafruit___m_p_r121__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_adafruit___m_p_r121_a41a5019501062ae1f94c121c580514b5}{Adafruit\+\_\+\+M\+P\+R121} (void)
+\item 
+boolean \hyperlink{class_adafruit___m_p_r121_ae269064c42ced60c7450eab53ada5eee}{begin} (uint8\+\_\+t i2caddr=\hyperlink{_adafruit___m_p_r121_8h_aa4a9474e42d9c498f600c9ad8781f714}{M\+P\+R121\+\_\+\+I2\+C\+A\+D\+D\+R\+\_\+\+D\+E\+F\+A\+U\+LT})
+\item 
+uint16\+\_\+t \hyperlink{class_adafruit___m_p_r121_aa5bda4ff04ee361d857b80d95bddbbdb}{filtered\+Data} (uint8\+\_\+t t)
+\item 
+uint16\+\_\+t \hyperlink{class_adafruit___m_p_r121_a663d5e60aeb04b06697b2c40a33b40f0}{baseline\+Data} (uint8\+\_\+t t)
+\item 
+uint8\+\_\+t \hyperlink{class_adafruit___m_p_r121_a344c416d709121094a21d6892e23d28e}{read\+Register8} (uint8\+\_\+t reg)
+\item 
+uint16\+\_\+t \hyperlink{class_adafruit___m_p_r121_a171bf9f465d96819293657a589450e61}{read\+Register16} (uint8\+\_\+t reg)
+\item 
+void \hyperlink{class_adafruit___m_p_r121_a5dce866e817cfc15933e56b8dc679a13}{write\+Register} (uint8\+\_\+t reg, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Writes 8-\/bits to the specified destination register. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{class_adafruit___m_p_r121_a08b26f327e99b6f205df8907eafcab4c}{touched} (void)
+\item 
+\hyperlink{class_adafruit___m_p_r121_a56b9f0fb8cead2998dde1de6fcc2eb93}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((deprecated)) void set\+Threshholds(uint8\+\_\+t touch
+\item 
+void \hyperlink{class_adafruit___m_p_r121_a8588eabc494059b6fe5231b8dd2be416}{set\+Thresholds} (uint8\+\_\+t touch, uint8\+\_\+t \hyperlink{class_adafruit___m_p_r121_aff6b909093cf5eca8217990625c860fe}{release})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{class_adafruit___m_p_r121_aff6b909093cf5eca8217990625c860fe}{release}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_a41a5019501062ae1f94c121c580514b5}\label{class_adafruit___m_p_r121_a41a5019501062ae1f94c121c580514b5}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{Adafruit\+\_\+\+M\+P\+R121()}{Adafruit\_MPR121()}}
+{\footnotesize\ttfamily Adafruit\+\_\+\+M\+P\+R121\+::\+Adafruit\+\_\+\+M\+P\+R121 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_a56b9f0fb8cead2998dde1de6fcc2eb93}\label{class_adafruit___m_p_r121_a56b9f0fb8cead2998dde1de6fcc2eb93}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily Adafruit\+\_\+\+M\+P\+R121\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(deprecated)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_adafruit___m_p_r121_a663d5e60aeb04b06697b2c40a33b40f0}\label{class_adafruit___m_p_r121_a663d5e60aeb04b06697b2c40a33b40f0}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!baseline\+Data@{baseline\+Data}}
+\index{baseline\+Data@{baseline\+Data}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{baseline\+Data()}{baselineData()}}
+{\footnotesize\ttfamily uint16\+\_\+t Adafruit\+\_\+\+M\+P\+R121\+::baseline\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{t }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_adafruit___m_p_r121_a663d5e60aeb04b06697b2c40a33b40f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_ae269064c42ced60c7450eab53ada5eee}\label{class_adafruit___m_p_r121_ae269064c42ced60c7450eab53ada5eee}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!begin@{begin}}
+\index{begin@{begin}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily boolean Adafruit\+\_\+\+M\+P\+R121\+::begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{i2caddr = {\ttfamily \hyperlink{_adafruit___m_p_r121_8h_aa4a9474e42d9c498f600c9ad8781f714}{M\+P\+R121\+\_\+\+I2\+C\+A\+D\+D\+R\+\_\+\+D\+E\+F\+A\+U\+LT}} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_adafruit___m_p_r121_ae269064c42ced60c7450eab53ada5eee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_aa5bda4ff04ee361d857b80d95bddbbdb}\label{class_adafruit___m_p_r121_aa5bda4ff04ee361d857b80d95bddbbdb}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!filtered\+Data@{filtered\+Data}}
+\index{filtered\+Data@{filtered\+Data}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{filtered\+Data()}{filteredData()}}
+{\footnotesize\ttfamily uint16\+\_\+t Adafruit\+\_\+\+M\+P\+R121\+::filtered\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{t }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_adafruit___m_p_r121_aa5bda4ff04ee361d857b80d95bddbbdb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_a171bf9f465d96819293657a589450e61}\label{class_adafruit___m_p_r121_a171bf9f465d96819293657a589450e61}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!read\+Register16@{read\+Register16}}
+\index{read\+Register16@{read\+Register16}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{read\+Register16()}{readRegister16()}}
+{\footnotesize\ttfamily uint16\+\_\+t Adafruit\+\_\+\+M\+P\+R121\+::read\+Register16 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_adafruit___m_p_r121_a171bf9f465d96819293657a589450e61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_a344c416d709121094a21d6892e23d28e}\label{class_adafruit___m_p_r121_a344c416d709121094a21d6892e23d28e}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!read\+Register8@{read\+Register8}}
+\index{read\+Register8@{read\+Register8}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{read\+Register8()}{readRegister8()}}
+{\footnotesize\ttfamily uint8\+\_\+t Adafruit\+\_\+\+M\+P\+R121\+::read\+Register8 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_adafruit___m_p_r121_a344c416d709121094a21d6892e23d28e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_a8588eabc494059b6fe5231b8dd2be416}\label{class_adafruit___m_p_r121_a8588eabc494059b6fe5231b8dd2be416}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!set\+Thresholds@{set\+Thresholds}}
+\index{set\+Thresholds@{set\+Thresholds}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{set\+Thresholds()}{setThresholds()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+M\+P\+R121\+::set\+Thresholds (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{touch,  }\item[{uint8\+\_\+t}]{release }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_adafruit___m_p_r121_a8588eabc494059b6fe5231b8dd2be416_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_adafruit___m_p_r121_a8588eabc494059b6fe5231b8dd2be416_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_a08b26f327e99b6f205df8907eafcab4c}\label{class_adafruit___m_p_r121_a08b26f327e99b6f205df8907eafcab4c}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!touched@{touched}}
+\index{touched@{touched}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{touched()}{touched()}}
+{\footnotesize\ttfamily uint16\+\_\+t Adafruit\+\_\+\+M\+P\+R121\+::touched (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_adafruit___m_p_r121_a08b26f327e99b6f205df8907eafcab4c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_a5dce866e817cfc15933e56b8dc679a13}\label{class_adafruit___m_p_r121_a5dce866e817cfc15933e56b8dc679a13}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!write\+Register@{write\+Register}}
+\index{write\+Register@{write\+Register}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{write\+Register()}{writeRegister()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+M\+P\+R121\+::write\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Writes 8-\/bits to the specified destination register. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_adafruit___m_p_r121_a5dce866e817cfc15933e56b8dc679a13_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_adafruit___m_p_r121_aff6b909093cf5eca8217990625c860fe}\label{class_adafruit___m_p_r121_aff6b909093cf5eca8217990625c860fe}} 
+\index{Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}!release@{release}}
+\index{release@{release}!Adafruit\+\_\+\+M\+P\+R121@{Adafruit\+\_\+\+M\+P\+R121}}
+\subsubsection{\texorpdfstring{release}{release}}
+{\footnotesize\ttfamily uint8\+\_\+t Adafruit\+\_\+\+M\+P\+R121\+::release}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_adafruit___m_p_r121_8h}{Adafruit\+\_\+\+M\+P\+R121.\+h}\item 
+\hyperlink{_adafruit___m_p_r121_8cpp}{Adafruit\+\_\+\+M\+P\+R121.\+cpp}\end{DoxyCompactItemize}

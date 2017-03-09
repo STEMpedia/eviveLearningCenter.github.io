@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Control</title>
+</head>
+<body>
+<h1><strong>Menu Interface: Control</strong></h1>
+<p>evive includes hardware interaction and plug &amp; play interface, which can be used to control many basic utilities like controlling motors, servos, stepper, relays, solenoid values for pneumatics using tactile switches slide switches and potentiometers. Also the user can use the inbuilt hardware (switches and potentiometers) to change/define the states of Digital I/O Pins or PWM output. Switches and potentiometers are internally connected to Arduino MEGA pins as control inputs and motor drivers are connected for output at plug &amp; play interface. The state or values are displayed on screen.</p>
+<div class="doc-caic">
+	<img src="images/Control1.png">
+</div>
+<p>Through evive&rsquo;s control submenu you can control 2 DC Motors or 2 Servo Motors or a Stepper Motor. 
+</p>
+<h2>
+	Controlling DC Motor from Control Submenu
+</h2>
+<p>To control a DC motor, the user have to navigate in control, select Motor. Then select whether you want to control motor though Channel 1 or Channel 2 or both the Channels. Then you can see the motor control panel, where you can control the direction of the motor using slide switch and the speed (PWM) of the motor using potentiometer.</p>
+<figure align="center" style="margin-bottom: 30px">
+  <div class="doc-caic">
+  	<img src="images/evive_motor_pin.png">
+  </div>
+  <figcaption><strong>Figure:</strong> Connect the DC Motor to the motor output pins</figcaption>
+</figure>
+
+<figure align="center" style="margin-bottom: 30px">
+  <div class="doc-caic">
+  	<img src="images/DC_Motor_fritzing_bb.png" style="width: 450px">
+  </div>
+  <figcaption><strong>Figure:</strong> Schematic Diagram (DC Motor is connected to the second motor output)</figcaption>
+</figure>
+
+<figure align="center" style="margin-bottom: 30px">
+  <div class="doc-caic">
+  	<img src="images/Control2.png">
+  </div>
+  <figcaption><strong>Figure:</strong> Controlling a motor through channel 1 and a servo motor through channel 2</figcaption>
+</figure>
+<h2>
+	Controlling Servo Motor from Control Submenu
+</h2>
+<p>To control a RC servo motor, the user needs to select the servo menu and it will open the servo control option showing the current angle. The angle of servo motor can be controlled using the potentiometers.</p>
+<h2>
+<figure align="center" style="margin-bottom: 30px">
+  <div class="doc-caic">
+  	<img src="images/evive_servo_pins.png">
+  </div>
+  <figcaption><strong>Figure:</strong> Connect the DC Motor to the motor output pins</figcaption>
+</figure>
+
+<figure align="center" style="margin-bottom: 30px">
+  <div class="doc-caic">
+  	<img src="images/Servo_fritzing_bb.png" style="width: 600px">
+  </div>
+  <figcaption><strong>Figure:</strong> Schematic Diagram (DC Motor is connected to the second motor output)</figcaption>
+</figure>
+<h2>
+	Controlling Stepper Motor from Control Submenu
+</h2>
+<p>To control a stepper motor, the user needs to select the stepper menu and it will open the stepper control panel where you can control the stepper motor using slide switch and potentiometer.</p>
+<figure align="center" style="margin-bottom: 30px">
+  <div class="doc-caic">
+  	<img src="images/evive_stepper_pin.png">
+  </div>
+  <figcaption><strong>Figure:</strong> Connect the DC Motor to the motor output pins</figcaption>
+</figure>
+
+<figure align="center" style="margin-bottom: 30px">
+  <div class="doc-caic">
+  	<img src="images/Stepper_bb.png" style="width: 600px">
+  </div>
+  <figcaption><strong>Figure:</strong> Schematic Diagram (DC Motor is connected to the second motor output)</figcaption>
+</figure>
+
+<h2>
+	Uses
+</h2>
+<p>This submenu can be used to test, calibrate and debug actuators or components in your projects or use them to get desired output states at digital I/O pins for your custom needs.</p>
+
+
+
+</body>
+</html>

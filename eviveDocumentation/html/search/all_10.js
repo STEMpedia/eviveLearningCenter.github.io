@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['radians',['RADIANS',['../d2/d2c/configuration_8h.html#ab827a07c64d61d077e09efb4a6e25dd7',1,'configuration.h']]],
+  ['range0',['range0',['../d2/d9c/screen_implementation_8h.html#a43291297bd89bd8ee3e417dcceffa1cb',1,'screenImplementation.h']]],
+  ['range1',['range1',['../d2/d9c/screen_implementation_8h.html#a06152df96daa5c3180a8232155a86b0a',1,'screenImplementation.h']]],
+  ['range_5fmax_5fch0',['RANGE_MAX_CH0',['../d2/d9c/screen_implementation_8h.html#a3dcf8050f2a5f0d26b70bf5a21b5f9b1',1,'screenImplementation.h']]],
+  ['range_5fmax_5fch1',['RANGE_MAX_CH1',['../d2/d9c/screen_implementation_8h.html#a30aa47f4e19bdc222262fa77da1ac745',1,'screenImplementation.h']]],
+  ['range_5fmin',['RANGE_MIN',['../d2/d9c/screen_implementation_8h.html#a3c983eeadd733105fb0fea8729a9f2db',1,'screenImplementation.h']]],
+  ['ranges',['Ranges',['../d2/d9c/screen_implementation_8h.html#a26dd00c43dfb2671e22136597b045003',1,'screenImplementation.h']]],
+  ['rate',['rate',['../d2/d9c/screen_implementation_8h.html#aff4035249a7f89b6607e156630957192',1,'screenImplementation.h']]],
+  ['rate_5fmax',['RATE_MAX',['../d2/d9c/screen_implementation_8h.html#ab86d4993e2e4313522d98699d392b0f2',1,'screenImplementation.h']]],
+  ['rate_5fmin',['RATE_MIN',['../d2/d9c/screen_implementation_8h.html#a924cb0c4d5e07440ce096af9d63830ea',1,'screenImplementation.h']]],
+  ['rates',['Rates',['../d2/d9c/screen_implementation_8h.html#abf14a549f3c67c6fd2f5f4bb38b8aadb',1,'screenImplementation.h']]],
+  ['read',['read',['../d4/d77/class_button.html#a5f5c0d23ab0e5387b861e68019a7e85d',1,'Button::read()'],['../d2/d3c/class_servo.html#aaca0af33ba7d7c87c8a785b8eabf95a7',1,'Servo::read()'],['../db/dcd/fastio_8h.html#a9716cca366b99de7c0d101eeab24c967',1,'READ():&#160;fastio.h']]],
+  ['readmicroseconds',['readMicroseconds',['../d2/d3c/class_servo.html#a43950424d146c1414460066483d9561b',1,'Servo']]],
+  ['readpin1',['readPin1',['../d3/d09/class_slide_switch.html#a5c9f61ec4369f17e176d948ad74fc3ab',1,'SlideSwitch']]],
+  ['readpin2',['readPin2',['../d3/d09/class_slide_switch.html#ada186df3375d7dcd7dac6470c9832830',1,'SlideSwitch']]],
+  ['readregister16',['readRegister16',['../d9/d2e/class_adafruit___m_p_r121.html#a171bf9f465d96819293657a589450e61',1,'Adafruit_MPR121']]],
+  ['readregister8',['readRegister8',['../d9/d2e/class_adafruit___m_p_r121.html#a344c416d709121094a21d6892e23d28e',1,'Adafruit_MPR121']]],
+  ['refresh_5finterval',['REFRESH_INTERVAL',['../dc/d3b/_servo_8h.html#adfe85923c58edb0cfa15a0d026d7ee74',1,'Servo.h']]],
+  ['release',['release',['../d9/d2e/class_adafruit___m_p_r121.html#aff6b909093cf5eca8217990625c860fe',1,'Adafruit_MPR121']]],
+  ['releasedfor',['releasedFor',['../d4/d77/class_button.html#a805e542eaf9976b7c1afaf3dfecc13a5',1,'Button']]],
+  ['remove_5fother_5fuser_5fdef_5ffun',['remove_other_user_def_fun',['../df/d6b/user_defined_functions_8cpp.html#a1547c4e248a4a9290c2d5e6ff9c08a36',1,'remove_other_user_def_fun(uint8_t funNum):&#160;userDefinedFunctions.cpp'],['../d3/dab/user_defined_functions_8h.html#a7318dc2400a39d68bbe56371463723ab',1,'remove_other_user_def_fun(uint8_t):&#160;userDefinedFunctions.cpp']]],
+  ['reset_5fon',['RESET_ON',['../da/d4c/adc__ade7912_8cpp.html#afb576c7e4d3eb9b0f50d5832a33c03ab',1,'adc_ade7912.cpp']]],
+  ['rotation',['rotation',['../d9/d97/class_adafruit___g_f_x.html#a37a479d28fb11906ce516e983b1af926',1,'Adafruit_GFX']]]
+];

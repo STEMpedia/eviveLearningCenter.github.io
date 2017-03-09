@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>evive Pin State Monitor</title>
+</head>
+<body>
+<h1 style="text-align: center">
+	Pin State Monitor
+</h1>
+<h2>
+	Introduction
+</h2>
+<p>
+	Pin State monitor is included in the evive menu i. It shows the state all the digital and analog pins of evive. It shows output as high or low for digital pins and analog value for analog pins. The pins are displayed in tabular form on the evive screen.
+</p>
+<p>
+	There are 40 digital pins in evive and 16 analog pins. Different colors are used to show the pin no. and its respective output.
+</p>
+<h2>
+	Working
+</h2>
+<p>There is a function named <strong>ligitalRead </strong>in library screenimpntation.h in evive. It reads state of digital pins in evive. In digital pins there are 15 PWM pins whose state is determined first by a function called <strong>turnOffPWM</strong> in ligitalRead which turns off PWM before reading pin. After this it reads the pin and returns high if pin output is high and low if pin output is low. turnOffPWM uses standard(AVR) methods for setting, or clearing, bits in PORT.</p>
+<p>Then the <strong>lcd_digital_pin_state_monitor_late()</strong> function prints all this on the screen. It uses for loop to set lcdCursor and print all the pins. Similarly analog pins are also printed. The ligitalRead returns high when the if condition <strong>*portInputRegister(port) &amp; bit</strong>&nbsp;is true. <strong>portInputRegister </strong>returns an input port register of the specified port. <strong>bit = digitalPinToBitMask(pin)</strong> which returns the bitmask of a specified pin.</p>
+</body>
+</html>

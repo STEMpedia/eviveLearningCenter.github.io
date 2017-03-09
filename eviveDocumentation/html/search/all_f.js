@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['pgm_5fread_5fbyte',['pgm_read_byte',['../d1/de6/_adafruit___g_f_x_8cpp.html#a48c60b057902adf805797f183286728d',1,'Adafruit_GFX.cpp']]],
+  ['pin',['Pin',['../da/d58/structservo__t.html#a04bcc6cf13ea5cd2c4dabdc977e054cb',1,'servo_t']]],
+  ['pot1',['POT1',['../d6/daf/evive_pins_8h.html#af4281f9328df5dce43d83c9d867012a3',1,'POT1():&#160;evivePins.h'],['../d0/d66/potentiometer_8cpp.html#a62fe6c7eb34b752f9226bcc1a814f182',1,'pot1():&#160;potentiometer.cpp'],['../d9/d19/potentiometer_8h.html#ad5f270e092f889d4d79b2758186091ea',1,'pot1():&#160;potentiometer.h']]],
+  ['pot2',['POT2',['../d6/daf/evive_pins_8h.html#ad12d3e0231feabd481350ce3f6c85843',1,'POT2():&#160;evivePins.h'],['../d0/d66/potentiometer_8cpp.html#a2311024d1548425d769ce05acaf15c41',1,'pot2():&#160;potentiometer.cpp'],['../d9/d19/potentiometer_8h.html#aabd001435178175ca19d9f6a996c4765',1,'pot2():&#160;potentiometer.h']]],
+  ['potentiometer',['Potentiometer',['../d3/d10/class_potentiometer.html',1,'Potentiometer'],['../d3/d10/class_potentiometer.html#a15bc5c613ca3c66b54cb816af5935c1b',1,'Potentiometer::Potentiometer(byte potPin)'],['../d3/d10/class_potentiometer.html#af91e2477f31efbb3b7ebfedb427007ff',1,'Potentiometer::Potentiometer(byte potPin, uint16_t sectors)']]],
+  ['potentiometer_2ecpp',['potentiometer.cpp',['../d0/d66/potentiometer_8cpp.html',1,'']]],
+  ['potentiometer_2eh',['potentiometer.h',['../d9/d19/potentiometer_8h.html',1,'']]],
+  ['pre_5fvvr',['pre_vvr',['../d2/d9c/screen_implementation_8h.html#ae2a53a7ac888cdca7dbcddacef3c2c29',1,'screenImplementation.h']]],
+  ['press',['press',['../de/d70/class_adafruit___g_f_x___button.html#a221d9753f7d8e8f7f9c1ebbee69d02bd',1,'Adafruit_GFX_Button']]],
+  ['pressedfor',['pressedFor',['../d4/d77/class_button.html#a11b97b9e73881e876724ddeedac716f9',1,'Button']]],
+  ['prevangleservo1',['prevAngleServo1',['../d0/d9a/servo_control_8cpp.html#a21284fb709fdb8c41f4c99d7a9498f56',1,'servoControl.cpp']]],
+  ['prevangleservo2',['prevAngleServo2',['../d0/d9a/servo_control_8cpp.html#accfc14bf906a1ff4610b30114f4338a3',1,'servoControl.cpp']]],
+  ['prevencoderposition',['prevEncoderPosition',['../de/dd8/screen_8cpp.html#a76390d175d4b27f9451f3a3793d04f0f',1,'screen.cpp']]],
+  ['prevmenu',['prevMenu',['../de/dd8/screen_8cpp.html#abd0ed6748e0b429f612377cdb904e195',1,'screen.cpp']]],
+  ['prevvalueservo1',['prevValueServo1',['../d0/d9a/servo_control_8cpp.html#aaae2e0c1f630d844780cad0748d36653',1,'prevValueServo1():&#160;servoControl.cpp'],['../d1/d38/servo_control_8h.html#aaae2e0c1f630d844780cad0748d36653',1,'prevValueServo1():&#160;servoControl.cpp']]],
+  ['prevvalueservo2',['prevValueServo2',['../d0/d9a/servo_control_8cpp.html#a087480f9ff82919f7f4b859e007b9195',1,'prevValueServo2():&#160;servoControl.cpp'],['../d1/d38/servo_control_8h.html#a087480f9ff82919f7f4b859e007b9195',1,'prevValueServo2():&#160;servoControl.cpp']]],
+  ['progmem',['PROGMEM',['../d3/da9/glcdfont_8c.html#a75acaba9e781937468d0911423bc0c35',1,'PROGMEM():&#160;glcdfont.c'],['../d2/d7b/bitmaps_8h.html#a898aafcaf148a71a480a0413d87eeaf0',1,'PROGMEM():&#160;bitmaps.h']]],
+  ['ps_5f128',['PS_128',['../d2/d2c/configuration_8h.html#a1a65bcfdfa559d20645453aca170466b',1,'configuration.h']]],
+  ['ps_5f16',['PS_16',['../d2/d2c/configuration_8h.html#a0f19aef7325ef708cf22efe648db0c44',1,'configuration.h']]],
+  ['ps_5f32',['PS_32',['../d2/d2c/configuration_8h.html#a45cb1a3e93c6c2d657e8e616f2308f27',1,'configuration.h']]],
+  ['ps_5f64',['PS_64',['../d2/d2c/configuration_8h.html#a0c7cf8508f9acad9f6ba054fa1b3d4d0',1,'configuration.h']]],
+  ['pushcolor',['pushColor',['../dd/dee/class_adafruit___s_t7735.html#ac7e7977e3d664360f7f991cd7ae01035',1,'Adafruit_ST7735']]],
+  ['pwm',['pwm',['../d1/d6b/class_motor.html#aef307daeabd4eee18f890b0df79c5b2b',1,'Motor']]],
+  ['pwm_5fpin',['pwm_pin',['../d1/d6b/class_motor.html#a140443a1dcef9aef92dbfc5a8190b2a4',1,'Motor']]],
+  ['pwrdwn_5fen',['PWRDWN_EN',['../da/d4c/adc__ade7912_8cpp.html#ab0994e65f0697b9a950408aa70661c05',1,'adc_ade7912.cpp']]]
+];

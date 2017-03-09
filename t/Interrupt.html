@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<h1 ><strong>Interrupts</strong></h1>
+<h2><strong>Introduction</strong></h2>
+<p>In system programming, an interrupt is a signal to the processor emitted by hardware or software indicating an event that needs immediate attention. An interrupt alerts the processor to a high-priority condition requiring the interruption of the current code the processor is executing. The processor responds by suspending its current activities, saving its state, and executing a function called an interrupt handler (or an interrupt service routine, ISR) to deal with the event. This interruption is temporary, and, after the interrupt handler finishes, the processor resumes normal activities.</p>
+<p>evive has 6 external interrupt pins: 2 (interrupt 0), 3 (interrupt 1), 18 (interrupt 5), 19 (interrupt 4), 20 (interrupt 3), and 21 (interrupt 2). these pins can be configured to trigger an interrupt on a low level, a rising or falling edge, or a change in level.</p>
+<h2><strong>attachInterrupt():</strong></h2>
+<p>In Arduino IDE environment you can attach interrupts using attachInterrupt() function. There are two different ways you can initialise an interrupt pin:</p>
+<code style="font-size: 18px">attachInterrupt(digitalPinToInterrupt(pin), ISR, mode);</code>
+</br>
+<code style="font-size: 18px">attachInterrupt(interrupt, ISR, mode);</code>
+<p>where, interrupt is the number of the interrupt pin (from 0-5), pin is the pin number, ISR is the function that you call when interrupt occurs (this functions do not take parameters and returns nothing. This function is also reffered as an interrupt service routine), and mode defines how the interrupt occurs. There are several types of mode listed in the table below:</p>
+<table >
+<tbody>
+<tr>
+<td width="85">
+<p>LOW</p>
+</td>
+<td width="516">
+<p>Trigger the interrupt whenever the pin is low</p>
+</td>
+</tr>
+<tr>
+<td width="85">
+<p>CHANGE</p>
+</td>
+<td width="516">
+<p>Trigger the interrupt whenever the pin value changes</p>
+</td>
+</tr>
+<tr>
+<td width="85">
+<p>RISING</p>
+</td>
+<td width="516">
+<p>Trigger when the pin goes from low to high</p>
+</td>
+</tr>
+<tr>
+<td width="85">
+<p>FALLING</p>
+</td>
+<td width="516">
+<p>Trigger when the pin goes from high to low</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><br />Example:</p>
+<div class="doc-code">
+<pre>
+<code>
+/*
+ This program demonstrate the use of interrupts with evive. 
+ You have to connect digital pins 2 and 7 using a jumper wire.
+ In this program we will control and LED (connected to pin 13)
+ using pushbutton 1 of evive and interrupt pin.
+ */
+
+int LEDPin = 13;              // LED connected to pin 13
+int interruptPin = 2;         // Interrupt pin connected to pin 2
+int PushPin = 38;             // Pushbutton is connected to digital pin 38
+int OutPin = 7;               // Interrupt signal is generated from digital pin 7
+
+boolean state = false;        // Variable to store the state of LED 
+
+void setup() {
+  // put your setup code here, to run once:
+  // Initalise all the pin
+  pinMode(LEDPin, OUTPUT);
+  pinMode(PushPin, INPUT);
+  pinMode(OutPin, OUTPUT);
+  pinMode(interruptPin, INPUT_PULLUP);
+  // Initalise the interrupt pin 
+  attachInterrupt(digitalPinToInterrupt(interruptPin), changeState, CHANGE);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite(LEDPin, state);
+  digitalWrite(OutPin, digitalRead(PushPin));
+}
+
+// Interrupt service routine function
+void changeState(){
+  state = !state;
+}
+</code>
+</pre>
+</div>
+
+<h2><strong>detachInterrupt():</strong></h2>
+<p>To detach an interrupt, you have to use detachInterrupt() function in Arduino IDE platform. There are two different ways to do it:</p>
+<code style="font-size: 18px">detachInterrupt(interrupt);</code>
+</br>
+<code style="font-size: 18px">detachInterrupt(digitalPinToInterrupt(pin));</code>
+</body>
+</html>

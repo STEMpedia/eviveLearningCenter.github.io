@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+    <h1><strong>Slide Switch</strong></h1>
+<p>There are two inbuilt 3-way slide switches in evive.</p>
+<p>Slide switch 1 is connected to Arduino pins 40 and 41, both active high. This means that when the switch is slide &nbsp;up, pin 28 is high, when it is slide down, pin 29 is high while both are low when the switch is in the middle.</p>
+<div class="doc-caic">
+<img src="images/evive_slideswitch.png">
+</div>
+<p>Slide switch 2 is connected to pins 42 and 43, and behave similarly as above.</p>
+<p>Note that pins 40-43 are all pulled low, i.e. they will be at 0V (and not floating) when the switch is not engaged.</p>
+<p>Slide switches are used in motor control to control the direction of the motor.</p>
+<p>The test code for the slide switch is:</p>
+
+<div class="doc-code">
+  <pre>
+  <code>
+
+/*
+ evive inbuit slideswitch code
+
+ Slideswitch 1 is connected to digital pin 40 and 41.
+ Slideswitch 2 is connected to digital pin 42 and 43.
+
+ This code demonstrates how to use evive inbuilt slideswitches switches.
+ The code turns on and off a bi-dectional LED connected to digital
+ pin 28 and 29, when sliding the switch to either sides.
+
+ Created by Pankaj Kumar Verma and Akshat Agarwal
+ On 12 Dec, 2016
+ This example code is in the public domain.
+ */
+
+// set pin numbers:
+int slidePin1 = 40;             // the number of the slideswitch 1 pin 1
+int slidePin2 = 41;             // the number of the slideswitch 1 pin 2
+ 
+//int slidePin1 = 42;           // the number of the slideswitch 2 pin 1
+//int slidePin2 = 43;           // the number of the slideswitch 2 pin 2
+ 
+// Note: This code is meant to run for only one slideswitch. Please initialise only one slideswitch.
+
+int ledPin1 =  30;              // the number of the LED pin
+int ledPin2 =  31;
+
+int buttonState1 = 0;           // variable for reading the pushbutton pin 1 status
+int buttonState2 = 0;           // variable for reading the pushbutton pin 2 status
+
+void setup() {
+  // initialize the LED pins as an output:
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  // initialize the slideswitch pins as an input:
+  pinMode(slidePin1, INPUT);
+  pinMode(slidePin1, INPUT);
+  // open serial port, set data rate at 9600 bps:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // read the state of the pushbutton value:
+  buttonState1 = digitalRead(slidePin1);
+  buttonState2 = digitalRead(slidePin2);
+  
+  // check if the slideswitch is in state 1.
+  // if it is, the buttonState1 is HIGH:
+  if (buttonState1 == HIGH) {
+    // print on serial monitor
+    Serial.println("The slideswitch is in state 1");
+    delay(100);
+    // turn LED leg 1 on:
+    digitalWrite(ledPin1, HIGH);
+    // turn LED leg 2 off:
+    digitalWrite(ledPin2, LOW);
+  }
+
+  // check if the slideswitch is in state 2.
+  // if it is, the buttonState2 is HIGH:
+  else if (buttonState2 == HIGH) {
+  // print on serial monitor
+  Serial.println("The slideswitch is in state 2");
+  delay(100);
+  // turn LED leg 1 off:
+  digitalWrite(ledPin1, LOW);
+  // turn LED leg 2 on:
+  digitalWrite(ledPin2, HIGH);
+  }
+  
+  else {
+  // turn LED leg 1 off:
+  digitalWrite(ledPin1, LOW);
+  // turn LED leg 2 off:
+  digitalWrite(ledPin2, LOW);
+  }
+}
+</code>
+</pre>
+</div>
+
+</body>
+</html>

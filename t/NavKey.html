@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+    <h1><strong>5-way navigational key</strong></h1>
+<p>evive has inbuilt 5-way navigational, which is used to navigate in evive menu based system. The navigational key have 4 directions: left, right, up and down. This information is provided by the analog pin A11.</p>
+<div class="doc-caic">
+<img src="images/evive_nav_key.png">
+</div>
+<p>The table provide you the corresponding values for directions:</p>
+<table>
+<tbody>
+<tr>
+<td width="312">
+<p>Direction</p>
+</td>
+<td width="312">
+<p>Analog value range</p>
+</td>
+</tr>
+<tr>
+<td width="312">
+<p>Up</p>
+</td>
+<td width="312">
+<p>205-215</p>
+</td>
+</tr>
+<tr>
+<td width="312">
+<p>Right</p>
+</td>
+<td width="312">
+<p>405-415</p>
+</td>
+</tr>
+<tr>
+<td width="312">
+<p>Down</p>
+</td>
+<td width="312">
+<p>605-615</p>
+</td>
+</tr>
+<tr>
+<td width="312">
+<p>Left</p>
+</td>
+<td width="312">
+<p>835-845</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><br />The center switch is connected to the digital pin 19 in active high mode. This means that if the switch is pressed, then pin 19 is high, otherwise the pin is LOW.</p>
+<p>The sample code is provided below:</p>
+<div class="doc-code">
+<pre>
+<code>
+/*
+  evive navigational key
+
+  Navigational key direction pin is connected to A11.
+  Navigational key pushbutton pin is connected to pin 19
+
+  This code demonstrates how to use navigational key of evive.
+  The code detect the direction on which the key is pressed 
+  and displays on serial monitor.
+
+  Created by Pankaj Kumar Verma
+  On 12 Dec, 2016
+
+  This example code is in the public domain.
+
+*/
+
+int navKeyAnalog = A11;  // select the analog input pin
+int navKeyDigital = 19;  // select the digital input pin
+
+void setup() {
+  // put your setup code here, to run once:
+// open serial port, set data rate at 9600 bps:
+Serial.begin(9600);
+
+// declare the Pin as INPUT:
+pinMode(navKeyAnalog,INPUT);
+pinMode(navKeyDigital,INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+// read the input 
+int x = analogRead(navKeyAnalog);
+
+// if the key is pressed then the digital pin is HIGH
+if (digitalRead(navKeyDigital) == HIGH)
+{
+  Serial.println("Pressed");
+}
+
+// if the key is in up direction
+if (x > 150 && x < 250)
+{
+  Serial.println("UP");
+}
+
+// if the key is in right direction
+else if (x > 400 && x < 500)
+{
+  Serial.println("RIGHT");
+}
+
+// if the key is in down direction
+else if (x > 600 && x < 700)
+{
+  Serial.println("DOWN");
+}
+
+// if the key is in left direction
+else if (x > 800 && x < 900)
+{
+  Serial.println("LEFT");
+}
+delay(5);
+}
+</code>
+</pre>
+</div>
+
+</body>
+</html>

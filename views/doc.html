@@ -1,0 +1,26 @@
+<div>
+	<ng-include src="navbar.url"></ng-include>
+	<div>
+		{{data}}
+	</div>
+	<div class="tutorial-sidebar-wrapper">
+		<ng-include ng-if="pageInfo.sidebar" src="sidebar.url"></ng-include>
+		<div class="tutorial-container"><ng-include src="pageInfo.templateUrl"></ng-include></div>
+	</div>
+	<ng-include src="footer.url"></ng-include>
+</div>
+<style type="text/css">
+	.tutorial-sidebar-wrapper{
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: row;
+		max-width: 1340px;
+		margin: auto;
+		padding-top: 0px;
+		margin-top: 64px;
+	}
+	.tutorial-container{
+		padding: 12px;
+		padding-right: 24px;
+	}
+</style>

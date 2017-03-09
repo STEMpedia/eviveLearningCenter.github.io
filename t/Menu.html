@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1><strong>Menu</strong></h1>
+<p>Conventional way of using Arduino is by making a program in Arduino IDE and upload it on Arduino based device. Every time even for doing a small change or to test your robot with different parameters, we need to plug in the USB cable and re-program. It happens that we need to debug or tune some part of your project and hence have to program it. To cater this, evive introduces a novel way of menu based approach for programming. It is preloaded with many utility functions while the user can add user defined functions. It gives you the ability to change your programs in real time (although you can use evive normally as Arduino MEGA). Using the user defined function, the user can add multiple custom codes, which can run same as loop function in Arduino IDE.</p>
+<div class="doc-caic">
+<img src="images/evive_menu.png">
+</div>
+<p>evive&rsquo;s menu gives an intuitive textual interface to users. It is programmed using Arduino IDE along with some AVR commands. The menu has a tree structure. On the start-up screen, the list of basic utility functions like controlling motors or servos using inbuilt hardware (switches, potentiometer, etc.), sensing currents and voltages, evive&rsquo;s mini oscilloscope, Arduino pin states, function generator, data logging and user defined functions. Also internal battery level and variable voltage value are displayed on top status bar. The menu item&rsquo;s having following sub-menus are indicated. Using a joystick (5-way Navigation key), the user can scroll across the menu item using up and down keys, or traverse to the following sub-menus (or select the menu function) using right key, or revert back to top level menu using left key. Any time during the function is running, the user can get back to menu using center key (in most cases or as per user&rsquo;s requirement).</p>
+<h2><strong>Control</strong></h2>
+<p>evive includes hardware interaction and plug &amp; play interface, which can be used to control many basic utilities like controlling motors, servos, stepper, relays, solenoid values for pneumatics using tactile switches slide switches and potentiometers. Also the user can use the inbuilt hardware (switches and potentiometers) to change/define the states of Digital I/O Pins or PWM output. Switches and potentiometers are internally connected to Arduino MEGA pins as control inputs and motor drivers are connected for output at plug &amp; play interface. The state or values are displayed on screen.</p>
+<div class="doc-caic">
+<img src="images/Control2.png">
+</div>
+<a target="_blank" href="?t=Control">
+	<div class="doc-readmore">
+		Read More
+	</div>
+</a>
+<h2><strong>Sensing</strong></h2>
+<p>evive can be used as a voltmeter or an ammeter. It uses a very accurate 24-bit dual channel ADC IC for sensing from Analog Devices (ADE7912). There are two channels for data acquisition namely Probe I/V and Probe V. The Probe I/V can be used to sense currents or voltage as per the Jumper selection. The current sensing has accuracy of 3mA with range of -3A to +3A, while in voltage mode, the accuracy is of 3mV with range of -5V to +5V. The Probe V can be used for higher voltage sensing in range of -30V to +30V with accuracy of 10mV.</p>
+<div class="doc-caic">
+<img src="images/Sensing1.png">
+</div>
+<a target="_blank" href="?t=Sensing">
+	<div class="doc-readmore">
+		Read More
+	</div>
+</a>
+<h2><strong>Mini Oscilloscope</strong></h2>
+<p>evive can be used as mini oscilloscope to visualize voltage and current measurements. Is has lots of function like scaling voltage level, time scaling to see the reading in better way, trigger to start the measurement at some set value, scanning modes like single or continuous, offset, save readings to SD card and send data to computer. It uses a very accurate 24-bit dual channel ADC IC for sensing from Analog Devices (ADE7912). There are two channels for data acquisition namely Probe I/V and Probe V. The Probe I/V can be used to sense currents or voltage as per the Jumper selection. The maximum sensing frequency is about 1kHz. The current sensing has accuracy of 3mA with range of -3A to +3A, while in voltage mode, the accuracy is of 3mV with range of -5V to +5V. The Probe V can be used for higher voltage sensing in range of -30V to +30V with accuracy of 10mV.</p>
+<div class="doc-caic">
+<img src="images/Sensing1.gif">
+</div>
+<a target="_blank" href="?t=MiniOscilloscope">
+	<div class="doc-readmore">
+		Read More
+	</div>
+</a>
+<h2><strong>Serial Monitor</strong></h2>
+<p>evive can be used as a serial monitor for applications like to display received data at any serial port of Arduino MEGA or what data is sent to it via USB Jack. The data (numbers or characters) will be displayed on the TFT screen. Also, the user can print data on the screen using the serialTft.print(str) like functions for any Arduino code or User Defined Functions. (Under development)</p>
+<a target="_blank" href="?t=SerialMonitor">
+	<div class="doc-readmore">
+		Read More
+	</div>
+</a>
+<h2><strong>Arduino Pin State Monitor</strong></h2>
+<p>Sometimes, it is required to monitor the states of either input pins or output pins (ports). This menu will show the current states of all the available Digital Input-output pins and Analog Input Pins.</p>
+<a target="_blank" href="?t=PinState">
+	<div class="doc-readmore">
+		Read More
+	</div>
+</a>
+<h2><strong>Beta Function Generator</strong></h2>
+<p>evive has a built-in 12-bit DAC using IC MCP4725 (IIC Address 0x60 or 0x62). It is controlled using IIC (or I2C) commands using Arduino MEGA with output range of 0 to 5V. Many inbuilt function to generate waves like sine, square, triangular or saw-tooth shapes are provided with option to control amplitude between 0 to 5V and frequency upto few hundred hertz. It&rsquo;s limited to 8.5Hz ~ 500Hz. The user can set the desired output voltage and the desired frequency using potentiometer knobs.</p>
+<div class="doc-caic">
+<img src="images/Function2.png">
+</div>
+<a target="_blank" href="?t=FunctionGenerator">
+	<div class="doc-readmore">
+		Read More
+	</div>
+</a>
+<h2><strong>User Defined Function</strong></h2>
+<p>Generally, while using Arduino one face problem of uploading different codes again and again as he changes some part of codes. Using evive&rsquo;s user defined function submenu, he can store different Arduino programs at once. You can switch to different program while navigating inside the menu.</p>
+<div class="doc-caic">
+<img src="images/UserDefined3.png">
+</div>
+<a target="_blank" href="?t=UserDefinedPrograms">
+	<div class="doc-readmore">
+		Read More
+	</div>
+</a>
+</body>
+</html>

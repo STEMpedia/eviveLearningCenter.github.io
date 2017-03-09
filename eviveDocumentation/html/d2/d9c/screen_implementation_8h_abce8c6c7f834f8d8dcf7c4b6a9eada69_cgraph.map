@@ -1,0 +1,5 @@
+<map id="lcd_analog_pin_state_monitor_template" name="lcd_analog_pin_state_monitor_template">
+<area shape="rect" id="node2" href="$d9/d97/class_adafruit___g_f_x.html#aaf96a40cad0f34dd8ec73494b3866c33" title="Adafruit_GFX::setCursor" alt="" coords="206,5,369,32"/>
+<area shape="rect" id="node3" href="$d9/d97/class_adafruit___g_f_x.html#a59178a0e0c845a14a39b457c43567dd9" title="Adafruit_GFX::setTextColor" alt="" coords="198,56,377,83"/>
+<area shape="rect" id="node4" href="$d9/d97/class_adafruit___g_f_x.html#aeeacd62bf26f3e7abbdc4b5b50faa6fa" title="Adafruit_GFX::setTextWrap" alt="" coords="197,107,377,133"/>
+</map>

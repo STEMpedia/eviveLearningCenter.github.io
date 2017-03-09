@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<h1><strong>Power Module</strong></h1>
+<p>The power module consists of 4 power output ports, multi-modal power input, internal rechargeable Li-ion battery, and a main power switch.</p>
+<div class="doc-caic">
+<img src="images/power-module-input-output.png" style="min-width: 800px">
+</div>
+<a name="PowerSwitch"></a> 
+<h2><strong>Power Switch</strong></h2>
+<p>The power switch is located on the top corner of the right surface. It is a three way switch, with the middle state corresponding to &lsquo;OFF&rsquo;. Sliding the switch in corresponds to &lsquo;INT&rsquo; state, which means evive will be powered by the internal 3.7V battery. Sliding the switch outwards corresponds to &lsquo;EXT&rsquo; state, which means evive will be powered by external power supplies through DC jack or power input pins.</p>
+<table>
+<tbody>
+<tr>
+<td width="47">
+<p><strong>S.No.</strong></p>
+</td>
+<td width="130">
+<p><strong>Switch State</strong></p>
+</td>
+<td width="150">
+<p><strong>DC Jack Supply</strong></p>
+</td>
+<td width="120">
+<p><strong>USB Supply</strong></p>
+</td>
+<td width="58">
+<p><strong>On/Off</strong></p>
+</td>
+<td width="160">
+<p><strong>Source for evive</strong></p>
+</td>
+<td width="75">
+<p><strong>Charging</strong></p>
+</td>
+<td width="180">
+<p><strong>Source for charging</strong></p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>1.</p>
+</td>
+<td width="85">
+<p>OFF</p>
+</td>
+<td width="64">
+<p>No</p>
+</td>
+<td width="69">
+<p>No</p>
+</td>
+<td width="58">
+<p>Off</p>
+</td>
+<td width="115">
+<p>None</p>
+</td>
+<td width="75">
+<p>No</p>
+</td>
+<td width="89">
+<p>None</p>
+</td>
+</tr>
+<tr>
+<td width="47"><p>2.</p></td>
+<td width="85">
+<p>OFF</p>
+</td>
+<td width="64">
+<p>No</p>
+</td>
+<td width="69">
+<p>Yes</p>
+</td>
+<td width="58">
+<p>On</p>
+</td>
+<td width="115">
+<p>USB</p>
+</td>
+<td width="75">
+<p>No</p>
+</td>
+<td width="89">
+<p>None</p>
+</td>
+</tr>
+<tr>
+<td width="47"><p>3.</p></td>
+<td width="85">
+<p>OFF</p>
+</td>
+<td width="64">
+<p>Yes</p>
+</td>
+<td width="69">
+<p>No</p>
+</td>
+<td width="58">
+<p>Off</p>
+</td>
+<td width="115">
+<p>None</p>
+</td>
+<td width="75">
+<p>Yes</p>
+</td>
+<td width="89">
+<p>DC</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>4.</p>
+</td>
+<td width="85">
+<p>OFF</p>
+</td>
+<td width="64">
+<p>Yes</p>
+</td>
+<td width="69">
+<p>Yes</p>
+</td>
+<td width="58">
+<p>On</p>
+</td>
+<td width="115">
+<p>USB</p>
+</td>
+<td width="75">
+<p>Yes</p>
+</td>
+<td width="89">
+<p>DC</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>5.</p>
+</td>
+<td width="85">
+<p>EXT</p>
+</td>
+<td width="64">
+<p>No</p>
+</td>
+<td width="69">
+<p>No</p>
+</td>
+<td width="58">
+<p>Off</p>
+</td>
+<td width="115">
+<p>None</p>
+</td>
+<td width="75">
+<p>No</p>
+</td>
+<td width="89">
+<p>None</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>6.</p>
+</td>
+<td width="85">
+<p>EXT</p>
+</td>
+<td width="64">
+<p>No</p>
+</td>
+<td width="69">
+<p>Yes</p>
+</td>
+<td width="58">
+<p>On</p>
+</td>
+<td width="115">
+<p>USB</p>
+</td>
+<td width="75">
+<p>Yes</p>
+</td>
+<td width="89">
+<p>USB</p>
+</td>
+</tr>
+<tr>
+<td width="47"><p>7.</p></td>
+<td width="85">
+<p>EXT</p>
+</td>
+<td width="64">
+<p>Yes</p>
+</td>
+<td width="69">
+<p>No</p>
+</td>
+<td width="58">
+<p>On</p>
+</td>
+<td width="115">
+<p>DC</p>
+</td>
+<td width="75">
+<p>Yes</p>
+</td>
+<td width="89">
+<p>DC</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>8.</p>
+</td>
+<td width="85">
+<p>EXT</p>
+</td>
+<td width="64">
+<p>Yes</p>
+</td>
+<td width="69">
+<p>Yes</p>
+</td>
+<td width="58">
+<p>On</p>
+</td>
+<td width="115">
+<p>DC+USB</p>
+</td>
+<td width="75">
+<p>Yes</p>
+</td>
+<td width="89">
+<p>DC</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>9.</p>
+</td>
+<td width="85">
+<p>INT</p>
+</td>
+<td width="64">
+<p>No</p>
+</td>
+<td width="69">
+<p>No</p>
+</td>
+<td width="58">
+<p>On</p>
+</td>
+<td width="115">
+<p>Internal</p>
+</td>
+<td width="75">
+<p>No</p>
+</td>
+<td width="89">
+<p>None</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>10.</p>
+</td>
+<td width="85">
+<p>INT</p>
+</td>
+<td width="64">
+<p>No</p>
+</td>
+<td width="69">
+<p>Yes</p>
+</td>
+<td width="58">
+<p>On</p>
+</td>
+<td width="115">
+<p>Internal+USB</p>
+</td>
+<td width="75">
+<p>No</p>
+</td>
+<td width="89">
+<p>None</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>11.</p>
+</td>
+<td width="85">
+<p>INT</p>
+</td>
+<td width="64">
+<p>Yes</p>
+</td>
+<td width="69">
+<p>No</p>
+</td>
+<td width="58">
+<p>On</p>
+</td>
+<td width="115">
+<p>Internal</p>
+</td>
+<td width="75">
+<p>No</p>
+</td>
+<td width="89">
+<p>None</p>
+</td>
+</tr>
+<tr>
+<td width="47"><p>12.</p></td>
+<td width="85">
+<p>INT</p>
+</td>
+<td width="64">
+<p>Yes</p>
+</td>
+<td width="69">
+<p>Yes</p>
+</td>
+<td width="58">
+<p>On</p>
+</td>
+<td width="115">
+<p>Internal+USB</p>
+</td>
+<td width="75">
+<p>No</p>
+</td>
+<td width="89">
+<p>None</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table width="604">
+<tbody>
+<tr>
+<td width="47">
+<p><strong>S.No.</strong></p>
+</td>
+<td width="130">
+<p><strong>Switch State</strong></p>
+</td>
+<td width="280">
+<p><strong>DC Jack Supply</strong></p>
+</td>
+<td width="170">
+<p><strong>USB Supply</strong></p>
+</td>
+<td width="113">
+<p><strong>On/Off</strong></p>
+</td>
+<td width="94">
+<p><strong>Charging</strong></p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>0.</p>
+</td>
+<td width="104">
+<p>X</p>
+</td>
+<td width="132">
+<p>No</p>
+</td>
+<td width="113">
+<p>No</p>
+</td>
+<td width="113">
+<p>OFF</p>
+</td>
+<td width="94">
+<p>No</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>1.</p>
+</td>
+<td width="104">
+<p>OFF</p>
+</td>
+<td width="132">
+<p>Yes</p>
+</td>
+<td width="113">
+<p>Yes</p>
+</td>
+<td width="113">
+<p>ON</p>
+</td>
+<td width="94">
+<p>Yes</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>2.</p>
+</td>
+<td width="104">
+<p>OFF</p>
+</td>
+<td width="132">
+<p>No</p>
+</td>
+<td width="113">
+<p>Yes</p>
+</td>
+<td width="113">
+<p>ON</p>
+</td>
+<td width="94">
+<p>No</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>3.</p>
+</td>
+<td width="104">
+<p>OFF</p>
+</td>
+<td width="132">
+<p>Yes</p>
+</td>
+<td width="113">
+<p>No</p>
+</td>
+<td width="113">
+<p>OFF</p>
+</td>
+<td width="94">
+<p>Yes</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>4.</p>
+</td>
+<td width="104">
+<p>EXT</p>
+</td>
+<td width="132">
+<p>Yes</p>
+</td>
+<td width="113">
+<p>X</p>
+</td>
+<td width="113">
+<p>ON</p>
+</td>
+<td width="94">
+<p>Yes</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>5.</p>
+</td>
+<td width="104">
+<p>EXT</p>
+</td>
+<td width="132">
+<p>No</p>
+</td>
+<td width="113">
+<p>Yes</p>
+</td>
+<td width="113">
+<p>ON</p>
+</td>
+<td width="94">
+<p>Yes</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p>6.</p>
+</td>
+<td width="104">
+<p>INT</p>
+</td>
+<td width="132">
+<p>X</p>
+</td>
+<td width="113">
+<p>X</p>
+</td>
+<td width="113">
+<p>ON</p>
+</td>
+<td width="94">
+<p>No</p>
+</td>
+</tr>
+</tbody>
+</table>
+<a name="InternalBattery"></a> 
+<h2><strong><br />Internal Li-ion Battery</strong></h2>
+<p>With an 18650 Li-ion 3.7V 2600mAh rechargeable battery inside, evive can easily run for 6 hours on a single charge. The 3.7V is boosted to 5V, at a current rating of 1A. This battery also powers the RTC chip inside to keep time correctly, and can run all the features of evive except motor output ports, which are disabled to prevent flow of excess current from battery.</p>
+<div class="doc-caic">
+<img src="images/evive_v1.54_1.png">
+</div>
+<p>Charging happens whenever an external power supply is connected and the battery is not being used. If the power supply is connected through DC jack or power input pins, it happens automatically, while if power supply is through USB port, the power switch needs to be switched to &lsquo;EXT&rsquo; state to charge the battery. The orange LED below the screen glows to indicate charging.</p>
+<a name="PowerInput"></a> 
+<h2><strong>Power Input</strong></h2>
+<p>While evive is powered by a rechargeable 3.7V Li-ion battery, it also offers multiple modes of power input for the situations where you need higher voltage or current supply. Whenever evive is powered on, the red LED below the screen glows brightly.</p>
+<div class="doc-caic">
+<img src="images/power-module-input.png" style="min-width: 800px">
+</div>
+<ol>
+<li>It has a DC jack and two power input pins, both of which have been given reverse polarity, over-voltage and over-current to protect you and evive from harm. The operating range for voltage input on these jacks is 5V to 30V. Using this power input mode also charges the internal battery automatically, as long as the switch is set to &lsquo;OFF&rsquo; or &lsquo;EXT&rsquo; state.</li>
+<li>The USB B-type port connects to laptops, power banks and USB wall chargers to power evive, through a USB A-B type cable which has been provided in the box. This port operates at voltages around 5V, so please take care that the charger you use has a rated output voltage of 5V (which is usually the case). Like the internal battery, this power input can power all the features in evive except the motor outputs, which will be disabled to prevent drawing of excess current. To charge the internal battery, set the switch to &lsquo;EXT&rsquo; mode.</li>
+</ol>
+<a name="PowerOutput"></a> 
+<h2><strong>Power Output</strong></h2>
+<p>evive has four power output ports:</p>
+<div class="doc-caic">
+<img src="images/power-module-output.png" style="min-width: 800px">
+</div>
+<ol>
+<li>Variable Voltage (VVR): This port outputs a voltage level that can be tuned using the wheel on the right surface of evive. The output range is from 1.25V to (V<sub>IN</sub>-1) Volts, at a current rating of 3A. Hence, if evive is being powered by its internal battery or a USB power supply, the effective range is around 1.25V-4V. <strong>Caution! </strong>Take care to not draw more than 1A current from VVAR in that case.</li>
+<li>Fixed 5V/3A supply. <strong>Caution!</strong> In case evive is being powered by internal battery or USB port, do not draw more than 1A current.</li>
+<li>Fixed 3.3V/0.8A supply.</li>
+<li>The VSS port provides you with a safety buffer between your power supply and other devices. Instead of directly connecting your other devices to the power supply, plug the supply into evive and connect device to the VSS port. This makes sure that in case of a reverse polarity or over-voltage connection, the device does not get damaged. It also shuts down if the device starts drawing too much current, hence protecting the power supply. This output port is active only when input supply is through DC jack or power input pins.</li>
+</ol>
+<a name="LED"></a> 
+<h2><strong>Power Indication LEDs</strong></h2>
+<p>There are 2 power indication LEDs, both located below the TFT screen as shown below.</p>
+<ol>
+<li>The red LED glows when evive is powered on</li>
+<li>The orange LED glows when battery is being charged</li>
+</ol>
+<a name="Protections"></a> 
+<h2><strong>Protections</strong></h2>
+<ol>
+<li>Overvoltage protection: Cuts off power supply greater than 30V</li>
+<li>Overcurrent protection: Does not allow circuit to draw more than 3A current from supply</li>
+<li>Reverse polarity protection: Protects evive from damage even if reverse polarity is applied at power input</li>
+</ol>
+<p><strong>&nbsp;</strong></p>
+</body>
+</html>

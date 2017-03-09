@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Serial Monitor</title>
+</head>
+<body>
+<h1 style="text-align: center;">Serial Mointor</h1>
+<h2><strong>Introduction</strong></h2>
+<p>Serial Monitor appears in one of the menu item of evive. It asks the user to select the serial and also allows users to set the baud rate at which they want to open the serial port. It ,then, reads and displays the data coming from the selected serial at specified baud rate by the user. With Serial Monitor it is also possible to display the multiple serial data displaying simultaneously on the screen of evive. Different Serial data are displayed in different colors i.e. Serial 1 with White ;Serial 2 with Magenta ; Serial 3 with Blue. It is an essential tool for debug.</p>
+<h2><strong>Working</strong></h2>
+<p>There is a library serialMonitor in evive which is responsible for the implementation of Serial Monitor. Looking into the library there are a variety of function which ease down the process of implementation.</p>
+<p>Implementation has be broken down into two parts :</p>
+<ol>
+<li>To find the Serial and Baud Rate selected by the user.</li>
+<li>Capturing &amp; displaying of data from specified serial at specified baud rate.</li>
+</ol>
+<p>The first part is achieved by the function :</p>
+<p><strong>SerialMonitor: Initalise(long baudRateSelect, uint8_t serialNum)</strong> .</p>
+<p>It sets the specified serial at specified baud rate.</p>
+<p>The specified serial and specified baud rate is determined by&nbsp;<strong>serialSelect = prevEncoderPosition; &amp; baudrate[encoderPosition]</strong> based on encoderPosition in screen.cpp.</p>
+<p>The second part is achieved by the function :</p>
+<p><strong>SerialMonitor: serial0PrintMsg();</strong></p>
+<p><strong>SerialMonitor: serial2PrintMsg();</strong></p>
+<p><strong>SerialMonitor: serial3PrintMsg();</strong></p>
+<p>Each one responsible for displaying the data from their serials on evive screen. It first check if the specified serial is available or not by</p>
+<p><strong>Serialx.available() where x =0,2,3.</strong></p>
+<p>It ,then, counts the message length so as to appropriately displaying message on screen &amp; then there is an <strong>if&nbsp; ( ln + l &gt; 16 ) </strong>which checks whether the screen has got filled if filled then it erases next line accordingly and displays it.</p>
+<p>It also has <strong>SerialMonitor: lnCount(int ln)</strong> which counts the number of lines needed for message to be printed. Since, <strong>ln </strong>is globally defined hence if there are multiple data from various serials can be shown simultaneously using different colors.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

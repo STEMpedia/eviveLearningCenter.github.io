@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bluetooth</title>
+</head>
+<body link="blue">
+<h1 style="text-align: center;"><strong>Bluetooth</strong></h1>
+<h2><strong>Introduction:</strong></h2>
+<p>Bluetooth (<a href="https://en.wikipedia.org/wiki/Bluetooth" target="_blank">Wikipedia</a>) is a wireless technology standard for exchanging data over short distances (using short-wavelength UHF radio waves in the ISM band from 2.4 to 2.485 GHz) from fixed and mobile devices, and building personal area networks (PANs).</p>
+<p>evive has dedicated Bluetooth (HC05) headers, which just requires you to connect the HC05 Bluetooth module.</p>
+<div class="doc-caic">
+<img src="images/evive_bluetooth.png">
+</div>
+<h2><strong>HC05 Bluetooth Module:</strong></h2>
+<p>HC-05 module is an easy to use Bluetooth SPP (Serial Port Protocol) module, designed for transparent wireless serial connection setup. Serial port Bluetooth module is fully qualified Bluetooth V2.0+EDR (Enhanced Data Rate) 3Mbps Modulation with complete 2.4GHz radio transceiver and baseband.</p>
+<div class="doc-caic">
+<img src="images/HC05_bluetooth.jpg">
+</div>
+<h2><strong>Arduino IDE:</strong></h2>
+<p>Serial Port 3 of evive is directly connected to the serial ports of Bluetooth. All the data transmission hence, happens through serial port 3.</p>
+<p>Example:</p>
+<div class="doc-code">
+  <pre>
+  <code>
+
+/*
+  evive HC05 (Bluetooth) test
+  Turn LED 13 On/Off using Serial Commands
+
+  It's a simple sketch which waits for a character on serial
+  and in case of a desirable character, it turns an LED on/off.
+
+  Possible string values:
+  a (to turn the LED on)
+  b (tor turn the LED off)
+*/
+
+char junk;
+String inputString="";
+
+void setup()                    // run once, when the sketch starts
+{
+  Serial3.begin(9600);          // set the baud rate to 9600, same should be of yourSerial3 Monitor
+  Serial.begin(9600); 
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  if(Serial3.available()){
+  while(Serial3.available())
+    {
+      char inChar = (char)Serial3.read();   //read the input
+      inputString += inChar;                //make a string of the characters coming onSerial3
+    }
+   Serial3.println(inputString);
+   Serial3.println(123);
+   Serial.println(inputString);
+    while (Serial3.available() > 0)  
+    { junk =Serial3.read() ; }               // clear the serial buffer
+    if(inputString == "a"){                  //in case of 'a' turn the LED on
+      digitalWrite(13, HIGH);  
+    }else if(inputString == "b"){            //incase of 'b' turn the LED off
+      digitalWrite(13, LOW);
+    }
+    inputString = "";
+  }
+}
+</code>
+</pre>
+</div>
+
+</body>
+</html>

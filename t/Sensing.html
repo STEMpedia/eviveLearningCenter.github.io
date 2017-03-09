@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<h1><strong>Sensing</strong></h1>
+<p>evive can be used as a voltmeter or an ammeter. It uses a very accurate 24-bit dual channel ADC IC for sensing from Analog Devices (ADE7912). There are two channels for data acquisition namely Probe I/V and Probe V. The Probe I/V can be used to sense currents or voltage as per the Jumper selection. The current sensing has accuracy of 3mA with range of -3A to +3A, while in voltage mode, the accuracy is of 3mV with range of -5V to +5V. The Probe V can be used for higher voltage sensing in range of -30V to +30V with accuracy of 10mV.</p>
+<div class="doc-caic">
+<img src="images/Sensing1.png">
+</div>
+<p>There are two options user can choose:</p>
+<ol>
+<li><strong>ProbeV (30V) and I/V (5V): </strong>There are three header and three banana jacks where you can place you sensing probe. The middle one is the reference point (means the voltage or the current is measured with reference to this probe), left is for voltage measurement from a range of -30V to +30V with an accuracy of 10 mV and the right probe is also for voltage measurement, but for a range of -5V to +5V, with an accuracy of 3mV.</li>
+</br>
+<li><strong>ProbeV (30V) and I/V (3A): </strong>The left probe is for voltage measurement from a range of -30V to +30V with an accuracy of 10 mV, same as the previous case and the right probe is for current measurement, but for a range of -3A to +3A, with an accuracy of 3mA.</li>
+</ol>
+<p>You have to be very careful about the jumper for sensing. If you are sensing voltage from second channel, then it should be placed on right header and if you sensing current, then place it on the left header.</p>
+<div class="doc-note"><strong>Note:</strong> While measuring voltage user should connect the probe parallel to the circuit and while measuring the current, user should connect it in series to the circuit (in-between the wire from where the current is flowing).</div>
+<figure align="center" style="margin-bottom: 30px">
+<div class="doc-caic">
+  <img src="images/Voltmeter.png" style="max-width: 400px">
+  </div>
+  <figcaption><strong>Figure 1:</strong> Circuit while using evive as a voltmeter.</figcaption>
+</figure>
+<figure align="center" style="margin-bottom: 30px">
+<div class="doc-caic">
+  <img src="images/Ammeter.png" style="max-width: 300px">
+  </div>
+  <figcaption><strong>Figure 2:</strong> Circuit while using evive as an ammeter.</figcaption>
+</figure>
+</body>
+</html>
