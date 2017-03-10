@@ -8,14 +8,16 @@
 <p>There are two inbuilt 3-way slide switches in evive.</p>
 <p>Slide switch 1 is connected to Arduino pins 40 and 41, both active high. This means that when the switch is slide &nbsp;up, pin 28 is high, when it is slide down, pin 29 is high while both are low when the switch is in the middle.</p>
 <div class="doc-caic">
-<img src="images/evive_slideswitch.png">
+<img src="images/evive_slideswitch.png" alt="evive Slide Switch">
 </div>
 <p>Slide switch 2 is connected to pins 42 and 43, and behave similarly as above.</p>
 <p>Note that pins 40-43 are all pulled low, i.e. they will be at 0V (and not floating) when the switch is not engaged.</p>
 <p>Slide switches are used in motor control to control the direction of the motor.</p>
 <p>The test code for the slide switch is:</p>
+<gist id="29fa1750ad4218f43b278ec59692b56c">
+</gist>
 
-<div class="doc-code">
+<!-- <div class="doc-code">
   <pre>
   <code>
 
@@ -98,7 +100,7 @@ void loop() {
 }
 </code>
 </pre>
-</div>
+</div> -->
 
 </body>
 </html>

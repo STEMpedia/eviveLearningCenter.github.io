@@ -8,7 +8,7 @@
 <h2><strong>Introduction</strong></h2>
 <p>A stepper motor is a brushless DC electric motor that divides a full rotation into a number of equal steps. The motor's position can then be commanded to move and hold at one of these steps without any feedback sensor (an open-loop controller), as long as the motor is carefully sized to the application in respect to torque and speed.</p>
 <div class="doc-caic">
-<img src="images/stepper.png" style="max-width: 400px">
+<img src="images/stepper.PNG" style="max-width: 400px" alt="Stepper Motor Schematic">
 </div>
 <p>DC brushed motors rotate continuously when DC voltage is applied to their terminals. The stepper motor is known by its property to convert a train of input pulses (typically square wave pulses) into a precisely defined increment in the shaft position. Each pulse moves the shaft through a fixed angle.</p>
 <p>Stepper motors effectively have multiple "toothed" electromagnets arranged around a central gear-shaped piece of iron. The electromagnets are energized by an external driver circuit or a micro controller. To make the motor shaft turn, first, one electromagnet is given power, which magnetically attracts the gear's teeth. When the gear's teeth are aligned to the first electromagnet, they are slightly offset from the next electromagnet. This means that when the next electromagnet is turned on and the first is turned off, the gear rotates slightly to align with the next one. From there the process is repeated. Each of those rotations is called a "step", with an integer number of steps making a full rotation. In that way, the motor can be turned by a precise angle.</p>
@@ -27,7 +27,7 @@
 <p>evive already have 2 H bridge available for running a stepper motor. SN754410NE motor driver IC is used to run a bipolar stepper motor.</p>
 <figure>
   <div class="doc-caic">
-  <img src="images/Stepper_bb.png">
+  <img src="images/Stepper_bb.png" alt="evive Stepper Motor Fritzing Circuit">
   </div>
   <figcaption>Circuit diagram for stepper motor</figcaption>
 </figure>
@@ -35,11 +35,12 @@
 <h3><strong>Wave Drive Sequence</strong></h3>
 <p>This is one type of stepping sequence. In this method, one phase is HIGH at a time. That is, when phase A is excited, all other phases are OFF. Similarly before exciting the next phase, the first is turned OFF. The winding are excited on by one for a finite duration like a wave, hence the name. Here is the stepping sequence diagram.</p>
 <div class="doc-caic">
-<img src="images/stepper-motor-wave-drive.png" style="max-width: 400px">
+<img src="images/stepper-motor-wave-drive.png" style="max-width: 400px" alt="Wave Drive Sequence">
 </div>
 <p>Here is an example of Wave Type Stepping Sequence:</p>
-
-<div class="doc-code">
+<gist id="628525162ccf26da88e5a3a77052d6c4">
+</gist>
+<!-- <div class="doc-code">
   <pre>
   <code>
 
@@ -121,15 +122,16 @@ void loop() {
 }
 </code>
 </pre>
-</div>
+</div> -->
 <h3><strong>Full Step Sequence</strong></h3>
 <p>The full step sequence or the 2 phase ON sequence, is when two adjacent phase windings are excited at a time so that the rotor is positioned at a point resultant to both the fields. Here is the stepping sequence diagram.</p>
 <div class="doc-caic">
-<img src="images/stepper-motor-half-step.png" style="max-width: 400px">
+<img src="images/stepper-motor-half-step.png" style="max-width: 400px" alt="Full Step Sequence">
 </div>
 <p>Here is an example of Full Step Sequence:</p>
-
-<div class="doc-code">
+<gist id="d3389efdb41e31c2c2b96e2333b837e3">
+</gist>
+<!-- <div class="doc-code">
   <pre>
   <code>
 
@@ -211,15 +213,16 @@ void loop() {
 }
 </code>
 </pre>
-</div>
+</div> -->
 <h3><strong>Half Step Sequence</strong></h3>
 <p>This sequence is the mix of both the wave drive and full step stepping sequence. The first one of the each of the above methods is used to from the first two of this message. By using this sequence, as you can see, the stepping angle is reduced by half.</p>
 <div class="doc-caic">
-<img src="images/stepper-motor-basic-theory.png" style="min-width: 800px">
+<img src="images/stepper-motor-basic-theory.png" style="min-width: 800px" alt="Half Step Sequence">
 </div>
 <p>Here is an example of Half Step Sequence</p>
-
-<div class="doc-code">
+<gist id="6b11c7169b2d98223bfb68fa0585259a">
+</gist>
+<!-- <div class="doc-code">
   <pre>
   <code>
 
@@ -349,6 +352,6 @@ void loop() {
 }
 </code>
 </pre>
-</div>
+</div> -->
 </body>
 </html>

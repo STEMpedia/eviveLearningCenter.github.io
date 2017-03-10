@@ -8,13 +8,13 @@
 <h2><strong>Introduction:</strong></h2>
 <p>evive has two inbuilt motor control units with which you can control motors with current limit of 1A each. It uses a SN754410NE Quad H-Bridge IC to control two DC Motors.</p>
 <div class="doc-caic">
-<img src="images/evive_motor_pin.png">
+<img src="images/evive_motor_pin.png" alt="evive Motor Output Pins">
 </div>
 <h2><strong>SN754410NE:</strong></h2>
 <p>If you look at the SN754410NE chip, you will notice a u-shaped notch at one end. &nbsp;This helps you to identify pin 1.</p>
 <figure align="center" style="margin-bottom: 30px">
 <div class="doc-caic">
-<img src="images/Screenshot (9).png" style="max-width: 400px">
+<img src="images/Screenshot (9).png" style="max-width: 400px" alt="SN754410NE">
 </div>
 <figcaption>Pin diagram of SN754410NE IC</figcaption>
 </figure>
@@ -85,18 +85,18 @@
 <p>Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough, the result is as if the signal is a steady voltage between 0 and 5v controlling the speed of the motor.</p>
 <p>Generally, Arduino's PWM frequency is about 500Hz. In Arduino IDE, we use PWM concept through analogWrite() function. We give a value ranging on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.</p>
 <div class="doc-caic">
-<img src="images/Screenshot (10).png" style="max-width: 400px">
+<img src="images/Screenshot (10).png" style="max-width: 400px" alt="evive PWM">
 </div>
 <p>In evive the PWM pin for motor 1 is connected to digital pin 44 and for motor 2 it is connected to digital pin 45.</p>
 <h2><strong>VVR vs VVS:</strong></h2>
 <p>The power voltage can be provided to the motor drive IC through variable voltage or source voltage, using a jumper. So if you want to change the power voltage, then you connect to the VVR side (left one) else VVS (right).</p>
 <div class="doc-caic">
-<img src="images/evive_jumperMotor.png" >
+<img src="images/evive_jumperMotor.png" alt="evive Jumpers for Motor Control">
 </div>
 <h2><strong>Controlling motor using evive menu based system:</strong></h2>
 <p>You can control or test your motors through evive menu based system. You have to just navigate into control, select motor and then select which motor output you want to use (Motor 1, Motor 2 or both Motor 1 and Motor 2).</p>
 <div class="doc-caic">
-<img src="images/DC_Motor_fritzing_bb.png" style="max-width: 450px">
+<img src="images/DC_Motor_fritzing_bb.png" style="max-width: 450px" alt="evive Motor Fritzing Circuit">
 </div>
 <p>Using inbuilt potentiometers, you can control the PWM of the motors and using slide switches you can control the state of the motor (CW, CCW or free state).</p>
 <h2><strong>Controlling motor using motor library:</strong></h2>
@@ -392,7 +392,9 @@
 </table>
 <p>&nbsp;</p>
 <p>Using these library functions, you can control your motors easily. Here is a sample code to illustrate how to use the motor library:</p>
-<div class="doc-code">
+<gist id ="2f7555a45347b4bb831e9e49a5a864ea">
+</gist>
+<!-- <div class="doc-code">
 <pre>
 <code>
 /* 
@@ -447,6 +449,6 @@ delay(1000);
 }
 </code>
 </pre>
-</div>
+</div> -->
 </body>
 </html>
