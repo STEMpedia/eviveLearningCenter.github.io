@@ -131,7 +131,8 @@ h1 {
   text-align: center; }
 
 p {
-  text-align: justify; }
+  text-align: justify;
+  font-size: 14px; }
 
 figure {
   align: center;
@@ -185,6 +186,9 @@ figure {
 .doc-caic img {
   display: inline-block;
   width: 600px; }
+
+.tutorial-container a {
+  color: #1c75bc; }
 
 .navbar-wrapper {
   position: fixed;

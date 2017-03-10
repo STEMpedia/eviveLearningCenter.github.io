@@ -7,62 +7,13 @@
     <h1><strong>Potentiometer</strong></h1>
 <p>evive has two in-built 10kΩ knob potentiometers connected to Arduino Mega pins A9 and A10, respectively.</p>
 <div class="doc-caic">
-<img src="images/evive_Potentiometer.png">
+<img src="images/evive_potentiometer.png" alt="evive Potentiometer">
 </div>
 <p>The two potentiometers are used to control the speed of the motor (through PWM) in firmware as well as for the angle control of servo motor. It is also used to control the amplitude and frequency of the signal in function generator.</p>
 <p>The test code for the potentiometer is given below:</p>
 
-<div class="doc-code">
-  <pre>
-  <code>
-/*
-  evive inbuilt potentiometer
-
-  Potentiometer 1 is connected to A9.
-  Potentiometer 2 is connected to A10.
-
-  This code demonstrates how to use evive inbuilt potentiometers.
-  The code read an analog sensor on analog pin 9 or analog pin 10 and 
-  turn on and off a light emitting diode(LED) connected to 
-  digital pin 13 (also inbuit in evive).
-  The frequency of LED blinking is determined by the potentiometer
-
-  Created by Pankaj Kumar Verma and Akshat Agarwal
-  On 12 Dec, 2016
-
-  This example code is in the public domain.
-
-*/
-
-int sensorPin = A9;               // select the input pin for the potentiometer 1
-//int sensorPin = A10;            // select the input pin for the potentiometer 2
-// Note: This code is meant to run for only one potentiometer. Please initialise only one of the analog sensor pin.
-int ledPin = 13;                  // select the pin for the LED
-int sensorValue = 0;              // variable to store the value coming from the sensor
-
-void setup() {
-  // declare the ledPin as an OUTPUT:
-  pinMode(ledPin, OUTPUT);
-  // open serial port, set data rate at 9600 bps:
-  Serial.begin(9600);
-}
-
-void loop() {
-  // read the value from the sensor:
-  sensorValue = analogRead(sensorPin);
-  // turn the ledPin on
-  digitalWrite(ledPin, HIGH);
-  // stop the program for sensorValue milliseconds:
-  delay(sensorValue);
-  // turn the ledPin off:
-  digitalWrite(ledPin, LOW);
-  // stop the program for sensorValue milliseconds:
-  delay(sensorValue);
-  // display sensor value on serial monitor:
-  Serial.println(sensorValue);
-}
-</code>
-</pre>
+<gist id="f28e3a80e1a8e64499f18bac1e1cfbdf">
+</gist>
 </div>
 </body>
 </html>
