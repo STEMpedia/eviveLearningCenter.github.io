@@ -37,7 +37,8 @@ var homeData = [
   {
     id:'evive Firmware',
     title:'evive Firmware',
-    href:'eviveDocumentation/html/index.html',
+    href:'/eviveDocumentation/html/index.html',
+    target:'_blank',
     desc:'Battery installation and uploading code for the first time',
     img:'home-images/Firmware.png'
   },
@@ -378,6 +379,11 @@ var pageInfo = [
     templateUrl:'t/HomeAutomation.html',
     sidebar:true,
   },
+  {
+    id:'BatteryInstallation',
+    templateUrl:'t/BatteryInstallation.html',
+    sidebar:true,
+  },
 ];
 
 
@@ -443,7 +449,7 @@ var sidebarInfo = [
         ]
       },
       {
-        title:'Plug and Play Hardware Interface',
+        title:'Plug and Play Interface',
         href:'?t=PlugAndPlayInterface',
         children:[
           {
@@ -636,7 +642,7 @@ var sidebarInfo = [
   },
   {
     title:'Circuit',
-    href:'?views=Circuit',
+    href:'?t=Circuit',
   },
   {
     title:'Learning Modules and Kits',

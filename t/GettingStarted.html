@@ -7,10 +7,10 @@
 	<h1>Getting Started</h1>
 <p>Directly jump to the section: </p>
 <ul>
-<li><a href="#BatteryInstallation">Battery Installation</a></li>
-<li><a href="#BasicFunctionality">Basic Functionality</a></li>
-<li><a href="#Arduino">Setting up your Arduino IDE for evive</a></li>
-<li><a href="#Kits">Know Your Kits</a></li>
+<li><a href="#BatteryInstallation" style="color: #1c75bc">Battery Installation</a></li>
+<li><a href="#BasicFunctionality" style="color: #1c75bc">Basic Functionality</a></li>
+<li><a href="#Arduino" style="color: #1c75bc">Setting up your Arduino IDE for evive</a></li>
+<li><a href="#Kits" style="color: #1c75bc">Know Your Kits</a></li>
 </ul>
 <a name="BatteryInstallation"></a>
 <h2>Battery Installation</h2>
@@ -20,27 +20,27 @@
 <ol>
 <li>Unscrew the four bolts encircled (in red) in the image from the back side of evive</li>
 <div class="doc-caic">
-<img src="images/BatteryInstallation1.jpg">
+<img src="images/BatteryInstallation1.jpg" alt="evive Battery Installation">
 </div>
 <li>Remove the bottom (grey) half of the case by gently pulling it up.</li>
 <div class="doc-caic">
-<img src="images/BatteryInstallation2_2.png">
+<img src="images/BatteryInstallation2_2.png" alt="evive Battery Installation">
 </div>
 <li>Plug in the battery connector into the empty male socket as shown in the figure. Please note that the connector is unidirectional, i.e. it will only go in one way.</li>
 <div class="doc-caic">
-<img src="images/BatteryInstallation3_1.png">
+<img src="images/BatteryInstallation3_1.png" alt="evive Battery Installation">
 </div>
 <li>Dock the battery securely in the slot provided. Take care that the battery wire remains inside the boundaries of the case</li>
 <div class="doc-caic">
-<img src="images/evive_v1.54_1.png">
+<img src="images/evive_v1.54_1.png" alt="evive Battery Installation">
 </div>
 <li>Gently put back the bottom half of the case, and tighten all the screws that you had taken out in step 1</li>
 <div class="doc-caic">
-<img src="images/BatteryInstallation4_1.png">
+<img src="images/BatteryInstallation4_1.png" alt="evive Battery Installation">
 </div>
 <li>evive is now ready to be powered by the internal battery, by pulling the power switch on the top corner of right face to the &lsquo;INT&rsquo; state, as shown in the figure</li>
 <div class="doc-caic">
-<img src="images/evive_v1.147_noBacground_1 - Copy.png">
+<img src="images/evive_v1.147_noBacground_1 - Copy.png" alt="evive Power Switch">
 </div>
 </ol>
 <a name="BasicFunctionality"></a>
@@ -57,51 +57,51 @@
 <p>Components required: evive, USB cable and a computer</p>
 <p>One of the simplest environments for programming evive is the Arduino IDE. These steps will walk you through downloading and setting it up to use with evive.</p>
 <ol>
-<li>The Arduino IDE can be downloaded from&nbsp;<a href="https://www.arduino.cc/en/Main/Software">their official website</a>. The instructions for installation on Windows, Mac or Linux operating systems can be found there.
+<li>The Arduino IDE can be downloaded from&nbsp;the <a href="https://www.arduino.cc/en/Main/Software" style="color: #1c75bc">official website</a>. The instructions for installation on Windows, Mac or Linux operating systems can be found there.
 <div class="doc-note" style="margin-top: 12px; margin-bottom: 12px">
 <strong>Note:</strong> Please note that evive needs a version of the IDE &gt;= 1.6, so in case you already have the IDE installed on your computer please update it.
 </div>
 </li>
-<li>Download evive's firmware&nbsp;<a href="https://github.com/evivetoolkit/">from here</a>. Unzip the file (using a software like <a href="http://www.7-zip.org/">7-zip</a>), go to the extracted files and open &gt;&gt;evive.ino. This should open the file evive.ino in Arduino IDE.</li>
+<li>Download evive's firmware&nbsp;from <a href="https://github.com/evivetoolkit/" style="color: #1c75bc">here</a>. Unzip the file (using a software like <a href="http://www.7-zip.org/">7-zip</a>), go to the extracted files and open &gt;&gt;evive.ino. This should open the file evive.ino in Arduino IDE.</li>
 <li>Plug one end of the USB cable provided into evive, and the other end into a USB jack of your computer.</li>
 <li>In the menu bar near the top of the screen, navigate to Tools-&gt;Board and select &ldquo;Arduino/Genuino Mega or Mega 2560&rdquo;. This should also automatically set the processor to &ldquo;ATmega2560 (Mega 2560)&ldquo;</li>
 <div class="doc-caic">
-<img src="images/eviveFirmware3.png" width="600">
+<img src="images/eviveFirmware3.png" width="600" alt="Arduino Choose Board">
 </div>
 <div class="doc-caic">
-<img src="images/eviveFirmware4.png" width="600">
+<img src="images/eviveFirmware4.png" width="600" alt="Arduino IDE Choose processor">
 </div>
 <li>Now select the serial port at which evive is connected, by navigating to Tools-&gt;Port and choosing the appropriate port. It should be the one which says in brackets &ldquo;Arduino/Genuino Mega or Mega 2560&rdquo;.</li>
 <div class="doc-caic">
-<img src="images/eviveFirmware2.png" width="600">
+<img src="images/eviveFirmware2.png" width="600" alt="Arduino IDE choose COM Port">
 </div>
 <div class="doc-note" style="margin-top: 12px; margin-bottom: 12px">
 <strong>Note:</strong> &nbsp;The port submenu will be active only if evive is plugged in and the driver was successfully installed by your operating system. Please see the Troubleshooting Guide for more information.
 </div>
 <li>Upload the code by clicking on the upload button (second from the left), as shown in the figure</li>
 <div class="doc-caic">
-<img src="images/eviveFirmware5.png" style="max-width: 400px">
+<img src="images/eviveFirmware5.png" style="max-width: 400px" alt="Arduino IDE Upload Code">
 </div>
 <li>You will see &ldquo;Done Uploading&rdquo; message once the code is uploaded.</li>
 <div class="doc-caic">
-<img src="images/eviveFirmware6.png" style="max-width: 400px">
+<img src="images/eviveFirmware6.png" style="max-width: 400px" alt="Arduino IDE code uploaded">
 </div>
 </ol>
 <a name="Kits"></a>
 <h2>&nbsp;Know Your Kits</h2>
 <div class="doc-caic">
 <a href="?t=StarterKit">
-<img src="images/perks_evive.jpg" width="600">
+<img src="images/perks_evive.jpg" width="600" alt="evive Basic Kit"	>
 </a>
 </div>
 <div class="doc-caic">
 <a href="?t=IOTKit">
-<img src="images/perks_iot.jpg" width="600">
+<img src="images/perks_iot.jpg" width="600" alt="evive IOT Kit">
 </a>
 </div>
 <div class="doc-caic">
 <a href="?t=UltimateKit">
-<img src="images/perks_ultimate.jpg" width="600">
+<img src="images/perks_ultimate.jpg" width="600" alt="evive Ultimate Kit">
 </a>
 </div>
 <div class="doc-readmore" style="max-width: 400px; font-size: 20px" >

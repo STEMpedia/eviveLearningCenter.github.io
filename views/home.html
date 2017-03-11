@@ -1,7 +1,7 @@
 <ng-include src="navbar.url"></ng-include>
 <div class="main-documentation">
 	<div class="tile-container">
-		<a class="tile" href="{{e.href}}" ng-repeat="e in homeData">
+		<a class="tile" href="{{e.href}}" ng-repeat="e in homeData" target="{{e.target}}">
 			<img class="tile-image" src="{{e.img}}">
 			<div class="tile-title">{{e.title}}</div>
 		</a>

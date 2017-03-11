@@ -142,11 +142,12 @@ figure {
   margin-bottom: 30px; }
 
 .doc-note {
-  background-color: #d9edf7;
+  background-color: #E6F7FF;
   border: solid 1px #bce8f1;
-  color: #31708f;
+  color: #034C85;
   border-radius: 3px;
-  padding: 12px; }
+  padding: 12px;
+  font-size: 14px; }
 
 .doc-code {
   background-color: #f3f3f3;
