@@ -388,6 +388,7 @@ var pageInfo = [
     id:'DifferentialDriveMobileRobot',
     templateUrl:'t/DifferentialDriveMobileRobot.html',
     sidebar:true,
+    title: 'Bluetooth (smartphone) Controlled Robot',
   },
 ];
 
