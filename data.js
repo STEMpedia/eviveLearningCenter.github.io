@@ -384,6 +384,11 @@ var pageInfo = [
     templateUrl:'t/BatteryInstallation.html',
     sidebar:true,
   },
+  {
+    id:'DifferentialDriveMobileRobot',
+    templateUrl:'t/DifferentialDriveMobileRobot.html',
+    sidebar:true,
+  },
 ];
 
 

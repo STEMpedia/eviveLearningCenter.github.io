@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Differential Drive Mobile Robot</title>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Bluetooth Controlled Differential Drive Robot</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/MobileRobot/Projects/TC_V2_exploded.305.jpg">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE PROJECT</a>
+				<div>
+				<a class="about">In this project we will build a robotic car from scratch and control it using a smartphone connected to the robot via mobile.</a>
+				<div>
+					<a class="info">PROJECT INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Intermediate</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 8 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+	
+<h2><strong>Introduction</strong></h2>
+<p>In this project we will build a robotic car from scratch and control it using a smartphone connected to the robot via mobile.</p>
+<h3><strong>Wheels</strong></h3>
+<p>Like real cars, the robotic car also have wheels which are actuated using DC motors. For a moving object to be stable, you need at least 3 contact points. Like, in car you have four wheels, but in bicycle, there are only two wheel. A cyclist can control bicycle only when he is cycling, but of he stops he can&rsquo;t balance the cycle without resting his foot on the ground.&nbsp;</p>
+<p>In our mobile robot, we have 2 wheels and one caster touching the ground. Caster wheel is just round ball rolling on the ground. It can move in any direction.</p>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.281.jpg" alt="Three wheeled chasis">
+</div>
+<h3><strong>Differential Drive</strong></h3>
+<p>A differential wheeled robot is a mobile robot whose movement is based on two separately driven wheels placed on either side of the robot body. It can thus change its direction by varying the relative rate of rotation of its wheels and hence does not require an additional steering motion.</p>
+<figure style="text-align: center">
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/Tanklike.png" alt="Three wheeled chasis" style="max-width: 400px">
+</div>
+<figcaption>A three-wheeled differential drive</figcaption>
+</figure>
+<p>If both the wheels are driven in the same direction and speed, the robot will go in a straight line. If both wheels are turned with equal speed in opposite directions, the robot will rotate about the central point of the axis. Otherwise, depending on the speed of rotation and its direction, the center of rotation may fall anywhere on the line defined by the two contact points of the tires. While the robot is traveling in a straight line, the center of rotation is an infinite distance from the robot.</p>
+<figure style="text-align: center">
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/Capture25.PNG" alt="Three wheeled chasis" style="max-width: 500px">
+</div>
+<figcaption>Figure: (a) Pure translation occurs when both wheels move at the same angular velocity; (b) pure rotation occurs when the wheels move at opposite velocities.</figcaption>
+</figure>
+<h2>Assembly Instructions</h2>
+<ol>
+<li>Place an angle bracket on the motor as shown in the figure. Note that the bracket should be placed on that side of a motor which has a circular extrusion coming out of the yellow body (white plastic body if you have a white motor). If you are preparing a right hand side motor, then your assembly should look like as shown in the figure, otherwise you have to mount the bracket in the upside-down position (for left motor).</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.234.jpg" alt="Motor Assembly" style="max-width: 250px">
+</div>
+<li>Using two 12mm M3 bolts and two M3 nuts, fasten the motor and brackets.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.235.jpg" alt="Motor Assembly" style="max-width: 300px">
+</div>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.237.jpg" alt="Motor Assembly" style="max-width: 250px">
+</div>
+<li>Place the left motor bracket assembly on the lower base plate in the mounting holes provided. </li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.4.jpg" alt="Base Plate evive" style="max-width: 450px">
+</div>
+<div class="doc-note">
+	Note that, as the base plate is symmetric, you should keep in mind which motor is for right side and which one for left before mounting them.
+</div>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.164.jpg" alt="Motor Assembly">
+</div>
+<li>Fasten the motor using two 8mm M3 bolts and two M3 nuts.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.165.jpg" alt="Motor Assembly">
+</div>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.167.jpg" alt="Motor Assembly">
+</div>
+<li>Similarly mount the right motor using nuts and bolts. Ensure that you have mounted the motors in the exact way as shown in the figure.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.171.jpg" alt="Motor Assembly">
+</div>
+<li>Then, gently attach wheels on the motor shaft as shown in the figure.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.290.jpg" alt="Wheels Assembly" style="max-width: 450px">
+</div>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.289.jpg" alt="Wheels Assembly" style="max-width: 450px">
+</div>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.288.jpg" alt="Wheels Assembly" style="max-width: 420px">
+</div>
+<li>Turn the lower base plate upside down and mount the castor wheel on the mounting holes provided on the base plate. Using three 12mm M3 bolts and three M3 nuts to fasten the castor wheel.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.284.jpg" alt="Caster Assembly" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.281.jpg" alt="Caster Assembly" style="max-width: 600px">
+</div>
+<li>Turn the lower base plate back to initial orientation.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.269.jpg" alt="Caster Assembly" style="max-width: 600px">
+</div>
+<li>Now, using 8mm M3 bolts, mount four 40mm standoffs on the holes provided on the base plate.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.268.jpg" alt="Standoffs Assembly" style="max-width: 600px">
+</div>
+<li>Mount evive on upper base plate using two 12mm M3 bolts. Note that if you are not using encoders, then you can mount evive with all four bolts.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.255.jpg" alt="evive Assembly" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.254.jpg" alt="evive Assembly" style="max-width: 600px;">
+</div>
+<li>Finally place the upper base plate on the standoffs of lower base plate.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.261.jpg" alt="Overall Assembly" style="max-width: 600px">
+</div><div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.305.jpg" alt="Overall Assembly" style="max-width: 600px">
+</div>
+<li>If you want to increase the height at which the upper base plate is mounted, then you can do it, by attaching another 10mm standoffs on top of 40mm standoffs.</li>
+</ol>
+<h2>Basic Circuit</h2>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/RoboticCar2_bb.png" alt="Differential Drive Robot Circuit fritzing" style="max-width: 600px">
+</div>
+<h2><strong>Flow Chart</strong></h2>
+<p>At a time, the mobile robot can move forward, backward, right or left and stop. Given below is the flow chart:</p>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/Differential Drive Robot.jpg" alt="Differential Drive Robot Flow Diagram" style="max-width: 406px">
+</div>
+<h2>Code</h2>
+<p>We are using <a href="https://play.google.com/store/apps/details?id=eu.jahnestacado.arduinorc&hl=en" style="color: #1C75bc"> Arduino Bluetooth Controller</a> App to send command to the robot via Serial port 3. </br>Given below is the example code. </p>
+<gist id="daf465dd19377ce18bc32984633a3355">
+</gist>
+</div>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 600px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+</body>
+</html>
