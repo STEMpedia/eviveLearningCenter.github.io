@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bluetooth (Smartphone) Controlled Robot</title>
+	<title>Line Following Robot</title>
 	<meta name="author" content="Agilo Technologies"/>
 </head>
 <body>
 <div class="features-page-container">
-	<h1 class="features-main-title">Bluetooth (Smartphone) Controlled Robot</h1>
+	<h1 class="features-main-title">Line Following Robot</h1>
 	<div class="features-container1">
 		<div class="feature-category1">
 			<a class="feature-image-container1">
-				<img class="main-image1" src="images/MobileRobot/Projects/TC_V2_exploded.305.jpg">
+				<img class="main-image1" src="images/MobileRobot/Projects/TC_V2_exploded.258.jpg">
 			</a>
 			<div>
 				<a class="title1">ABOUT THE PROJECT</a>
 				<div>
-				<a class="about">In this project we will build a robotic car from scratch and control it using a smartphone via bluetooth.</a>
+				<a class="about">In this tutorial we will build a line following robot using an IR sensor array. </a>
 				<div>
 					<a class="info">PROJECT INFO</a>
 					<div>
 						<a class="infodes"><strong>Programming Platform:</strong> Arduino</a>
 						<a class="infodes"><strong>Type:</strong> Tutorial</a>
 						<a class="infodes"><strong>Difficulty:</strong> Intermediate</a>
-						<a class="infodes"><strong>Estimated Time:</strong> 8 hours</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 10 hours</a>
 					</div>
 				</div>
 				</div>
@@ -30,30 +30,7 @@
 			</br>
 		</div>
 	</div>
-	
-<h2><strong>Introduction</strong></h2>
-<p>In this project we will build a robotic car from scratch and control it using a smartphone via bluetooth.</p>
-<h3><strong>Wheels</strong></h3>
-<p>Like real cars, the robotic car also have wheels which are actuated using DC motors. For a moving object to be stable, you need at least 3 contact points. Like, in car you have four wheels, but in bicycle, there are only two wheel. A cyclist can control bicycle only when he is cycling, but of he stops he can&rsquo;t balance the cycle without resting his foot on the ground.&nbsp;</p>
-<p>In our mobile robot, we have 2 wheels and one caster touching the ground. Caster wheel is just round ball rolling on the ground. It can move in any direction.</p>
-<div class="doc-caic">
-<img src="images/MobileRobot/Projects/TC_V2_exploded.281.jpg" alt="Three wheeled chasis">
 </div>
-<h3><strong>Differential Drive</strong></h3>
-<p>A differential wheeled robot is a mobile robot whose movement is based on two separately driven wheels placed on either side of the robot body. It can thus change its direction by varying the relative rate of rotation of its wheels and hence does not require an additional steering motion.</p>
-<figure style="text-align: center">
-<div class="doc-caic">
-<img src="images/MobileRobot/Projects/Tanklike.png" alt="Three wheeled chasis" style="max-width: 400px">
-</div>
-<figcaption>A three-wheeled differential drive</figcaption>
-</figure>
-<p>If both the wheels are driven in the same direction and speed, the robot will go in a straight line. If both wheels are turned with equal speed in opposite directions, the robot will rotate about the central point of the axis. Otherwise, depending on the speed of rotation and its direction, the center of rotation may fall anywhere on the line defined by the two contact points of the tires. While the robot is traveling in a straight line, the center of rotation is an infinite distance from the robot.</p>
-<figure style="text-align: center">
-<div class="doc-caic">
-<img src="images/MobileRobot/Projects/Capture25.PNG" alt="Three wheeled chasis" style="max-width: 500px">
-</div>
-<figcaption>Figure: (a) Pure translation occurs when both wheels move at the same angular velocity; (b) pure rotation occurs when the wheels move at opposite velocities.</figcaption>
-</figure>
 <h2>Assembly Instructions</h2>
 <ol>
 <li>Place an angle bracket on the motor as shown in the figure. Note that the bracket should be placed on that side of a motor which has a circular extrusion coming out of the yellow body (white plastic body if you have a white motor). If you are preparing a right hand side motor, then your assembly should look like as shown in the figure, otherwise you have to mount the bracket in the upside-down position (for left motor).</li>
@@ -105,43 +82,57 @@
 <div class="doc-caic">
 <img src="images/MobileRobot/Projects/TC_V2_exploded.281.jpg" alt="Mounting Caster" style="max-width: 600px">
 </div>
-<li>Turn the lower base plate back to initial orientation.</li>
+<li>Using 8mm M3 bolts and female side of the 10mm standoffs, mount four standoffs on the lower base plate as shown in the figure.</li>
+</li>
 <div class="doc-caic">
-<img src="images/MobileRobot/Projects/TC_V2_exploded.269.jpg" alt="Caster mounted on the robot" style="max-width: 600px">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.279.jpg" alt="Mounting standoffs for line follower sensor" style="max-width: 600px">
 </div>
-<li>Now, using 8mm M3 bolts, mount four 40mm standoffs on the holes provided on the base plate.</li>
 <div class="doc-caic">
-<img src="images/MobileRobot/Projects/TC_V2_exploded.268.jpg" alt="Mounting standoffs on the base plate" style="max-width: 600px">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.278.jpg" alt="Mounting standoffs for line follower sensor" style="max-width: 600px">
 </div>
-<li>Mount evive on upper base plate using two 12mm M3 bolts. Note that if you are not using encoders, then you can mount evive with all four bolts.</li>
+<li>Place the line following sensor on the standoffs as shown in the figure.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.277.jpg" alt="Mounting line follwer sensor on standoffs" style="max-width: 600px">
+</div>
+<li>Using M3 nuts, fix the sensor to the lower base plate.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.276.jpg" alt="Mounting line follwer sensor on standoffs" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.275.jpg" alt="Mounting line follwer sensor on standoffs" style="max-width: 600px">
+</div>
+<li>Turn the lower base plate back to initial position.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.271.jpg" alt="Robot after mounting line follwer sensor" style="max-width: 600px">
+</div>
+<li>Now, using 8mm M3 bolts, mount 40mm standoffs on the holes provided on the base plate.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.266.jpg" alt="Mounting Standoffs for upper plate" style="max-width: 600px">
+</div>
+<li>Mount evive on the upper base plate using 12mm M3 bolts. Note that if you are not using encoders, then you can mount evive with all four bolts.</li>
 <div class="doc-caic">
 <img src="images/MobileRobot/Projects/TC_V2_exploded.255.jpg" alt="Mounting evive on Upper Plate" style="max-width: 600px">
 </div>
 <div class="doc-caic">
 <img src="images/MobileRobot/Projects/TC_V2_exploded.254.jpg" alt="Mounting evive on Upper Plate" style="max-width: 600px;">
 </div>
-<li>Finally place the upper base plate on the standoffs of lower base plate.</li>
+<li>Finally place the upper base plate on the standoffs of the lower base plates.</li>
 <div class="doc-caic">
-<img src="images/MobileRobot/Projects/TC_V2_exploded.261.jpg" alt="Mounting upper plate on base plate" style="max-width: 600px">
-</div><div class="doc-caic">
-<img src="images/MobileRobot/Projects/TC_V2_exploded.305.jpg" alt="Mounting upper plate on base plate" style="max-width: 600px">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.265.jpg" alt="Mounting upper plate on the lower plate using standoffs" style="max-width: 600px;">
 </div>
-<li>If you want to increase the height at which the upper base plate is mounted, then you can do it, by attaching another 10mm standoffs on top of 40mm standoffs.</li>
+<div class="doc-caic">
+<img src="images/MobileRobot/Projects/TC_V2_exploded.258.jpg" alt="Line Following Robot" style="max-width: 600px;">
+</div>
+<li>If you want to increase the height at which the upper base plate is mounted, then you can do it, by attaching another 10mm standoffs on the 40mm standoffs.</li>
 </ol>
-<h2>Basic Circuit</h2>
+<h2>
+	Circuit Diagram
+</h2>
 <div class="doc-caic">
-<img src="images/MobileRobot/Projects/RoboticCar2_bb.png" alt="Differential Drive Robot Circuit fritzing" style="max-width: 600px">
-</div>
-<h2><strong>Flow Chart</strong></h2>
-<p>At a time, the mobile robot can move forward, backward, right or left and stop. Given below is the flow chart:</p>
-<div class="doc-caic">
-<img src="images/MobileRobot/Projects/Differential Drive Robot.jpg" alt="Differential Drive Robot Flow Diagram" style="max-width: 406px">
+<img src="images/MobileRobot/Projects/linefollowe.png" alt="Line Following Robot Circuit Diagram" style="width: 800px;">
 </div>
 <h2>Code</h2>
-<p>We are using <a href="https://play.google.com/store/apps/details?id=eu.jahnestacado.arduinorc&hl=en" style="color: #1C75bc"> Arduino Bluetooth Controller</a> App to send command to the robot via Serial port 3. </br>Given below is the example code. </p>
-<gist id="daf465dd19377ce18bc32984633a3355">
-</gist>
-</div>
+<gist id="810f17459605a395ebdb12c7642dd7d4"></gist>
 <style type="text/css">
 	.features-main-page-container{
 		width: 100%;

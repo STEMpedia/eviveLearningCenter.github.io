@@ -388,7 +388,26 @@ var pageInfo = [
     id:'DifferentialDriveMobileRobot',
     templateUrl:'t/DifferentialDriveMobileRobot.html',
     sidebar:true,
-    title: 'Bluetooth (smartphone) Controlled Robot',
+  },
+  {
+    id:'LineFollowingRobot',
+    templateUrl:'t/LineFollowingRobot',
+    sidebar:true,
+  },
+  {
+    id:'ObstacleAvoidingRobot',
+    templateUrl:'t/ObstacleAvoidingRobot.html',
+    sidebar:true,
+  },
+  {
+    id:'PickingPlacingRoboticArm',
+    templateUrl:'t/PickingPlacingRoboticArm.html',
+    sidebar:true,
+  },
+  {
+    id:'SketchingRoboticArm',
+    templateUrl:'t/SketchingRoboticArm.html',
+    sidebar:true,
   },
 ];
 

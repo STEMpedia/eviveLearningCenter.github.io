@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pick and Place Robotic Arm</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Pick and Place Robotic Arm</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/RoboticArm/Projects/RoboticArm363.jpg" alt="Pick and Place Robotic Arm">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE PROJECT</a>
+				<div>
+				<a class="about">This is a four degree of freedom robotic arm capable of picking and placing small objects (up to 50g). With 15 cm long links, the robotic arm can fit perfectly on your table top, use the clip to attach it to your table or use screws if you’re comfortable with drilling holes.</a>
+				<div>
+					<a class="info">PROJECT INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Intermediate</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 10 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Assembly Instructions:</h2>
+<ol>
+<li>Gently insert a metal servo motor (the big one) inside the Base Mount. First insert the motor from the wire side and push it (the wire will otherwise cause probles in fitting). 
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm346.jpg" alt="Mounting Servo motor on Base Mount" style="max-width: 250px">
+</div>
+Once the servo motor is inserted, mount motor to the base plate using 12mm M4 bolts.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm345.jpg" alt="Mounting Servo motor on Base Mount" style="max-width: 220px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm344.jpg" alt="Mounting Servo motor on Base Mount" style="max-width: 220px">
+</div>
+</ol>
+<div class="doc-note">
+Note: In case you find it difficult mounting the servo this way, try inserting it from below while ensuring that servo&rsquo;s top face is parallel to mount&rsquo;s top face after fastening them together. Errors in this mounting will heavily impact clearance of end effector from your table top.
+</div>
+<ol start="2">
+<li>Similarly insert and mount the other metal servo motor inside Link 1 using same 12mm M4 bolts.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm335.jpg" alt="Mounting Servo motor on Link 1" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm333.jpg" alt="Mounting Servo motor on Link 1" style="max-width: 600px">
+</div>
+<li>Metal servo comes along with mounting accessories, take two screws and a servo horn from it and attach it to Link 1 as shown in the figure below.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm332.jpg" alt="Mounting Servo Motor head on Link 1" style="max-width: 600px">
+</div>
+<li>Take three 10mm M3 Standoffs and mount them on Link 1 on the holes shown below, use M3 Nuts for fastening.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm329.jpg" alt="Mounting standoffs on Link 1" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm330.jpg" alt="Mounting standoffs on Link 1" style="max-width: 600px">
+</div>
+</ol>
+<p>This is how the First link should look after step 4.</p>
+<ol start="5">
+<li>Connect the Base Servo (from Step 1) to evive (on S1/S2 port) and use evive&rsquo;s menu to set the servo angle at 90 degrees.</li> 
+</ol>
+<div class="doc-note">
+Failing to do this will rotate the arm in undesirable directions and may damage the arm and things around it. Keep in mind that ground (darkest wire of the three, most commonly brown) of the servo must be connected to the left-most of the three headers in evive&rsquo;s port.
+</div>
+<p>
+Now mount Link 1 to the Base Servo as shown. Use a black screw from servo accessories to fasten Link 1 to the Base Servo.</p>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm348.jpg" alt="Mounting Link 1 to Base Motor" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm349.jpg" alt="Mounting Link 1 to Base Motor" style="max-width: 600px">
+</div>
+<div class="doc-note">
+Keep in mind, if the screw is not tight enough, Link 1 might get bent from hinge during operation.
+</div>
+<ol start="6">
+<li>In order to strengthen Link 1, Support Link 1 should be mounted on Standoffs shown using 8mm M3 bolts.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm351.jpg" alt="Mounting Support Link 1 to Standoffs" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm350.jpg" alt="Mounting Support Link 1 to Standoffs" style="max-width: 600px">
+</div>
+<li>Mount Micro Servo Holder on Link 2 using 8mm M3 bolts and M3 nuts.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm341.jpg" alt="Mounting Micro Servo Holder on Link 2" style="max-width: 600px">
+</div>
+<li>Insert Micro Servo in the holder and mount it using 8mm M2 bolts and M2 nuts. Mount the servo horn on the other end of link 2 (similar to Step 3).</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm340.jpg" alt="Insert Micro Servo in the holder" style="max-width: 600px">
+</div>
+<li>Mount 10mm M3 standoffs on remaining holes using M3 nuts (similar to Step 4).</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm337.jpg" alt="Mount 10mm M3 standoffs on Link 2" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm336.jpg" alt="Mount 10mm M3 standoffs on Link 2" style="max-width: 600px">
+</div>
+<li>Insert Link 2 on Metal Servo of the Link 1 and tighten it using the screw provided with Metal Servo (similar to Step 5).</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm352.jpg" alt="Insert Link 2 on Metal Servo of the Link 1" style="max-width: 600px">
+</div>
+<li>Mount the Support Link 2 on top of the standoffs using 8mm M3 bolts (similar to Step 6).</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm351.jpg" alt="Mount the Support Link 2 on top of the standoffs" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm355.jpg" alt="Mount the Support Link 2 on top of the standoffs" style="max-width: 600px">
+</div>
+<li>Take Gripper Claws, Gripper Link and Micro Servo Horn, and assemble them using 12mm M3 bolts for Gripper Claws and Gripper Link, M2 servo screw for Gripper Link and Servo Mount.
+</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm316.jpg" alt="Gripper Claws Assembly" style="max-width: 250px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm320.jpg" alt="Gripper Claws Assembly" style="max-width: 180px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm322.jpg" alt="Gripper Claws Assembly" style="max-width: 160px">
+</div>
+</ol>
+<div class="doc-note">Keep in mind, screwing them together will need considerable care and efforts. Fasten all the screws just enough, don&rsquo;t over-tighten, this will jam the joints and create friction while operation or may even damage the arm. Use lock nuts on hinges, this will ensure that joint doesn&rsquo;t loosen up while operation. </div>
+<ol start="13">
+<li>Mount other Micro Servo on Griper Plate 1 using M2 bolts and M2 nuts.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm323.jpg" alt="Mounting Micro Servo on Griper Plate 1" style="max-width: 250px">
+</div>
+<li>Mount the Servo Mount on the micro servo head and tighten it using screws provided with the micro servo. Also mount Claws to the Gripper Plate using 12mm M4 bolts and M4 lock nuts.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm315.jpg" alt="Gripper Claws Assembly" style="max-width: 250px">
+</div>
+<li>Mount Gripper Plate 2 and Gripper Plate 3 to Gripper Plate 1 using 15mm M3 standoffs, 8 mm M3 bolts and M3 Nuts.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm310.jpg" alt="Gripper Claws Assembly" style="max-width: 350px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm314.jpg" alt="Gripper Claws Assembly" style="max-width: 200px">
+</div>
+<li>Mount micro servo horn to Gripper Mount using screws provided with the micro servo.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm325.jpg" alt="Mounting micro servo horn to Gripper Mount" style="max-width: 250px">
+</div>
+<li>Attach Gripper Mount to Gripper Plate 2 using 8mm M3 bolts &amp; M3 nuts.</li>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm309.jpg" alt="Gripper Claws Assembly" style="max-width: 250px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm307.jpg" alt="Gripper Claws Assembly" style="max-width: 250px">
+</div>
+<li>Attach the Gripper to the micro servo of Link 2 and fasten it with a screw provided with micro servo.</li>
+</ol>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm362.jpg" alt="Attach the Gripper to the micro servo of Link 2" style="max-width: 600px">
+</div>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/RoboticArm361.jpg" alt="Attach the Gripper to the micro servo of Link 2" style="max-width: 600px">
+</div>
+<h2>
+Circuit Diagram
+</h2>
+<div class="doc-caic">
+<img src="images/RoboticArm/Projects/Robotic Arm_bb.png" alt="Pick and Place Robot Circuit Diagram" style="min-width: 900px">
+</div>
+<div class="doc-note">
+Note: Ensure that all the servos are properly connected and there are no loose wires, this might otherwise effect performance of the arm during operation. Use cable ties for wire management.
+</div>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
