@@ -415,6 +415,11 @@ var pageInfo = [
     templateUrl:'t/eviveFritzing.html',
     sidebar:true,
   },
+  {
+    id:'ArduinoLibrary',
+    templateUrl:'t/ArduinoLibrary.html',
+    sidebar:true,
+  },
 ];
 
 

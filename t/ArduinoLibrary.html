@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduino IDE Libraries</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Arduino IDE Libraries</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/Screenshot (143).png" alt="Installing Library">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">A library is a group of functions and declarations, exposed for use in Arduino IDE scripts. Libraries makes it easy for you to connect to a sensor, display, module, etc. This tutoral covers how to install and include libraries in your Arduino IDE sketches.</a>
+				<div>
+					<a class="info">PROJECT INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 2 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>A library is a group of functions and declarations, exposed for use in Arduino IDE scripts. The library therefore consists of an interface expressed in a .h file (named the "header") and an implementation expressed in a .cpp file. The header file contains all the declarations and the .cpp file contains definitions of functions declared in the header file.</p>
+<p>Libraries makes it easy for you to connect to a sensor, display, module, etc. For example if you want to control your evive TFT display, you can use Adafruit GFX Library. It has predefined functions to write text, draw line and many more. Hence you don&rsquo;t have to make all the complicated functions on your own, you have to just use the corresponding library.</p>
+<h2>Installing a library</h2>
+<p>There are three ways in which you can install a library:</p>
+<ol>
+<li>Using the Library Manager</li>
+<li>Importing a .zip Library</li>
+<li>Manual Installation (Not covered in this tutorial. To know more visit <a href="https://www.arduino.cc/en/guide/libraries">here</a>)</li>
+</ol>
+<h3>Using the Library Manager</h3>
+<p>To install a new library into your Arduino IDE you can use the Library Manager. Open the IDE and click to the "Sketch" menu and then <em>Include Library &gt; Manage Libraries</em>.</p>
+<div class="doc-caic">
+	<img src="images/Arduino/Screenshot (138).png" alt="Starting Library Manager" style="width: 750px">
+</div>
+<p>Then the library manager will open and you will find a list of libraries that are already installed or ready for installation. Scroll the list to find the library you want you install, then select the version of the library you want to install. Sometimes only one version of the library is available.</p>
+<div class="doc-caic">
+	<img src="images/Arduino/Screenshot (142).png" alt="Installation through library manager" style="width: 850px">
+</div>
+<p>Finally click on install and wait for the IDE to install the new library. Downloading may take time depending on your connection speed. Once it has finished, an Installed tag should appear next to the installed library. You can close the library manager.</p>
+<div class="doc-caic">
+	<img src="images/Arduino/Screenshot (141).png" alt="Library Installed" style="width: 846px">
+</div>
+<h3>Importing a .zip Library</h3>
+<p>Libraries are often distributed as a ZIP file or folder. The name of the folder is the name of the library. Inside the folder will be a .cpp file, a .h file and often a keywords.txt file, examples folder, and other files required by the library. Do not unzip the downloaded library, leave it as is.</p>
+<p>In the Arduino IDE, navigate to <em>Sketch &gt; Include Library</em>. At the top of the drop down list, select the option to "Add .ZIP Library''.</p>
+<div class="doc-caic">
+	<img src="images/Arduino/Screenshot (135).png" alt="Including Libraires in .zip mode" style="width: 650px">
+</div>
+<p>You will be prompted to select the library you would like to add. Navigate to the .zip file's location and open it.</p>
+<p>Return to the <em>Sketch &gt; Import Library</em> menu. You should now see the library at the bottom of the drop-down menu. It is ready to be used in your sketch. The zip file will have been expanded in the libraries folder in your Arduino sketches directory.</p>
+<p>Note: The Library will be available to use in sketches, but examples for the library will not be exposed in the <em>File &gt; Examples</em> until after the IDE has restarted.</p>
+<h2>Including Library in your Sketch</h2>
+<p>To include a library in a sketch, navigate to <em>Sketch &gt; Include</em> Library and select the library you want to include.</p> 
+<div class="doc-caic">
+	<img src="images/Arduino/Screenshot (136).png" alt="Incuding libraries in Arduino IDE" style="width: 600px">
+</div>
+<p>In this example we have included <em>Adafruit_GFX</em> Library.</p>
+<div class="doc-caic">
+	<img src="images/Arduino/Screenshot (137).png" alt="Adafruit_GFX Library included in Arduino IDE" style="width: 600px">
+</div>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>
