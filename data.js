@@ -422,6 +422,12 @@ var sidebarInfo = [
   {
     title:'GettingStarted',
     href:'?t=GettingStarted',
+    children:[
+      {
+        title:'Battery Installation',
+        href:'?t=BatteryInstallation',
+      }
+    ]
   },
   {
     title:'evive Documentation',
