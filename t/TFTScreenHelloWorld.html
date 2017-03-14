@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World TFT Screen</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">TFT Screen: Hello World</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/RoboticArm/Projects/RoboticArm363.jpg" alt="Sketching Robotic Arm">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE PROJECT</a>
+				<div>
+				<a class="about">This tutorial describes how to use TFT Screen of evive and how to write your first program to display text on TFT screen.</a>
+				<div>
+					<a class="info">PROJECT INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 2 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>
+	Introduction
+</h2>
+<p>
+	Visual feedback is very useful for electronics projects and prototyping. They help you debug your code, display data and soometime make your project look cool. 
+</p>
+<p>
+	evive has a 1.8" TFT Display with 128 x 160 colour pixel. This TFT uses <a href="http://www.sitronix.com.tw/sitronix/product.nsf/Doc/ST7735?OpenDocument" style="color: #1c75bc">ST7735R</a> TFT driver to display 18-bit colour (262,144 shades). Let us see how we can use the TFT Screen in our projects. 
+</p>
+<h2>
+	Adafruit ST7735 TFT Library
+</h2>
+<p>We will use Arduino IDE to control the TFT display.</p>
+<p>Two libraries are required for TFT:</p>
+<ol>
+<li>Adafruit_ST7735_Library (<a href="http://adafru.it/dXk" style="color: #1c75bc">http://adafru.it/dXk</a>): this contains the low-level code specific to this device.</li>
+<li>Adafruit_GFX_Library (<a href="http://adafru.it/cBB" style="color: #1c75bc">http://adafru.it/cBB</a>): handles graphics operations common to many displays.</li>
+</ol>
+<p>Download both ZIP files, uncompress and rename the folders to Adafruit_ST7735 (contains Adafruit_ST7735.cpp and .h) and Adafruit_GFX (contains Adafruit_GFX.cpp and .h) respectively. Then place them inside your Arduino libraries folder and restart the Arduino IDE.</p>
+<p>After restarting the Arduino software, you should see a new example folder called Adafruit_ST7735 and inside, an example called graphicstest. Change the pin details as shown below.</p>
+<pre>
+<code style="font-size: 14px">#define TFT_CS&nbsp;&nbsp;&nbsp;&nbsp; 48
+#define TFT_RST&nbsp;&nbsp;&nbsp; 47
+#define TFT_DC&nbsp;&nbsp;&nbsp;&nbsp; 49</code>
+</pre>
+<p>Now upload the sketch to your Arduino. You should see a collection of graphical tests draw out on the TFT.</p>
+<h2><strong>Write Text on Screen</strong></h2>
+<p>Now, as you have tested the Display, you are ready for writing the program in Arduino IDE to display &ldquo;Hello World&rdquo; and a message.</p>
+<p>In the beginning of the code you have to include libraries using these commands:</p>
+<pre><code style="font-size: 14px">#include &lt;Adafruit_GFX.h
+#include &lt;Adafruit_ST7735.h&gt; 
+#include &lt;SPI.h&gt;</code>
+</pre>
+<p>SPI Library is used to communicate with TFT Screen.</p>
+<p>Then you have to define CS, RST and DC pin numbers which are connected internally to digital pin 48, 47 and 49 respectively. These can be defined as:</p>
+<pre><code style="font-size: 14px">#define TFT_CS&nbsp;&nbsp;&nbsp;&nbsp; 48
+#define TFT_RST&nbsp;&nbsp;&nbsp; 47
+#define TFT_DC&nbsp;&nbsp;&nbsp;&nbsp; 49</code>
+</pre>
+<p>Now you have to define an object for TFT using its constructor function.</p>
+<p><code style="font-size: 14px"> Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS,&nbsp; TFT_DC, TFT_RST); </code></p>
+<p>In setup loop, you have to initialise the ST7735S Chip using this function:</p>
+<p><code style="font-size: 14px">tft.initR(INITR_BLACKTAB);</code></p>
+<p>Also it is recommended that you use <em>tft.fillscreen(ST7735_BLACK);</em> function to clear the screen with black background in setup function.</p>
+<p>These are the functions that you can use to customise and write text on TFT:</p>
+<table>
+<tbody>
+<tr>
+<td width="350">
+<p>Function</p>
+</td>
+<td width="350">
+<p>Description</p>
+</td>
+</tr>
+<tr>
+<td width="350">
+<p>setCursor(int16_t x, int16_t y)</p>
+</td>
+<td width="350">
+<p>Set cursor to a location</p>
+</td>
+</tr>
+<tr>
+<td width="350">
+<p>setTextColor(uint16_t c)</p>
+</td>
+<td width="350">
+<p>Set text colour</p>
+</td>
+</tr>
+<tr>
+<td width="350">
+<p>setTextColor(uint16_t c, uint16_t bg)</p>
+</td>
+<td width="350">
+<p>Set text colour</p>
+</td>
+</tr>
+<tr>
+<td width="350">
+<p>setTextSize(uint8_t s)</p>
+</td>
+<td width="350">
+<p>Set text size</p>
+</td>
+</tr>
+<tr>
+<td width="350">
+<p>setTextWrap(boolean w)</p>
+</td>
+<td width="350">
+<p>Set text wrap</p>
+</td>
+</tr>
+<tr>
+<td width="350">
+<p>print(string)</p>
+</td>
+<td width="350">
+<p>Display input string on TFT</p>
+</td>
+</tr>
+<tr>
+<td width="350">
+<p>println(string)</p>
+</td>
+<td width="350">
+<p>Display input string on TFT and move to next line</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><br />Using <em>setCursor()</em> function you can set the cursor to a location for next print command.</p>
+<p>Using <em>setTextSize()</em> function you can set the size of the text.</p>
+<p>Using <em>print()</em> and println function you can write text on the string.</p>
+<p>Given below is the code for this tutorial, you can take reference and write text your own customised message. &nbsp;</p>
+<gist id="98080f99ae950195d57f7b8830dba936"></gist>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

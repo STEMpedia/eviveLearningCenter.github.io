@@ -68,6 +68,7 @@ var pageInfo = [
     id:'Features',
     templateUrl:'views/Features.html',
     sidebar:false,
+    description: 'evive',
   },
   {
     id:'ProgrammingInterface',
@@ -407,6 +408,11 @@ var pageInfo = [
   {
     id:'SketchingRoboticArm',
     templateUrl:'t/SketchingRoboticArm.html',
+    sidebar:true,
+  },
+  {
+    id:'TFTScreenHelloWorld',
+    templateUrl:'t/TFTScreenHelloWorld.html',
     sidebar:true,
   },
 ];
