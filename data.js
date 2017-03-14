@@ -23,7 +23,7 @@ var homeData = [
   {
     id:'Circuit',
     title:'Circuit Diagrams',
-    href:'index.html?t=Circuit',
+    href:'index.html?t=eviveFritzing',
     desc:'Battery installation and uploading code for the first time',
     img:'home-images/Circuit.png'
   },
@@ -77,7 +77,7 @@ var pageInfo = [
   },
   {
     id:'Circuit',
-    templateUrl:'views/Circuit.html',
+    templateUrl:'views/eviveFritzing.html',
     sidebar:true,
   },
   {
@@ -301,11 +301,6 @@ var pageInfo = [
     sidebar:true,
   },
   {
-    id:'Circuit',
-    templateUrl:'t/Circuit.html',
-    sidebar:true,
-  },
-  {
     id:'HowItWorks',
     templateUrl:'t/HowItWorks.html',
     sidebar:false,
@@ -413,6 +408,11 @@ var pageInfo = [
   {
     id:'TFTScreenHelloWorld',
     templateUrl:'t/TFTScreenHelloWorld.html',
+    sidebar:true,
+  },
+  {
+    id:'eviveFritzing',
+    templateUrl:'t/eviveFritzing.html',
     sidebar:true,
   },
 ];
@@ -679,7 +679,7 @@ var sidebarInfo = [
   },
   {
     title:'Circuit',
-    href:'?t=Circuit',
+    href:'?t=eviveFritzing',
   },
   {
     title:'Learning Modules and Kits',
