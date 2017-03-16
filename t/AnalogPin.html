@@ -12,7 +12,7 @@
 	<p style="text-align: justify;">The analog pins can be used identically to the digital pins, using the aliases A0 (for analog input 0), A1, etc. For example, the code would look like this to set analog pin 0 to an output, and to set it HIGH.</p>
 	<h2>analogRead():</h2>
 	<p style="text-align: justify;">analogRead(pin) function reads the value from the specific analog pin. The output is a integer value between 0 and 1023 (Due to a 10 bit analog to digital converter), which is mapped between 0 and 5 volts input voltage. This yields a resolution between readings of: 5 volts / 1024 units or, .0049 volts (4.9 mV) per unit.</p>
-	<p style="text-align: justify;">It takes about 100 microseconds (0.0001 s) to read an analog input, so the maximum reading rate is about 10,000 times a second.</p>
+	<p style="text-align: justify;">It takes about 112 microseconds (0.000112 s) to read an analog input, so the maximum reading rate is about 9,000 times a second.</p>
 	<div class="doc-note">
 		<b>Note:</b>
 		If the analog input pin is not connected to anything, the value returned by analogRead() will fluctuate based on a number of factors (e.g. the values of the other analog inputs, how close your hand is to the board, etc.).
