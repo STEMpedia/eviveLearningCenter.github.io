@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduino IDE: Relational Operators</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Arduino IDE: Relational Operators</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/A10.PNG" alt="Arduino IDE Relational Operators">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">This tutorial discuss about relational operators. A relational operator is an operator that tests some kind of relation between two entities. </a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 1 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>A relational operator is an operator that tests some kind of relation between two entities. The result of the relational operator is either true or false.</p>
+<div class="doc-note">Note: In programming, true is represented by the value 1 and false is represented by the value 0.</>
+<p>There are 6 relational operator in Arduino IDE:</p>
+<ol>
+<li>Greater than (&gt;)</li>
+<li>Less than (&lt;)</li>
+<li>Greater than or equal to (&gt;=)</li>
+<li>Less than or equal to (&lt;=)</li>
+<li>Equal to (==)</li>
+<li>Not equal to (!=)</li>
+</ol>
+<h2>Greater than (&gt;)</h2>
+<p>It returns true is number 1 is greater than number 2. If number 1 is equal to or less than the second number, it returns false. Given below is an example:</p>
+<gist id="9ea2503b2a0da01d4359d158d02226e9">
+</gist>
+<p>The result of the operation is:</p>
+<pre><code>Is 7 greater than 4: 1
+Is 7 greater than 10: 0</code></pre>
+<h2>Less than (&lt;)</h2>
+<p>It returns true is number 1 is less than number 2. If number 1 is equal to or greater than the second number, it returns false. Given below is an example:</p>
+<gist id="766f29a3b1ca69037fb5cfa831b291bf">
+</gist>
+<p>The result of the operation is:</p>
+<pre><code>Is 7 less than 4: 0
+Is 7 less than 10: 1</code></pre>
+<h2>Greater than or equal to (&gt;)</h2>
+<p>It returns true is number 1 is greater than or equal to number 2. If number 1 is less than the second number, it returns false. Given below is an example:</p>
+<gist id="369a93e2f0239cf75417acfe66212d9f">
+</gist>
+<p>The result of the operation is:</p>
+<pre><code>Is 7 greater than or equal to 10: 0
+Is 7 greater than or equal to 7: 1</code></pre>
+<h2>Less than or equal to (&lt;)</h2>
+<p>It returns true is number 1 is less than or equal to number 2. If number 1 is greater than the second number, it returns false. Given below is an example:</p>
+<gist id="68b46f206ca1b323d3f86c79c5e332cc">
+</gist>
+<p>The result of the operation is:</p>
+<pre><code>Is 7 less than or equal to 4: 0
+Is 7 less than or equal 7: 1</code></pre>
+<h2>Equal to (==)</h2>
+<p>It returns true is number 1 is equal to number 2, otherwise it returns false. Given below is an example:</p>
+<gist id="9fd7b931196fd6f1400b2a865962697a">
+</gist>
+<p>The result of the operation is:</p>
+<pre><code>Is 7 equal to 10: 0
+Is 7 equal to 7: 1</code></pre>
+<h2>Not equal to (==)</h2>
+<p>It returns false is number 1 is equal to number 2, otherwise it returns true. Given below is an example:</p>
+<gist id="115b83ddfd9636f58528bfb33ccaa541">
+</gist>
+<p>The result of the operation is:</p>
+<pre><code>Is 7 not equal to 10: 1
+Is 7 not equal to 7: 1</code></pre>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 504px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

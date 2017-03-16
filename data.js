@@ -420,6 +420,46 @@ var pageInfo = [
     templateUrl:'t/ArduinoLibrary.html',
     sidebar:true,
   },
+  {
+    id:'ArduinoStructureAndFlow',
+    templateUrl:'t/ArduinoStructureAndFlow.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoVariable',
+    templateUrl:'t/ArduinoVariable.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoArithmaticOperator',
+    templateUrl:'t/ArduinoArithmaticOperator.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoRelationalOperator',
+    templateUrl:'t/ArduinoRelationalOperator.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoIfStatement',
+    templateUrl:'t/ArduinoIfStatement.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoLogicOperator',
+    templateUrl:'t/ArduinoLogicOperator.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoForLoop',
+    templateUrl:'t/ArduinoForLoop.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoIncrementalOperator',
+    templateUrl:'t/ArduinoIncrementalOperator.html',
+    sidebar:true,
+  },
 ];
 
 

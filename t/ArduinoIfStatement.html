@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduino IDE: if-else-if Statement</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Arduino IDE: if-else-if Statement</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/A11.PNG" alt="Arduino IDE if Statement">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">In this tutorial you will learn about if statements, which are also known as decision making statements. </a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 2 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>In this tutorial you will learn about if statement, if-else statement and if-else-if statement, which are also known as decision making statements. &nbsp;</p>
+<h2><strong><em>if</em> statement</strong></h2>
+<p>Given below is the structure of an if statement:</p>
+<pre><code style="font-size: 14px">&nbsp;If (conditional expression)&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Body of the if statement
+}</code></pre>
+<p>Conditional expression can be anything which can give true or false. Hence is the statement is true, the code in the body of the statement run. If the conditional statement evaluates to false. Given below is an example of if statement:</p>
+<gist id="34565b5436316bdc74734e1adbc8175f">
+</gist>
+<p>The result on Serial Monitor is:</p>
+<pre><code style="font-size: 14px">The student1 marks is greater than 33. He passed the exam.
+The student2 marks is less than or eqaul to 33. He failed the exam.
+</code></pre>
+<p>In the above code is Student 1 has marks greater than 33 hence the first statement is true and gets executed. For Student2 second statement is true, hence second statement is executed.</p>
+<p>Try changing numbers and see what happens.</p>
+<h2><em>if-else</em> statement</h2>
+<p>When using an if statement, the code in the body of the if statement is run only when the if statement evaluates to true. When it evaluates to false, program execution skips the code in the body of the if statement and continues below the body of the if statement.</p>
+<p>By adding an else statement, code in the body of the else statement will run only when its corresponding if statement evaluates to false.</p>
+<pre><code style="font-size: 14px">If (conditional expression)&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Body of the if statement when conditional expression is true
+}
+else {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Body of the else statement when conditional expression is false
+}</code></pre>
+<p>Hence, When the conditional expression evaluates to true:</p>
+<ul>
+<li>Code in the body of the if statement runs.</li>
+<li>Code in the body of the else statement does not run.</li>
+</ul>
+<p>When the conditional expression evaluates to false:</p>
+<ul>
+<li>Code in the body of the if statement does not run.</li>
+<li>Code in the body of the else statement runs.</li>
+</ul>
+<p>Given below is an example of if else statement:</p>
+<h2><em>if-else-if </em>statement</h2>
+<gist id="445f5d2c06a0b9b06dbd86e64b198170">
+</gist>
+<p>The result on Serial Monitor is:</p>
+<pre><code style="font-size: 14px">The student1 marks is greater than 33. He passed the exam.
+The student2 marks is less than or eqaul to 33. He failed the exam.
+</code></pre>
+<p>The if-else-if construct allows further conditional expressions to be evaluated than the if-else construct.</p>
+<p>Basic structure is given below:</p>
+<pre><code>if (conditional expression 1)&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Body of the if statement when conditional expression 1 is true
+}
+else if (conditional expression 2) &nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Body of the else-if statement when conditional expression 1 is false and conditional expression 2 is true
+}
+else {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Body of the else statement when conditional expression 1 and 2 are both false
+}</code></pre>
+<p>Hence, When the conditional expression 1 evaluates to true:</p>
+<ul>
+<li>Code in the body of the if statement 1 runs.</li>
+<li>Code in the body of the else-if statement and else statement will not run.</li>
+</ul>
+<p>When the conditional expression 1 evaluates false and conditional expression 2 evaluates to true:</p>
+<ul>
+<li>Code in the body of the else-if statement runs.</li>
+<li>Code in the body of the if statement and else statement will not run.</li>
+</ul>
+<p>When the conditional expression 1 and 2 evaluates to false:</p>
+<ul>
+<li>Code in the body of the else statement runs.</li>
+<li>Code in the body of the if statement and if-else statement will not run.</li>
+</ul>
+<p>Given below is an example of if-else-if statement:</p>
+<gist id="422f7966b1d59cca7fe76ab9a1e74a63">
+</gist>
+<p>The result on Serial Monitor is:</p>
+<pre><code style="font-size: 14px">Your grade is: A
+</code></pre>
+<p>Try changing marks and check each if-else-if statement.</p>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 504px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

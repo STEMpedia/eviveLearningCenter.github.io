@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduino Sketch Structure and Flow</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Arduino Sketch: Structure and Flow</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/A8.PNG" alt="Arduino IDE variable">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">This tutorial discuss about variables. A variable is used in programming to store a value that may change during the life of the Arduino sketch.</a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 1 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>A sketch is the name that Arduino uses for a program. It's the unit of code that is uploaded to and run on an Arduino board. A basic Arduino sketch consists of two functions called setup() and loop(). The purpose of these will be explained later in the tutorial. &nbsp;</p>
+<p>Now, open the Arduino IDE and select <em>File &gt; New</em> (or press Control + N on your keyboard) to see the two functions.</p>
+<div class="doc-caic">
+<img src="images/Arduino/A1.PNG" alt="Arduino IDE new sketch" style="width: 469px">
+</div>
+<h2>Writing a Sketch</h2>
+<p>We will now create a &ldquo;Hello World&rdquo; program in Arduino IDE. We will simply write the text &ldquo;Hello World&rdquo; to the screen. We will use serial monitor window, to write our message.</p>
+<div class="doc-note">
+<strong>Information:</strong> This serial communication is very useful for controlling electronics that is connected to (interfaced to) the Arduino board from the PC. It can also be used to debug (find errors in) Arduino programs when writing new programs.
+</div>
+<p>To write in the serial monitor, you have to first initialise serial monitor which you can do with the following statement:</p>
+<p><code>Serial.begin(9600);</code></p>
+<p>Here 9600 is the baud rate at which you are communicating over USB with your device.</p>
+<p>The statement to write on Serial Monitor is:</p>
+<p><code>Serial.println(&ldquo;Your Message&rdquo;);</code></p>
+<p>Now, modify the code by initialising serial monitor and writing print statement inside setup() function. You will end with this code:</p>
+<gist id="d666c7a63de0e2e19e3d25e0eb73039b">
+</gist>
+<p>Save your sketch by selecting <em>File &gt; Save</em>.</p>
+<h2>Running the Sketch</h2>
+<p>Plug your evive into your PC using a USB cable. Click the Upload button to load the program to the Arduino. Now open the Arduino IDE Serial Monitor Window to see the sketch run and print the text message. The text that the program outputs should be visible in the serial monitor window.</p>
+<div class="doc-caic">
+<img src="images/Arduino/A4.PNG" alt="evive Hello World" style="width: 411px">
+</div>
+<div class="doc-note">
+<strong>Note:</strong> If you get error, please confirm that you have correctly written you code, connected evive and selected appropriate COM port.</div>
+<h2>Arduino Sketch Program Flow:</h2>
+<p>In an Arduino sketch, program statements (individual lines of code) are executed or run from top to bottom. This top-to-bottom execution of statements can only be altered by flow control statements.</p>
+<p>There are few things to notice in your sketch:</p>
+<ol>
+<li>void setup() is the function initialisation of a function named &ldquo;setup&rdquo;. As the function does not return anything, it is initialise with void.</li>
+<li>begin(9600);<br /> Serial.println(&ldquo;Hello World&rdquo;); <br /> are the statements that are contained in the setup function body.</li>
+<li>{ is the opening brace of the functions that tells that all statements starting from here are inside the fuctions.</li>
+<li>} is the closing brace of the function.</li>
+<li>; is the termination of the statement.</li>
+</ol>
+<p>In the hello world sketch, statements in the setup() function will run first, from top to bottom. The statement Serial.begin(9600); is the first statement in the setup() function, so it is run first. This statement sets up the speed of the serial port to 9600 baud. The baud setting in the serial monitor window must match this value so that the evive and serial monitor window are communicating at the same speed.</p>
+<p>The second statement to run in the setup() function is Serial.println("Hello, world!"); which sends the text Hello World out of the serial for display in the serial monitor window. In this statement, any text can be put between the opening and closing quotes ("") and it will be displayed in the serial monitor window.</p>
+<h3>The setup() Function</h3>
+<p>Statements in the setup() function are run only once, every time that the sketch is run (which you can see in Hello World sketch).</p>
+<h3>The loop() Function</h3>
+<p>Statements in the loop() function will run continuously from top to bottom and then back to the top.</p>
+<p>If the loop() function contains two statements, the first statement will be executed, then the second statement, then the first statement again and so on in a loop. Hence, the statements in the main loop will be executed continuously until the Arduino is switched off or reset.</p>
+<p>As there are no statements in the loop() function in our hello world example, program execution will end up in the loop and get stuck there doing nothing.</p>
+<p>It is important to have the loop() function in the sketch, even if it is empty, because without it the microcontroller on the Arduino board will try to execute whatever it finds next in memory after the statements in the setup() function have been executed. The microcontroller will try to execute whatever it finds in memory as an instruction, but the loop() function prevents it from doing this by keeping program execution in the loop.</p>
+<p>Given below is an example sketch that demonstrate the main loop execution. Copy the code to your Arduino IDE, upload the code to your evive, and start Serial Monitor.</p>
+<gist id="6e0807fcddf47ba51019240a1acde1ee">
+</gist>
+
+<div class="doc-note"><strong>Note:</strong> When the delay() function is called in the statement delay(1000); then the delay function causes a waiting period of 1 seconds.</div>
+<p>This is what you get in your serial monitor:</p>
+<div class="doc-caic">
+<img src="images/Arduino/A2.PNG" alt="Arduino IDE loop execution" style="width: 629px">
+</div>
+<p>As the above demonstration shows, the text in the setup() function is only displayed once when the serial monitor window is first opened and the Arduino is reset. After this, program execution enters the loop() function and repeatedly executes the statements in the loop from top to bottom and back to the top again in a never ending loop.</p>
+<h2>
+	Conclusion
+</h2>
+<p>
+	In this tutorial you have learned about the basic structure of Arduino sketches and the flow of execution of program using setup() and loop() function.
+</p>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

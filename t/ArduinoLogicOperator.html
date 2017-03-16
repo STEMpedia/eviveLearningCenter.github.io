@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduino IDE: Logical Operators</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Arduino IDE: Logical Operators</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/A12.PNG" alt="Arduino IDE Logical Operators">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">In this tutorial you will learn about logic operators, Logical operators evaluate two or single relational or logical statements.  </a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 2 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>Logical operators evaluate two or single relational or logical statements. There are 3 logical operators in Arduino IDE:</p>
+<ul>
+<li>OR: ||</li>
+<li>AND: &amp;&amp;</li>
+<li>NOT: !</li>
+</ul>
+<h2>OR Logic Operator</h2>
+<p>Structure of OR logic operator:</p>
+<p><code>(Statement 1) || (Statement2)</code></p>
+<p>The OR logic operator gives true if Statement1 or Statement2 or both are true. If both the statements are false, then it will give false. Given below if the truth table:</p>
+<table style="height: 207px;" width="620">
+<tbody>
+<tr>
+<td width="200">
+<p>Statement1</p>
+</td>
+<td width="200">
+<p>Statement2</p>
+</td>
+<td width="200">
+<p>Statement1 || Statemen2</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>0</p>
+</td>
+<td width="200">
+<p>0</p>
+</td>
+<td width="200">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>0</p>
+</td>
+<td width="200">
+<p>1</p>
+</td>
+<td width="200">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>1</p>
+</td>
+<td width="200">
+<p>0</p>
+</td>
+<td width="200">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>1</p>
+</td>
+<td width="200">
+<p>1</p>
+</td>
+<td width="200">
+<p>1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Given below is an example of OR logic operator:</p>
+<gist id="b5b0ec667d013a8dd83b8fc196aa42b1">
+</gist>
+<p>The serial monitor output is:</p>
+<pre>
+	<code style="font-size: 14px">
+		Result 1: 1
+		Result 2: 1
+		Result 3: 1
+		Result 4: 0
+	</code>
+</pre>
+<h2>AND Logic Operator</h2>
+<p>Structure of AND logic operator:</p>
+<p><code>(Statement 1) &amp;&amp; (Statement2)</code></p>
+<p>The AND logic operator gives true if both Statement 1 and Statement2 are true. If Statement1 or Statement2 or both are false, then it will give false. Given below if the truth table:</p>
+<table>
+<tbody>
+<tr>
+<td width="200">
+<p>Statement1</p>
+</td>
+<td width="200">
+<p>Statement2</p>
+</td>
+<td width="200">
+<p>Statement1 || Statemen2</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>0</p>
+</td>
+<td width="200">
+<p>0</p>
+</td>
+<td width="200">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>0</p>
+</td>
+<td width="200">
+<p>1</p>
+</td>
+<td width="200">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>1</p>
+</td>
+<td width="200">
+<p>0</p>
+</td>
+<td width="200">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>1</p>
+</td>
+<td width="200">
+<p>1</p>
+</td>
+<td width="200">
+<p>1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Given below is an example of AND logic operator:</p>
+<gist id="621dab831d1c748bf2d8c08568819ae6">
+</gist>
+<p>The serial monitor output is:</p>
+<pre>
+	<code style="font-size: 14px">
+		Result 1: 1
+		Result 2: 0
+		Result 3: 0
+		Result 4: 0
+	</code>
+</pre>
+<h2>NOT Logic Operator</h2>
+<p>Structure of NOT logic operator:</p>
+<p><code>! Statement</code></p>
+<p>The NOT operator checks whether the statement evaluate to 0 or not. If it is 0 it give true, otherwise false. Given below is an example of NOT logic operator.</p>
+<gist id="19e50d39d183b3978ea9022b4227cb31">
+</gist>
+<p>The serial monitor output is:</p>
+<pre>
+	<code style="font-size: 14px">
+		Result 1: 0
+		Result 2: 1
+	</code>
+</pre>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 504px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduino IDE: Variables</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Arduino IDE: Variable</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/A8.PNG" alt="Arduino IDE variable">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">This tutorial discuss the basics of variable. A variable is used in programming to store a value that may change during the life of the Arduino sketch.</a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 1 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>A variable is used in programming to store a value that may change during the life of the Arduino sketch. Memory is set aside for storing the variable and the variable is given a name which allows it to be accessed in the sketch.</p>
+<h2>Types of variables:</h2>
+<p>These are the few variables that are used frequently in Arduino sketches:</p>
+<ol>
+<li><strong>int</strong>: Integers are primary data-type for number storage. On evive, an int stores a 16-bit (2-byte) value. This yields a range of -32,768 to 32,767 (minimum value of -2^15 and a maximum value of (2^15) - 1).</li>
+<li><strong>float</strong>: Datatype for floating-point numbers, a number that has a decimal point. Floating-point numbers are often used to approximate analog and continuous values because they have greater resolution than integers. Floating-point numbers can be as large as 3.4028235E+38 and as low as -3.4028235E+38. They are stored as 32 bits (4 bytes) of information. Floats have only 6-7 decimal digits of precision.</li>
+</ol>
+<p>There are also other types of variables in Arduino. Click <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://www.arduino.cc/en/Reference/HomePage">here</a></span> to explore more.</p>
+<h2>Variable Definition</h2>
+<p>The standard form of variable definition is:</p>
+<p><code>Variable_Datatype Varible_Name;</code></p>
+<p>Variable_Datatype can be int or float depending on the type of variable you are want. Variable_Name is the name of variable. Variable is referenced or used by its name in the program.</p>
+<p>By giving the variable a type and name, space is made available in memory for this variable.</p>
+<p>Example: if I want to count the number of times main loop have been executed, I have to first define the variable count by:</p>
+<p><code>int count;</code></p>
+<h2>Naming Rules for Variables</h2>
+<p>Variables can be given any name that you like, so long as it sticks to the rules set out below. It is best to give variables meaningful names that help you and others to understand the sketch better.</p>
+<ul>
+<li>Variables can consist of any letters (a to z and A to Z).</li>
+<li>Variables can contain the numbers 0 to 9, but may not start with a number.</li>
+<li>Variables may not have the same names as Arduino language keywords, e.g. you cannot have a variable named float.</li>
+<li>Variables must have unique names i.e. you cannot have two variables with the same name.</li>
+<li>Variable names are case sensitive, so Count and count are two different variables.</li>
+<li>Variables may not contain any special characters, except the underscore (_).</li>
+</ul>
+<h2>Assigning Value to Variable</h2>
+<p>A variable can be assigned a value by the following form:</p>
+<p><code>Variable_Name = Expression;</code></p>
+<p>Expression will give a valid number that will be assigned to the variable. Let us count how many time loop has been executed. Following is the Arduino sketch:</p>
+
+<gist id="f73c679824fcfe0cfbddce555c56aba4">
+</gist>
+
+<div class="doc-caic">
+<img src="images/Arduino/A6.PNG" alt="Arduino IDE main loop execution count" style="width: 533px">
+</div>
+<p>Let us make a new sketch, where you will add two float variable to a new variable. Given below is the code:</p>
+
+<gist id="effe3a444cf71dd43b24766d85dd6534">
+</gist>
+
+<div class="doc-caic">
+<img src="images/Arduino/A7.PNG" alt="Arduino IDE float sum" style="width: 534px">
+</div>
+<p>When the value of the variable is sent to the serial monitor window, we can see that println() automatically rounds the number off to two decimal places.</p>
+<p>The second time that println() is used to send the value of the variable to the serial monitor window, the number of decimal places is specified as 5. This is done by passing a second parameter value of 5 to the println() function.</p>
+<p>&nbsp;</p>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 507px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

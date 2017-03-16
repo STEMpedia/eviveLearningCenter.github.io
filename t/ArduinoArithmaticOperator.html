@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduino IDE: Arithmatic Operators</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Arduino IDE: Arithmatic Operators</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/A9.PNG" alt="Arduino IDE Arithmatic Operators">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">This tutorial discuss about arithmatic operators. Arithmatic operators are used to perform basic mathematical operations like addition, subtraction, multiplication, division and remainder.</a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 1 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2><strong>Introduction</strong></h2>
+<p>Arduino IDE is capable doing some basic arithmetic operations. Arduino have five operators for basic mathematical operations:</p>
+<ol>
+<li>Addition: +</li>
+<li>Subtraction: -</li>
+<li>Multiplication: *</li>
+<li>Division: /</li>
+<li>Remainder: %</li>
+</ol>
+<h2><strong>Addition</strong></h2>
+<p>Addition operator is used for adding two numbers. Here is an example:</p>
+<gist id="203a3a5e5312a4f4717a1652b443fc05">
+</gist>
+<p>Serial Monitor Response: <code>Addition of Num1 and Num2 is 18</code></p>
+<p>In the above code you have defined Num1 and Num2. Also you have assigned them a value. The Sum variable is defined and no value is assigned to it, hence it contains a random number. The variable Sum is used to store the result of the addition of Num1 and Num2, and the random value will be overwritten when you assign the added value to Sum. After the statement 5 has been executed, the Sum will have a value 18.</p>
+<h2><strong>Subtraction</strong></h2>
+<p>The subtraction operator subtracts one number from another using the minus sign (-). Given below is an example:</p>
+<gist id="0754a5e7b0795fbc7ccd397c57c5736f">
+</gist>
+<p>Serial Monitor Response: <code>Subtraction of Num1 and Num2 is 12</code></p>
+<p>The result of this operation is 12.</p>
+<h2><strong>Multiplication</strong></h2>
+<p>The multiplication operator multiplies one number to another using the multiplication sign (*). Given below is an example:</p>
+<gist id="cebbfdf8f8396199edbbabf6e7cabc89">
+</gist>
+<p>Serial Monitor Response: <code>Multiplication of Num1 and Num2 is 15</code></p>
+<p>The result of this operation is 45.</p>
+<h2><strong>Division</strong></h2>
+<p>The division operator divides one number to another using the division sign (/). Given below is an example:</p>
+<gist id="091782cdd7433ef8f1d4ceb9d012769c">
+</gist>
+<p>Serial Monitor Response: <code>Division of Num1 and Num2 is 5</code></p>
+<p>The result of this operation is 5.</p>
+<p>But there is one something more you should know about division. Till now we have only used division for integers and have got an integer as result. But what if the result is not integer and is a float (number with a fraction). Given below is an example:</p>
+<gist id="aa307d53b8374fb15166191f3f7f030e">
+</gist>
+<p>Serial Monitor Response: <code>Division of Num1 and Num2 is 1</code></p>
+<p>The result will be 1 because the fraction is discarded when the result is stored in the integer variable. But if we use float variable to store the number, then we get the correct division result with fraction.</p>
+<gist id="1a857b53003497913ea42f650bde2975">
+</gist>
+<p>Serial Monitor Response: <code>Division of Num1 and Num2 is 1.20</code></p>
+<p>When using constant values in calculations that store the result in a floating point variable, you should use a decimal point and a zero for whole numbers, i.e. 5.0 instead of 5 on its own.</p>
+<h2><strong>Remainder</strong></h2>
+<p>The remainder operator finds the remainder after one number is divided by another number using the percentage sign (%). Given below is an example:</p>
+<gist id="114470c682676a5108566beeeaf60e6e">
+</gist>
+<p>Serial Monitor Response: <code>Division of Num1 and Num2 is 1</code></p>
+<p>The result of this operation is 1.</p>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 504px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>
