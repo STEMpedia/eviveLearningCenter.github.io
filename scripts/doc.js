@@ -36,7 +36,7 @@ angular.module('gist')
         },0);
       }
     };
-  }]);
+  }]); 
 var app = angular.module("learnEviveApp", ["ngRoute",'gist']);
 app.config(function($routeProvider, $locationProvider) {
 	var documentationViewConfig = {
@@ -78,6 +78,7 @@ app.controller('documentationCtrl',function($scope, $routeParams){
 				sidebar:false,
 			}
 			$scope.homeData = window.homeData;
+			$scope.Tutorials = window.Tutorials;
 		}
 	}
 

@@ -29,14 +29,14 @@ var homeData = [
   },
   {
     id:'LearningModules',
-    title:'Learning Modules',
+    title:'Kits and Learning Modules',
     href:'index.html?t=LearningModules',
     desc:'Battery installation and uploading code for the first time',
     img:'home-images/LearningModule.png'
   },
   {
-    id:'evive Firmware',
-    title:'evive Firmware',
+    id:'eviveFirmware',
+    title:'evive Software',
     href:'/eviveDocumentation/html/index.html',
     target:'_blank',
     desc:'Battery installation and uploading code for the first time',
@@ -460,6 +460,16 @@ var pageInfo = [
     templateUrl:'t/ArduinoIncrementalOperator.html',
     sidebar:true,
   },
+  {
+    id:'ArduinoWhileLoop',
+    templateUrl:'t/ArduinoWhileLoop.html',
+    sidebar:true,
+  },
+  {
+    id:'Tutorial',
+    templateUrl:'t/Tutorial.html',
+    sidebar:true,
+  },
 ];
 
 
@@ -772,5 +782,14 @@ var sidebarInfo = [
   {
     title:'Forum',
     href:'?t=Forum',
+  },
+];
+
+var Tutorials = [
+  {
+    title:'Arduino Sketch Structure and Flow',
+    description: 'This tutorial discuss the basic structure of an Arduino sketch and the top-to-bottom execution of program instructions.',
+    imgSource: 'images/Arduino/A5.PNG',
+    href:'?t=ArduinoStructureAndFlow',
   },
 ];
