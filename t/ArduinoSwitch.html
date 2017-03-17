@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tactile Switch</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">Tactile Switch</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/switch.jpg" alt="Different varieties of switches">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">This tutorial discuss about tactile switchs and how to interface them with evive using pull-up and pull-down configuration.</a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 2 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>Switch is a component which controls the open-ness or closed-ness of an electric circuit. Hence, the switch is open, circuit is broken and no current flows though the circuit. But when the switch is close current flows through it.</p>
+<p>A switch can be of different type:</p>
+<ul>
+<li>Maintained switches &ndash; like the light switches on your wall &ndash; stay in one state until actuated into a new one, and then remain in that state until acted upon once again.</li>
+<li>Momentary switches only remain active as long as they&rsquo;re actuated. If they&rsquo;re not being actuated, they remain in their &ldquo;off&rdquo; state.</li>
+</ul>
+<h2>Interfacing switch with evive</h2>
+<p>Let&rsquo;s say you have evive with one digital pin configured as an input. If there is nothing connected to the pin, and your program reads the state of the pin. Will it be high or low? It is difficult to tell. This phenomena is referred to as floating. To prevent this unknown state, a pull-up or pull-down resistor is connected in-between that&nbsp;ensure that the pin is in either a high or low state, while also using a low amount of current. While using switches you use pull-up or pull-down resistors. With a pull-up resistor, the input pin will read a high state when the button is not pressed. In other words, a small amount of current is flowing between VCC and the input pin (not to ground), thus the input pin reads close to VCC. When the button is pressed, it connects the input pin directly to ground. The current flows through the resistor to ground, thus the input pin reads a low state.</p>
+<div class="doc-caic">
+<img src="images/Arduino/PullUp.png" alt="Pull-up Configuration circuit"  style="width: 283px;"">
+</div>
+<p>Hence, when the switch is not pressed, you get a HIGH reading on the digital pin and when the switch is pressed you get a LOW reading, when you are using pull-up resistor. Generally you use a resistor of 10 kohm. If you are using pull-down configuration, the result is exactly opposite.</p>
+<h2>Pull-up resistor example:</h2>
+<p>In this example we will change the state of the LED each time you press the switch. Build the circuit given below using a tactile switch, evive, 10k Ohm resistor, and jumper wires.</p>
+<div class="doc-caic">
+<img src="images/Arduino/PullUpF.png" alt="Pull-up Configuration circuit Fritzing">
+</div>
+<p>You can observe that the above configuration is pull-up configuration. For the above configuration the flow chart is given below.</p>
+<div class="doc-caic">
+<img src="images/Arduino/PullUpFlow.png" alt="Pull-up Configuration circuit Fritzing" style="width: 538px;">
+</div>
+<p><strong>Arduino IDE Sketch:</strong></p>
+<gist id="0e8d4186c0c23ddc582c43cdce9827c3">
+</gist>
+<h2>Pull-down resistor example:</h2>
+<p>With a pull-down resistor, the input pin will read a low&nbsp;state when the button is not pressed. In other words, no&nbsp;current is flowing between GND&nbsp;and the input pin , thus the input pin reads close to GND.&nbsp;When the button is pressed, it connects the input pin directly to VCC. The current flows through the resistor to ground, thus the input pin reads a high&nbsp;state.</p>
+<div class="doc-caic">
+<img src="images/Arduino/PullDown (2).png" alt="Pull-down Configuration circuit" style="width: 263px;">
+</div>
+<p>In conlusion,&nbsp;when the switch is not pressed, you get a low&nbsp;reading on the digital pin and when the switch is pressed you get a high&nbsp;reading, when you are using pull-down resistor.</p>
+<p>In this example also we are doing the same thing as above. Given below is the circuit diagram, flow chart and the Adruino IDE sketch.&nbsp;</p>
+<div class="doc-caic">
+<img src="images/Arduino/PullDownF.png" alt="Pull-down Configuration circuit Fritzing">
+</div>
+<div class="doc-caic">
+<img src="images/Arduino/PullDownFloow.png" alt="Pull-up Configuration circuit Fritzing" style="width: 538px;">
+</div>
+<gist id="8e862863a0640e010074b5194d357ce2">
+</gist>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

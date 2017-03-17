@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TFT Screen: Graphics</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">TFT Screen: Graphics</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/eviveGraphics.gif" alt="TFT Screen Graphics">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">This tutorial discuss about TFT graphics which include drawing lines, rectangles, circle and triangles.</a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 1 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>Adafruit libraries for TFT Screens also include some functions for drawing lines and shapes. Given below is the list of such functions thrugh which you can display:</p>
+<ul>
+<li>Line</li>
+<li>Rectangle</li>
+<li>Circle</li>
+<li>Triangle</li>
+</ul>
+<h2>Functions</h2>
+<table style="width: 848px;">
+<tbody>
+<tr>
+<td style="width: 573px;">
+<p>Function</p>
+</td>
+<td style="width: 239px;">
+<p>Description</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a line using two points</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a vertical line</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a horizontal line</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>drawRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a rectangle using one point coordinate, width and height</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>fillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a filled rectangle using one point coordinate, width and height</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>drawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a circle using center point coordinate and radius of the circle</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>fillCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a filled circle using center point coordinate and radius of the circle</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a triangle using three points coordinate</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a filled triangle using three points coordinate</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>drawRoundRect(int16_t x0, int16_t y0, int16_t w, int16_t h, int16_t radius, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a round rectangle using one point coordinate, width, height and radius</p>
+</td>
+</tr>
+<tr>
+<td style="width: 573px;">
+<p>fillRoundRect(int16_t x0, int16_t y0, int16_t w, int16_t h, int16_t radius, uint16_t color)</p>
+</td>
+<td style="width: 239px;">
+<p>Draw a filled round rectangle using one point coordinate, width, height and radius</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Given below is a simple Arduino IDE Sketch which displays the use of each function discussed above.</p>
+<center>
+<img src="images/Arduino/TFT Graphics.gif" alt="evive TFT Graphics Test">
+</center>
+<gist id="753b3db64ffee1d08ccc8c2ee3436fb8">
+</gist>
+
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

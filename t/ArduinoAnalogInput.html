@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>evive Analog Input</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">evive Analog Input</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/eviveGraphics.gif" alt="TFT Screen Graphics">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">This tutorial discuss about analog input pins and to get analog inputs in Arduino sketch.</a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 2 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>evive have 10 analog input pins behind Magic Lid. The Atmega controllers used for the evive contains a total of 16 channel analog-to-digital (A/D) converter out of these only 10 analog inputs are available to the user. The converter has 10 bit resolution, returning integers from 0 to 1023. The main function of the analog pins for most Arduino users is to read analog sensors.</p>
+<div class="doc-caic">
+		<img src="images/evive_analog.png">
+	</div>
+<h2>analogRead():</h2>
+<p>analogRead(pin) function reads the value from the specific analog pin. The output is a integer value between 0 and 1023 (Due to a 10 bit analog to digital converter), which is mapped between 0 and 5 volts input voltage. This yields a resolution between readings of: 5 volts / 1024 units or, .0049 volts (4.9 mV) per unit.</p>
+<div class="doc-note">
+		<b>Note:</b>
+		If the analog input pin is not connected to anything, the value returned by analogRead() will fluctuate based on a number of factors (e.g. the values of the other analog inputs, how close your hand is to the board, etc.).
+	</div>
+<h2>Example:</h2>
+<p>evive a has two in-built potentiometers connected to A9 and A10. In this example we will read the analog reading from A9 and display the value on TFT Screen.</p>
+<div class="doc-caic">
+<img src="images/evive_potentiometer.png" alt="evive Potentiometer">
+</div>
+<div class="doc-note">A potentiometer is a variable resistor which can be used to create an adjustable voltage divider. Internal to the pot is a single resistor and a wiper, which cuts the resistor in two and moves to adjust the ratio between both halves. Externally there are usually three pins: two pins connect to each end of the resistor, while the third connects to the pot&rsquo;s wiper.</div>
+<p>Given below is the Arduino IDE sketch:</p>
+<center>
+<img src="images/Arduino/eviveAnalogRead.gif" alt="evive TFT Graphics Test">
+</center>
+<gist id="7b6296f5e0273f4927071d57d70650bc">
+</gist>
+<p>In the second example we will convert the analog reading with the voltage value. The voltage and the analog reading conversion relation is given by V = (5*A)/1023.</p>
+<p>Given below is the Arduino IDE sketch:</p>
+<center>
+<img src="images/Arduino/eviveAnalog.gif" alt="evive TFT Graphics Test">
+</center>
+<gist id="5a9c42b46018be35161622feb75e473c">
+</gist>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

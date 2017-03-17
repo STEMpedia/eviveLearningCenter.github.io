@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TFT Screen: Colours and Text Size</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">TFT Screen: Colours and Text Size</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/TFT Size.png" alt="TFT Screen Hello World">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">This tutorial discuss about colours and text size option for TFT Display.</a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 1 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>TFT Colour</h2>
+<p>In the last tutorial you have seen how to write text on screen with white colour. Well what if you want to write with some other colour?</p>
+<p>There are few colours defined in Adafruit ST7735 library:</p>
+<pre><code style="font-size: 14px">#define ST7735_BLACK&nbsp;&nbsp; 0x0000
+#define ST7735_BLUE&nbsp;&nbsp;&nbsp; 0x001F
+#define ST7735_RED&nbsp;&nbsp;&nbsp;&nbsp; 0xF800
+#define ST7735_GREEN&nbsp;&nbsp; 0x07E0
+#define ST7735_CYAN&nbsp;&nbsp;&nbsp; 0x07FF
+#define ST7735_MAGENTA &nbsp;0xF81F
+#define ST7735_YELLOW &nbsp;0xFFE0
+#define ST7735_WHITE &nbsp;0xFFFF
+</code></pre>
+<p>You can set the text colour using this function:</p>
+<p>tft.setTextColor(unit16_t color);</p>
+<p>where color can be any of the above define colours: ST7735_BLACK, ST7735_BLUE, ST7735_RED, ST7735_GREEN, ST7735_CYAN, ST7735_MAGENTA, ST7735_YELLOW, ST7735_WHITE. These colours are not only available for this function only, there are other function also which can have these colours in their argument.</p>
+<p>Given below is an example to show the use of differnt colours and the response of the TFT Screen:</p>
+<gist id="c0dd1c6513f9386f8db16cd4c0fe0600">
+</gist>
+<center>
+	<img src="images/Arduino/TFT Colour.gif" alt="evive TFT Colour Display">
+</center>
+<p>But what if I want to have a random colour?</p>
+<p>Well, there also a function to generate a custom colour:</p>
+<p><code style="font-size: 14px">tft.Color565(uint8_t r, uint8_t g, uint8_t b);</code></p>
+<p>where r, g, b are the red, green and blue value ranging from 0 to 255. Given below is the program to show you how to use different colours.</p>
+<h2>TFT Text Size</h2>
+<p>You can also vary text size using function:</p>
+<p><code style="font-size: 14px">tft.setTextSize(unit8_t size);</code></p>
+<p>Given below is the Arduino sketch to show you different text size.</p>
+<center>
+	<img src="images/Arduino/TFT Size.gif" alt="evive TFT Display different text size">
+</center>
+<gist id="d59ad0c435025df4849e1e122b499df5">
+</gist>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>

@@ -470,6 +470,56 @@ var pageInfo = [
     templateUrl:'t/Tutorial.html',
     sidebar:true,
   },
+  {
+    id:'TFTScreenColourSize',
+    templateUrl:'t/TFTScreenColourSize.html',
+    sidebar:true,
+  },
+  {
+    id:'TFTScreenGraphics',
+    templateUrl:'t/TFTScreenGraphics.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoDigitalOutput',
+    templateUrl:'t/ArduinoDigitalOutput.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoDigitalInput',
+    templateUrl:'t/ArduinoDigitalInput.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoAnalogOutput',
+    templateUrl:'t/ArduinoAnalogOutput.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoAnalogInput',
+    templateUrl:'t/ArduinoAnalogInput.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoSwitch',
+    templateUrl:'t/ArduinoSwitch.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoNavKey',
+    templateUrl:'t/ArduinoNavKey.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoTouch',
+    templateUrl:'t/ArduinoTouch.html',
+    sidebar:true,
+  },
+  {
+    id:'ControlDCMotor',
+    templateUrl:'t/ControlDCMotor.html',
+    sidebar:true,
+  },
 ];
 
 

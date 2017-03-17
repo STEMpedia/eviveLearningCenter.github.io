@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>evive Digital Output: LED Blink Example</title>
+	<meta name="author" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">evive Digital Output: LED Blink Example</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/Blink.gif" alt="evive LED blinking">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">evive has 28 digital I/O pins. In this tutorial we will learn how to use digital IO pins in OUTPUT mode and control a LED.</a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Easy</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 1 hours</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>Under the Magic Lid of evive there are 28 Digital 5V Input and Output (I/O) pins. By digital, we mean that there will be only 2 states the digital pin can have, either HIGH (5V or 3.3V) or LOW (0V/GND).</p>
+<div class="doc-caic">
+<img src="images/evive_digital.png" alt="evive digital pinout">
+</div>
+<p>A digital output allows you to control a voltage with evive. If evive instructs the output to be high, the output will produce a voltage (generally about 5 or 3.3 volts). If evive instructs the output to be low, it is connected to ground and produces no voltage.</p>
+<p>Let us consider an example, evive has a LED (named Pin 13) whose positive terminal is connected internally to digital pin 13 and negative terminal is connected to GND. There is a resistor also present between the digital pin 13 and positive terminal of LED to prevent excess current flow through LED (Excess current makes LED faulty).</p>
+<div class="doc-note">
+<p><strong>Light-Emitting Diodes (LEDs)</strong></p>
+<p>LEDs are like tiny lightbulbs. However, LEDs require a lot less power to light up by comparison. They&rsquo;re also more energy efficient, so they don&rsquo;t tend to get hot like conventional lightbulbs do.</p>
+<p><strong>Using LED:</strong></p>
+<ol>
+<li>Polarity Matters: In electronics, polarity indicates whether a circuit component is symmetric or not. LEDs only allows current to flow in one direction. And when there&rsquo;s no current-flow, there&rsquo;s no light.</li>
+</ol>
+<div class="doc-caic">
+<img src="images/Arduino/LED.png" alt="LED" style="width: 183px;">
+</div>
+<p>The positive side of the LED is called the &ldquo;anode&rdquo; and is marked by having a longer &ldquo;lead,&rdquo; or leg. The other, negative side of the LED is called the &ldquo;cathode.&rdquo; Current flows from the anode to the cathode and never the opposite direction. A reversed LED can keep an entire circuit from operating properly by blocking current flow.</p>
+<ol start="2">
+<li>More current equals more light: The brightness of an LED is directly dependent on how much current it draws. That means two things. The first being that super bright LEDs drain batteries more quickly, because the extra brightness comes from the extra power being used. The second is that you can control the brightness of an LED by controlling the amount of current through it.</li>
+<li>If you connect an LED directly to a current source it will try to dissipate as much power as it&rsquo;s allowed to draw, and it will destroy itself. That&rsquo;s why it&rsquo;s important to limit the amount of current flowing across the LED. Resistors limit the flow of electrons in the circuit and protect the LED from trying to draw too much current.</li>
+</ol>
+</div>
+<p>Now when digital pin 13 is HIGH, current passes though LED and it starts glowing. When digital pin 13 is LOW, there is no current passing through LED. Hence, it does not glow. Now all you have to do to control the LED is simply control the digital pin 13.</p>
+<h2><strong>Configuring a digital pin as OUTPUT</strong></h2>
+<p>Every digital pin you use should be configured as OUTPUT inside the setup() loop. This is done using the following statement:</p>
+<p><code>pinMode(pin, OUTPUT);</code></p>
+<p>where the pin is the digital pin number you want to initialise as output.</p>
+<p>Note: These pins are also in a low-impedance state. This means that they can provide a substantial amount of current to other circuits. Atmega pins can source (provide positive current) or sink (provide negative current) up to 40 mA (milliamps) of current to other devices/circuits. This is enough current to brightly light up an LED.</p>
+<p>Using digitalWrite() function in Arduino IDE, you can write a digital pin, to a HIGH or LOW value.</p>
+<h2><code>LED Blinking Example</code></h2>
+<p>Now you know, how to use digital pin as OUTPUT, let us write LED blinking sketch in Arduino IDE. In this sketch, we will turn ON the LED for 1 second, then turn it OFF for another 1 second and repeat. Given below is the Arduino sketch:</p>
+<gist id="533ba0d94ca530764ebf1bb3c82f2102">
+</gist>
+<style type="text/css">
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>
