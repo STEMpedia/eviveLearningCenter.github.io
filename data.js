@@ -428,7 +428,7 @@ var pageInfo = [
   {
     id:'ArduinoVariable',
     templateUrl:'t/ArduinoVariable.html',
-    sidebar:true,
+    sidebar:true, 
   },
   {
     id:'ArduinoArithmaticOperator',
@@ -518,6 +518,11 @@ var pageInfo = [
   {
     id:'ControlDCMotor',
     templateUrl:'t/ControlDCMotor.html',
+    sidebar:true,
+  },
+  {
+    id:'ArduinoSlideSwitch',
+    templateUrl:'t/ArduinoSlideSwitch.html',
     sidebar:true,
   },
 ];
