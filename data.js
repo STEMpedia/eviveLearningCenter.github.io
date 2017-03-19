@@ -468,7 +468,7 @@ var pageInfo = [
   {
     id:'Tutorial',
     templateUrl:'t/Tutorial.html',
-    sidebar:true,
+    sidebar:false,
   },
   {
     id:'TFTScreenColourSize',
