@@ -320,9 +320,9 @@ figure {
   padding: 24px 0 24px; }
   .section-projects .title {
     color: #1c75bc;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: bold;
-    padding: 24px;
+    padding: 12px;
     text-align: left; }
   .section-projects .content {
     display: -webkit-box;
