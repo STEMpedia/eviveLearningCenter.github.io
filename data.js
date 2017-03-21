@@ -525,6 +525,66 @@ var pageInfo = [
     templateUrl:'t/ArduinoSlideSwitch.html',
     sidebar:true,
   },
+  {
+    id:'ScratchUserInterface',
+    templateUrl:'t/ScratchUserInterface.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchStageAndSprite',
+    templateUrl:'t/ScratchStageAndSprite.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchMotionBlock',
+    templateUrl:'t/ScratchMotionBlock.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchLooksBlock',
+    templateUrl:'t/ScratchLooksBlock.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchSoundBlock',
+    templateUrl:'t/ScratchSoundBlock.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchPenBlock',
+    templateUrl:'t/ScratchPenBlock.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchEventBlock',
+    templateUrl:'t/ScratchEventBlock.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchControlBlock',
+    templateUrl:'t/ScratchControlBlock.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchSensingBlock',
+    templateUrl:'t/ScratchSensingBlock.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchOperatorBlock',
+    templateUrl:'t/ScratchOperatorBlock.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchDataBlock',
+    templateUrl:'t/ScratchDataBlock.html',
+    sidebar:true,
+  },
+  {
+    id:'ScratchArduinoBlock',
+    templateUrl:'t/ScratchArduinoBlock.html',
+    sidebar:true,
+  },
 ];
 
 
