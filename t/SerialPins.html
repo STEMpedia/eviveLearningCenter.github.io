@@ -6,10 +6,11 @@
 <body>
 		<h1><strong>Serial Pins</strong></h1>
 <p>Serial communication is the process of sending data one bit at a time, sequentially, over a communication channel or computer bus.</p>
-<p>For evive, serial is used for communication between evive and a computer or any other devices. It has four serial ports available: Serial0 on pins 0 (RX0) and 1 (TX0), Serial1 on pins 19 (RX1) and 18 (TX1), Serial2 on pins 17 (RX2) and 16 (TX2), Serial3 on pins 15 (RX3) and 14 (TX3).</p>
+<p>For evive, serial pins are used for communication between evive and a computer or sensors or any other devices. It has three serial ports available: Serial0 on pins 0 (RX0) and 1 (TX0), Serial2 on pins 17 (RX2) and 16 (TX2), and Serial3 on pins 15 (RX3) and 14 (TX3).</p>
 <div class="doc-caic">
 <img src="images/evive_SerialPort.png" alt="evive(Arduino) Serial Pins">
 </div>	
-<p>While communication with the computer, evive uses serial port 0 via USB. Thus, if you use these functions, you cannot also use pins 0 and 1 for digital input or output. But communication with HC05 (Bluetooth), ESP8266 (WiFi) or Xbee is done via serial port 3. Do not use digital pins 14 and 15 while using any of the three device.</p>
+<p>While communicating with the computer or for uploading Arduino sketch, evive uses serial port 0 via USB. Thus, if you use these functions, you cannot also use pins 0 and 1 for digital input or output. Communication with HC05 (Bluetooth), ESP-12e (or 12f) ESP8266 (WiFi) or Xbee is done via serial port 3. Do not use digital pins 14 and 15 while using any of the three device.</p>
+<p>Note: Arduino MEGA has Serial port 1 on pins 19 (RX1) and 18 (TX1), but in evive, pin 19 is used for <a href="http://learn.evive.cc/index.html?t=NavKey" style="color: #1c75bc" >Navigation Key/Joystick</a>, so we cannot use Serial port 1.</p>
 </body>
 </html>
