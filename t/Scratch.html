@@ -43,68 +43,76 @@
 <img src="images/Scratch/S8.PNG" style="max-width: 450px;" alt="evive Scratch Installation">
 </div>
 </ol>
-<h2>Creating first script in Scratch</h2>
-	</div>
-	<p>	
-		evive has a programmable LED connected to its digital pin 13. Thus, LED glows whenever digital pin 13 is HIGH, and turns off whenever it is LOW. 
-		In Scratch, we will make digital pin 13 HIGH for 1 second, then LOW for another 1 second and repeat. Open Scratch application on your desktop and start following the steps:
-		</br>
-		</br>
-		<strong>Step 1:</strong> 
-		</br>Whenever you want to run a script, you have to start with a Hat block which are present in Event category.
-		There is a block named ‘when space key is pressed’, which starts the execution of the program when space is pressed. We will use this block to start our program. Drag the block and drop the block in script using mouse.
-		<div class="doc-caic">
-		<img src="images/Tutorial/mblock2.PNG" style="max-width: 500px">
+<p>
+	You have now installed Scratch in your computer. 
+</p>
+<div class="main-documentation">
+	<div class="tile-container">
+	<a class="tile" href="?t=Scratch User Interface">
+	<div style=" font-size: 16px; text-align: center; margin-bottom: 6px; font-weight: bold;">Next Tutorial</div>
+			<img class="tile-image" src="images/Scratch/mb2.PNG" alt="Scratch LED blinking code script" style="width: 292px;margin: auto;">
+			<div class="tile-title">Scratch User Interface</div>
+			<div class="tile-text">
+				This tutorial discuss about the Scratch user interface, blocks, block palette. We will also make our first scratch program.
+			</div>
+			<div class="infodes"><strong>Programming Platform:</strong> Scrtach</div>
+			<div class="infodes"><strong>Difficulty:</strong> Easy</div>
+			<div class="infodes"><strong>Estimated Time:</strong> 2 hour</div>
+		</a>
 		</div>
-		</br>
-		</br>
-		<strong>Step 2:</strong> 
-		</br>Now, we want to run the code forever. For this types of functions there is a C block named ‘Forever’, which runs the code inside it continuously in loop. Drag the block and snap it below the hat block.
-		</br>
-		</br>
-		<strong>Step 3:</strong> 
-		</br>To access the evive digital pin 13, click on Arduino tab, you have to evive via serial port. First connect evive to you PC using USB B type connect. Select the Board to “Arduino Mega 2560”
-		<div class="doc-caic">
-		<img src="images/Tutorial/Screenshot (118).png" style="max-width: 500px">
 		</div>
-		Click on Connect and select the serial port to which evive is connected. 
-		<div class="doc-caic">
-		<img src="images/Tutorial/Screenshot (119).png" style="max-width: 500px">
-		</div>
-		Upload or upgrade the firmware to evive. 
-		<div class="doc-caic">
-		<img src="images/Tutorial/Screenshot (121).png" style="max-width: 500px">
-		</div>
-		Finally in Extension tab select Arduino. Now you are ready to use evive digital and analog pins.
-		<div class="doc-caic">
-		<img src="images/Tutorial/Screenshot (122).png" style="max-width: 450px">
-		</div>
-		Once you select a COM Port, you will get a message “Serial port connected” at the top. If you don’t get this message, select another COM port.
-		</br>
-		</br>
-		<strong>Step 4:</strong> 
-		</br>You want to turn ON the LED. For this digital pin 13 should be HIGH, which can be done using ‘set digital pin’ block. Drag and snap the block inside forever block. Next to the pin inside the block you can see white space where you have to input the pin number (13 in this case). To turn the pin HIGH, select the option at the end of the block.
-		</br>
-		</br>
-		<strong>Step 5:</strong> 
-		</br>Now you want to wait for 1 seconds. In Control panel there is wait block. Drag and drop it inside the forever loop below the digital pin block.
-		</br>
-		</br>
-		<strong>Step 6:</strong> 
-		</br>Now you want to turn the LED OFF. For this the digital pin should be LOW. Right click on the set digital pin block inside forever loop and duplicate. 
-		<div class="doc-caic">
-		<img src="images/Tutorial/Screenshot (123).png" style="max-width: 300px">
-		</div>
-		You will see two duplicated blocks, which you have to snap below wait block. Select the LOW option in set digital pin block.
-		<div class="doc-caic">
-		<img src="images/Tutorial/mb2.PNG" style="max-width: 300px">
-		</div>
-		Your program is ready now and you can press ‘space’ to start it. The whole script will start glowing indicating that the program is running.  To stop it press ‘Esc’ on keyboard.
-	</p>
 </body>
 </html>
 
 <style type="text/css">
+.main-documentation{
+		margin-top: 24px;
+		margin-left: -12px;
+		margin-right: -24px;
+		justify-content: space-around;
+	}
+	.tile-container{
+
+		position: relative;
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.tile{
+		position: relative;
+		width: 450px;
+		/*height: 274px;*/
+		background: #fafafa;
+		border: solid 1px #eee;
+		margin: 6px;
+		padding: 12px;
+		text-align: center;
+	}
+	.tile-image{
+		width: 426px;
+		/*height: 500px;*/
+	}
+	.tile-title{
+		font-weight: bold;
+		font-size: 16px;
+		padding-bottom: 6px;
+	}
+	.tile-text{
+		padding-bottom: 6px;
+    	margin-bottom: 6px;
+		font-weight: normal;
+		font-size: 12px;
+		text-align: justify;
+		border-bottom: dashed 1px #000000;
+		}
+	.infodes{
+		font-size: 12px;
+		text-align: left;
+	}
+	.img-cont{
+		/*height: 360px;*/
+	}
 	.features-main-page-container{
 		width: 100%;
 	}
