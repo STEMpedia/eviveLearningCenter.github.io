@@ -585,6 +585,11 @@ var pageInfo = [
     templateUrl:'t/ScratchArduinoBlock.html',
     sidebar:true,
   },
+  {
+    id:'ScratchTutorial',
+    templateUrl:'t/ScratchTutorial.html',
+    sidebar:true,
+  },
 ];
 
 
@@ -831,7 +836,7 @@ var sidebarInfo = [
       },
       {
         title:'Scratch',
-        href:'?t=Scratch',
+        href:'?t=ScratchTutorial',
       },
       {
         title:'MATLAB',
