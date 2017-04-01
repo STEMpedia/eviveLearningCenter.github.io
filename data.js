@@ -7,7 +7,7 @@ var homeData = [
     img:'home-images/Getting Started.png'
   },
   {
-    id:'eviveDocumentation',
+    id:'Know your evive | Features',
     title:'evive Documentation',
     href:'index.html?t=Features',
     desc:'Battery installation and uploading code for the first time',
