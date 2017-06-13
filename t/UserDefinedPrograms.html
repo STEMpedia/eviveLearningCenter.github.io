@@ -9,14 +9,14 @@
 		</h1>
 
 		<p>
-			Generally, while using Arduino one face problem of uploading different codes again and again as he changes some part of codes. Using evive’s user defined function submenu, the user can store different Arduino programs at once. He can switch to different program while navigating inside the menu. Here is how to do it:
+			Generally, while using Arduino one face problem of uploading different codes again and again as he changes some part of codes. Using evive’s User Defined Function submenu, the user can store different Arduino programs at once. He can switch to different program while navigating inside the menu. Here is how to do it:
 		</p>
 		<center>
 		<iframe width="800" height="450" src="https://www.youtube.com/embed/c5ne1dfeFOQ" frameborder="0" allowfullscreen align="middle"></iframe>
 		</center>
 		<ul>
 			<li>
-				In Arduino IDE, the user will add his custom codes in space provided in file named userDefinedFunctions.cpp in similar fashion to “void setup_user_defined_function(){….}” and “void loop_user_defined_function(){….}”.
+				In Arduino IDE, the user will add his custom codes in space provided in file named AddUserDefinedFunctions.cpp in similar fashion to “void setup_user_defined_function(){….}” and “void loop_user_defined_function(){….}”.
 			</li>
 			<div class="doc-caic">
 				<img src="images/UserDefined1.jpg" style="min-width: 1000px" alt="User Defined Functions">
@@ -38,7 +38,10 @@
 			So the code will be available under the user defined menu list item. When the user will select that particular user defined function in the sub-menu of user defined function, the code will start running in loop.
 		</p>
 		<div class="doc-note">
-			<strong>Note:</strong> All the libraries must be initialised in userDefinedFunctions.cpp. In other way, the user just have copy and paste the previous program in userDefinedFunctions.cpp.
+			<strong>Note:</strong> All the libraries must be initialised in AddUserDefinedFunctions.cpp. In other way, the user just have copy and paste the previous program in AddUserDefinedFunctions.cpp.
+		</div>
+			<div class="doc-note">
+			<strong>Note:</strong> The library name is changed from userDefinedFunctions.cpp to AddUserDefinedFunctions.cpp.
 		</div>
 </body>
 </html>
