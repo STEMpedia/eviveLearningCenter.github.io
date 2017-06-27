@@ -23,8 +23,8 @@
 <body ng-app="learnEviveApp">
 <div ng-view></div>
 <div id="scroll-to-top" class="scroll-to-top hidden">
-	<span onclick="window.scrollTo(0,0)" style="width: 48px;height: 48px;display: inline-block;display: flex;justify-content: center;align-items: center;background: #2a8bd8;border-radius: 50%;cursor: pointer;box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.1);">
-		<svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" fill="#fff" xmlns="http://www.w3.org/2000/svg" fit="" height="24" width="24" preserveAspectRatio="xMidYMid meet"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg>
+	<span class="background-container" onclick="window.scrollTo(0,0)">
+		<svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" fill="#fff" xmlns="http://www.w3.org/2000/svg" fit="" height="24" width="24" preserveAspectRatio="xMidYMid meet"><path class="arrow-path" d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg>
 	</span>
 	<style type="text/css">
 		.scroll-to-top{
@@ -34,13 +34,39 @@
 		.scroll-to-top.hidden{
 			transform: scale(0);
 		}
+		.scroll-to-top .background-container{
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #2a8bd8;
+			border-radius: 50%;
+			cursor: pointer;
+			box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.1);
+			transition: background-color ease 300ms;
+		}
+		.scroll-to-top.white-bg .background-container{
+			background: #fafafa;
+		}
+		.scroll-to-top .arrow-path{
+			transition: fill ease 300ms;
+		}
+		.scroll-to-top.white-bg .arrow-path{
+			fill: #2a8bd8;
+		}
 	</style>
 	<script type="text/javascript">
 		window.addEventListener('scroll',function(){
 			if(window.scrollY<200){
 				document.getElementById('scroll-to-top').setAttribute('class','scroll-to-top hidden');
 			}else{
-				document.getElementById('scroll-to-top').setAttribute('class','scroll-to-top');
+				var classs = 'scroll-to-top';
+				if( document.body.clientHeight - window.innerHeight - document.getElementsByClassName('footer')[0].clientHeight - window.scrollY + 120 < 0){
+					classs += ' white-bg'
+				}
+				document.getElementById('scroll-to-top').setAttribute('class',classs);
 			}
 		})
 	</script>
