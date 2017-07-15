@@ -590,6 +590,11 @@ var pageInfo = [
     templateUrl:'t/ScratchTutorial.html',
     sidebar:true,
   },
+  {
+    id:'TFTSerial',
+    templateUrl:'t/TFTSerial.html',
+    sidebar:true,
+  },
 ];
 
 

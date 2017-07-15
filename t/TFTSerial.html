@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>evive TFT Serial</title>
+	<meta name="Pankaj" content="Agilo Technologies"/>
+</head>
+<body>
+<div class="features-page-container">
+	<h1 class="features-main-title">evive TFT Serial</h1>
+	<div class="features-container1">
+		<div class="feature-category1">
+			<a class="feature-image-container1">
+				<img class="main-image1" src="images/Arduino/eviveDigitalInput.png" alt="evive Digital Input">
+			</a>
+			<div>
+				<a class="title1">ABOUT THE TUTORIAL</a>
+				<div>
+				<a class="about">This tutorial shows how to print values of variables on the evive TFT screen (just like serial print in arduino), making projects more portable as one does not have to connect the USB to debug his/her code. </a>
+				<div>
+					<a class="info">TUTORIAL INFO</a>
+					<div>
+						<a class="infodes"><strong>Programming Platform:</strong> Arduino IDE</a>
+						<a class="infodes"><strong>Type:</strong> Tutorial</a>
+						<a class="infodes"><strong>Difficulty:</strong> Medium</a>
+						<a class="infodes"><strong>Estimated Time:</strong> 2 hours</a>
+					</div>			
+				</div>
+				</div>
+			</div>
+			</br>
+		</div>
+	</div>
+</div>
+<h2>Introduction</h2>
+<p>The function to print values on TFT Display is used in same way as the serial.print/println() commands in Arduino.</p>
+<p>You can download the library for the same <a href="?t=Resources"> here</p>
+<p>Following are the steps for implementation:</p>
+<ul>
+<li>Initialise object Tftserial (before setup) : </li>
+<p>Tftserial ser = Tftserial();</p>
+<li>Begin serial (in setup)</li>
+<p>ser.begin();</p>
+<li>Use (in loop): The syntax is similar to Arduino serial print : </li>
+<p>Ser.print() or ser.println() the input can be char/int or string only.</p>
+</ul>
+<div class="doc-notes">
+WARNING : if Tftserial is initialised or even if object is declared then then tft should not be used for any other purpose. (i.e even tft object should not be initialised by the user) as it might cause unpredictable behaviour of the screen due to clash betwwen the tft object by user and the one initialised internally in the library
+</div>
+<h2>Example</h2>
+<p>In this example, we are displaying the reading from ultrasonic sensor (distance):</p>
+<center>
+<img src="images/Arduino/TFTSerial.gif" alt="evive TFT Serial">
+</center>
+<gist id="246b3556462c82066905437d5371c81f">
+</gist>
+<style type="text/css">
+.main-documentation{
+		margin-top: 24px;
+		margin-left: -12px;
+		margin-right: -24px;
+		justify-content: space-around;
+	}
+	.tile-container{
+
+		position: relative;
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.tile{
+		position: relative;
+		width: 450px;
+		/*height: 274px;*/
+		background: #fafafa;
+		border: solid 1px #eee;
+		margin: 6px;
+		padding: 12px;
+		text-align: center;
+	}
+	.tile-image{
+		width: 426px;
+		/*height: 500px;*/
+	}
+	.tile-title{
+		font-weight: bold;
+		font-size: 16px;
+		padding-bottom: 6px;
+	}
+	.tile-text{
+		padding-bottom: 6px;
+    	margin-bottom: 6px;
+		font-weight: normal;
+		font-size: 12px;
+		text-align: justify;
+		border-bottom: dashed 1px #000000;
+		}
+	.infodes{
+		font-size: 12px;
+		text-align: left;
+	}
+	.img-cont{
+		/*height: 360px;*/
+	}
+	.features-main-page-container{
+		width: 100%;
+	}
+
+	.features-main-title{
+		text-align: center;
+		color: #1c75bc;
+		font-size: 36px;
+	}
+	.features-container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: 16px;
+		margin: auto;
+	}
+	.feature-category{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category .title{
+		color: #6d6d6d;
+		font-size: 16px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 12px;
+	    display: block;
+	    margin-top: 50px
+
+	}
+
+	.features-container1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.feature-category1{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: #fafafa;
+		border: solid 1px #f0f0f0;
+		padding: 6px;
+		border-radius: 5px;
+		margin-bottom: 12px;
+	}
+	.feature-category1 .title1{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .about{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 12px 0;
+	    margin-bottom: 24px;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+	.feature-category1 .info{
+		color: #6d6d6d;
+		border-bottom: solid 1px #6d6d6d;
+		font-size: 14px;
+	    font-weight: bold;
+	    margin: 12px 0;
+	    padding-bottom: 8px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 12px
+
+	}
+
+	.feature-category1 .infodes{
+		color: #6d6d6d;
+		font-size: 14px;
+	    font-weight: normal;
+	    margin: 6px 0;
+	    margin-bottom: 6px;
+	    padding-bottom: 0px;
+	    padding-right: 0px;
+	    display: block;
+	    margin-top: 0px
+
+	}
+	.feature-image-container{
+		margin-right: 12px;
+	}
+	
+	.feature-image-container1{
+		margin-right: 12px;
+	}
+	.main-image1{
+		max-width: 500px;
+	}
+
+	.icon-link-container{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.icon-link-container .icon{
+		width: 64px;
+		height: 64px;
+	}
+	.icon-link-container a{
+		width: 96px;
+    	transition: background ease 500ms;
+   	 	margin: 0;
+    	margin-top: 12px;
+    	padding-top: 6px;
+    	text-align: center;
+    	padding: 0px;
+	}
+	.icon-link-container a:hover{
+		background: #eee;
+	}
+	.icon-link-container .icon-title{
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		font-size: 12px;
+	}
+
+	.heading{
+		font-size: 24px;
+		color: #1c75bc;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	</style>
+	</body>
+	</html>
