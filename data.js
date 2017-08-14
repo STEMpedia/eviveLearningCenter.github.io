@@ -595,6 +595,11 @@ var pageInfo = [
     templateUrl:'t/TFTSerial.html',
     sidebar:true,
   },
+  {
+    id:'Buy',
+    templateUrl:'t/Buy.html',
+    sidebar:false,
+  },
 ];
 
 
