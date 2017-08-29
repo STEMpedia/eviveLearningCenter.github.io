@@ -889,7 +889,7 @@ var sidebarInfo = [
       },
       {
         title:'Starter Kit',
-        href:'?t=StarterKit',
+        href:'?t=StarterKitNew',
       },
       {
         title:'Mobile Robot',
