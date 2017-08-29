@@ -600,6 +600,11 @@ var pageInfo = [
     templateUrl:'t/Buy.html',
     sidebar:false,
   },
+   {
+    id:'StarterKitNew',
+    templateUrl:'t/StarterKitNew.html',
+    sidebar:true,
+  },
 ];
 
 
